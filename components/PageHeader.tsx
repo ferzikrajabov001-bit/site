@@ -1,52 +1,39 @@
-import { Container } from "@/components/ui/Container";
-import { Reveal } from "@/components/ui/Reveal";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { Container } from "@/components/Container";
+import { Reveal } from "@/components/Reveal";
+import { SectionLabel } from "@/components/SectionLabel";
 
 interface PageHeaderProps {
-  eyebrow?: string;
+  label?: string;
   title: React.ReactNode;
-  description?: React.ReactNode;
-  children?: React.ReactNode;
+  intro?: React.ReactNode;
 }
 
-export function PageHeader({
-  eyebrow,
-  title,
-  description,
-  children,
-}: PageHeaderProps) {
+export function PageHeader({ label, title, intro }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden pt-36 pb-16 sm:pt-44 sm:pb-20">
-      <AmbientBackground />
+    <header className="border-b border-line pt-36 pb-16 sm:pt-44 sm:pb-20">
       <Container>
-        <div className="max-w-3xl">
-          {eyebrow ? (
-            <Reveal>
-              <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
-                <span className="h-px w-6 bg-accent-soft/60" aria-hidden />
-                {eyebrow}
-              </span>
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            {label ? (
+              <Reveal>
+                <SectionLabel>{label}</SectionLabel>
+              </Reveal>
+            ) : null}
+            <Reveal delay={0.05}>
+              <h1 className="mt-6 max-w-3xl text-balance font-serif text-4xl font-normal leading-[1.08] tracking-tight text-graphite sm:text-5xl md:text-[3.4rem]">
+                {title}
+              </h1>
             </Reveal>
-          ) : null}
-          <Reveal delay={0.05}>
-            <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
-              {title}
-            </h1>
-          </Reveal>
-          {description ? (
-            <Reveal delay={0.1}>
-              <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted">
-                {description}
-              </p>
-            </Reveal>
-          ) : null}
-          {children ? (
-            <Reveal delay={0.15}>
-              <div className="mt-8">{children}</div>
-            </Reveal>
+          </div>
+          {intro ? (
+            <div className="lg:col-span-4">
+              <Reveal delay={0.1}>
+                <p className="text-pretty leading-relaxed text-muted">{intro}</p>
+              </Reveal>
+            </div>
           ) : null}
         </div>
       </Container>
-    </section>
+    </header>
   );
 }

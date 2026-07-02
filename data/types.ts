@@ -1,61 +1,44 @@
 /**
- * Domain types shared across the marketing site and prepared for reuse by
- * future product surfaces (admin panel, client dashboard, analytics, CRM).
+ * Доменные типы. Описаны так, чтобы их можно было переиспользовать
+ * в будущих продуктовых разделах (кабинет владельца, отчётность, CRM).
  */
 
-export interface Metric {
+export interface ExperienceItem {
   id: string;
+  value?: string;
   label: string;
-  value: number;
-  suffix?: string;
-  prefix?: string;
-  decimals?: number;
   description: string;
 }
 
 export interface Service {
   id: string;
-  slug: string;
   title: string;
-  summary: string;
   description: string;
-  icon: ServiceIcon;
-  outcomes: string[];
 }
 
-export type ServiceIcon =
-  | "operations"
-  | "revenue"
-  | "sales"
-  | "marketing"
-  | "finance"
-  | "launch";
-
-export interface HotelKpi {
-  occupancy: number; // percentage
-  rooms: number;
-  adr: number; // average daily rate, RUB
-  revpar: number; // revenue per available room, RUB
-  rating: number; // guest satisfaction 0-5
+export interface ObjectKpi {
+  occupancy: number; // загрузка, %
+  adr: number; // средний тариф, ₽
+  revpar: number; // доход на номер, ₽
 }
 
-export interface Hotel {
+export type ObjectStatus = "Под управлением" | "Стабилизация" | "Запуск";
+
+export interface ManagedObject {
   id: string;
   name: string;
-  segment: string;
-  category: string; // e.g. "4★ Business"
+  category: string; // напр. «4★ · бизнес»
   district: string;
-  location: string;
-  status: "Under Management" | "Launch Phase" | "Stabilized";
-  yearOnboarded: number;
+  rooms: number;
+  managedSince: number;
+  status: ObjectStatus;
   summary: string;
   description: string;
   highlights: string[];
-  kpi: HotelKpi;
-  amenities: string[];
+  kpi: ObjectKpi;
 }
 
-export interface CaseMetricDelta {
+export interface CaseMetric {
   label: string;
   unit: string;
   before: number;
@@ -64,17 +47,17 @@ export interface CaseMetricDelta {
 
 export interface CaseStudy {
   id: string;
-  hotel: string;
-  segment: string;
-  duration: string;
+  object: string;
+  district: string;
+  period: string;
   summary: string;
-  challenge: string;
-  approach: string[];
-  metrics: CaseMetricDelta[];
+  context: string;
+  actions: string[];
+  metrics: CaseMetric[];
 }
 
-export interface ValueProp {
+export interface TeamArea {
   id: string;
-  title: string;
+  role: string;
   description: string;
 }

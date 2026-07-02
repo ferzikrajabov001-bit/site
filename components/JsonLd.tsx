@@ -1,9 +1,5 @@
 import { siteConfig } from "@/lib/site";
 
-/**
- * Organization structured data for richer search results. Rendered once in
- * the root layout.
- */
 export function JsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -16,16 +12,11 @@ export function JsonLd() {
     telephone: siteConfig.contact.phone,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Nevsky Prospekt",
+      streetAddress: "ул. Большая Морская, 18",
       addressLocality: siteConfig.contact.city,
       addressCountry: "RU",
-      postalCode: "191186",
     },
-    areaServed: {
-      "@type": "City",
-      name: siteConfig.contact.city,
-    },
-    sameAs: [siteConfig.social.linkedin, siteConfig.social.telegram],
+    areaServed: { "@type": "City", name: siteConfig.contact.city },
   };
 
   return (

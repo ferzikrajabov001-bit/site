@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import { caseStudies } from "@/data";
 import { PageHeader } from "@/components/PageHeader";
-import { Section } from "@/components/ui/Section";
-import { Reveal } from "@/components/ui/Reveal";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { CaseStudyCard } from "@/components/CaseStudyCard";
-import { CTA } from "@/components/CTA";
-import { Check } from "@/components/ui/icons";
+import { Container } from "@/components/Container";
+import { Reveal } from "@/components/Reveal";
+import { BeforeAfter } from "@/components/BeforeAfter";
+import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Case Studies",
+  title: "Кейсы",
   description:
-    "Before-and-after results from hotels managed by HMS — measurable improvements in occupancy, ADR and RevPAR across the Saint Petersburg portfolio.",
+    "Результаты по объектам под управлением HMS: рост загрузки, ADR и RevPAR за первый год работы. Только бизнес-показатели.",
   alternates: { canonical: "/cases" },
 };
 
@@ -19,66 +17,68 @@ export default function CasesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Case studies"
-        title="Performance you can measure"
-        description="Real transformations from properties managed under HMS. Each engagement pairs an operational reset with a data-led revenue strategy."
+        label="Кейсы"
+        title="Результаты по объектам"
+        intro="Что меняется после передачи объекта в управление. Показываем бизнес-показатели за первый год работы."
       />
 
-      <Section className="pt-0">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {caseStudies.map((study, i) => (
-            <Reveal key={study.id} delay={(i % 3) * 0.08} className="h-full">
-              <CaseStudyCard study={study} />
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      <section className="py-12 sm:py-16">
+        <Container>
+          {caseStudies.map((study) => (
+            <div key={study.id} className="border-t border-line py-14 sm:py-16">
+              <Reveal>
+                <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
+                  {study.object} · {study.district} · {study.period}
+                </p>
+              </Reveal>
 
-      <Section className="pt-0">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {caseStudies.map((study, i) => (
-            <Reveal key={study.id} delay={(i % 3) * 0.06} className="h-full">
-              <GlassCard className="h-full p-8">
-                <h2 className="text-lg font-semibold text-white">
-                  {study.hotel}
-                </h2>
-                <p className="mt-1 text-sm text-accent-soft">{study.segment}</p>
-
-                <div className="mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
-                    Challenge
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {study.challenge}
-                  </p>
+              <div className="mt-6 grid gap-10 lg:grid-cols-12">
+                <div className="lg:col-span-5">
+                  <Reveal delay={0.05}>
+                    <h2 className="max-w-md font-serif text-2xl font-normal leading-snug tracking-tight text-graphite sm:text-[1.9rem]">
+                      {study.summary}
+                    </h2>
+                  </Reveal>
+                  <Reveal delay={0.1}>
+                    <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
+                      {study.context}
+                    </p>
+                  </Reveal>
                 </div>
 
-                <div className="mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
-                    Approach
-                  </p>
-                  <ul className="mt-3 space-y-2.5">
-                    {study.approach.map((step) => (
-                      <li
-                        key={step}
-                        className="flex items-start gap-3 text-sm leading-relaxed text-white/90"
-                      >
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" />
-                        {step}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </GlassCard>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+                <div className="lg:col-span-7">
+                  <Reveal delay={0.08}>
+                    <p className="text-xs uppercase tracking-[0.12em] text-faint">
+                      Что сделали
+                    </p>
+                    <ul className="mt-4 space-y-3">
+                      {study.actions.map((action, idx) => (
+                        <li
+                          key={action}
+                          className="flex items-baseline gap-4 text-[15px] leading-relaxed text-graphite"
+                        >
+                          <span className="index-num">
+                            {String(idx + 1).padStart(2, "0")}
+                          </span>
+                          {action}
+                        </li>
+                      ))}
+                    </ul>
+                  </Reveal>
 
-      <CTA
-        title="Could your hotel perform like this?"
-        description="Book a consultation for a confidential performance review and a clear improvement plan."
-      />
+                  <Reveal delay={0.12}>
+                    <div className="mt-8">
+                      <BeforeAfter metrics={study.metrics} />
+                    </div>
+                  </Reveal>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Container>
+      </section>
+
+      <CTA />
     </>
   );
 }

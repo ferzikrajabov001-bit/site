@@ -3,12 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --bg-900: #0b1220;
-  --bg-800: #111c2e;
-  --text: #ffffff;
-  --muted: #aab4c0;
+  --paper: #f7f7f5;
+  --graphite: #1c1f26;
   --accent: #2f6bff;
-  --hairline: #e6eaf2;
 }
 
 * {
@@ -21,48 +18,38 @@ html {
 }
 
 body {
-  background-color: var(--bg-900);
-  color: var(--text);
-  font-feature-settings: "ss01", "cv01", "cv11";
+  background-color: var(--paper);
+  color: var(--graphite);
+  font-feature-settings: "ss01", "cv05", "cv08";
 }
 
 ::selection {
-  background: rgba(47, 107, 255, 0.35);
-  color: #ffffff;
+  background: rgba(47, 107, 255, 0.16);
+  color: #1c1f26;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b1220;
+  background: #f7f7f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1d2c48;
+  background: #d9d9d2;
   border-radius: 999px;
-  border: 2px solid #0b1220;
+  border: 3px solid #f7f7f5;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a3d63;
+  background: #c7c7be;
 }
 
 @layer components {
-  .glass {
-    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  .rule {
+    @apply border-t border-line;
   }
-  .glass-strong {
-    @apply border border-white/10 bg-white/[0.06] backdrop-blur-2xl;
-  }
-  .hairline {
-    @apply border-white/10;
-  }
-  .text-gradient {
-    @apply bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent;
-  }
-  .accent-gradient-text {
-    @apply bg-gradient-to-r from-accent-soft to-accent bg-clip-text text-transparent;
+  .index-num {
+    @apply font-sans text-xs font-medium tracking-[0.14em] text-faint tabular-nums;
   }
 }
 
@@ -72,6 +59,9 @@ body {
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
   }
 }
 

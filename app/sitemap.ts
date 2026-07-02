@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
-import { getHotelIds } from "@/data";
+import { getObjectIds } from "@/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();
 
-  const staticRoutes = ["", "/about", "/services", "/hotels", "/cases", "/contact"].map(
+  const staticRoutes = ["", "/about", "/services", "/objects", "/cases", "/contacts"].map(
     (path) => ({
       url: `${base}${path}`,
       lastModified: now,
@@ -15,12 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const hotelRoutes = getHotelIds().map((id) => ({
-    url: `${base}/hotels/${id}`,
+  const objectRoutes = getObjectIds().map((id) => ({
+    url: `${base}/objects/${id}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...hotelRoutes];
+  return [...staticRoutes, ...objectRoutes];
 }

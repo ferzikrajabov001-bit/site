@@ -13,7 +13,7 @@ export function Container({
   const Component = Tag as React.ElementType;
   return (
     <Component
-      className={cn("mx-auto w-full max-w-container px-6 sm:px-8", className)}
+      className={cn("mx-auto w-full max-w-container px-6 sm:px-8 lg:px-12", className)}
       {...props}
     >
       {children}

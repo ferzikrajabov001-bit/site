@@ -2,63 +2,63 @@ import type { CaseStudy } from "./types";
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "nevsky-turnaround",
-    hotel: "Nevsky Grand",
-    segment: "Upscale Business",
-    duration: "12 months",
+    id: "fontanka-turnaround",
+    object: "Отель «Фонтанка 42»",
+    district: "Центральный район",
+    period: "12 месяцев",
     summary:
-      "Operational reset and corporate demand rebuild lifted RevPAR by over a third.",
-    challenge:
-      "A strong asset underperforming on rate and over-reliant on low-margin OTA demand.",
-    approach: [
-      "Rebuilt corporate and MICE account base",
-      "Introduced dynamic segment-based pricing",
-      "Shifted mix toward direct and negotiated demand",
+      "Вернули корпоративный спрос и подняли доход на номер без демпинга по цене.",
+    context:
+      "Объект с хорошим расположением работал в основном через площадки бронирования по низкой цене. Прямые продажи и корпоративные клиенты были потеряны.",
+    actions: [
+      "Восстановили корпоративные договоры",
+      "Пересобрали структуру каналов продаж",
+      "Ввели управление тарифами по сегментам",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 68, after: 82 },
-      { label: "ADR", unit: "₽", before: 9200, after: 11800 },
-      { label: "RevPAR", unit: "₽", before: 6256, after: 9676 },
+      { label: "Загрузка", unit: "%", before: 66, after: 79 },
+      { label: "ADR", unit: "₽", before: 7900, after: 9800 },
+      { label: "RevPAR", unit: "₽", before: 5214, after: 7742 },
     ],
   },
   {
-    id: "moyka-repositioning",
-    hotel: "Moyka Boutique",
-    segment: "Boutique Lifestyle",
-    duration: "9 months",
+    id: "galernaya-positioning",
+    object: "Бутик-отель «Галерная»",
+    district: "Адмиралтейский район",
+    period: "9 месяцев",
     summary:
-      "Premium repositioning grew ADR while protecting the boutique experience.",
-    challenge:
-      "Undifferentiated positioning suppressing rate potential for a high-quality product.",
-    approach: [
-      "Repositioned toward premium leisure",
-      "Upgraded content across premium OTAs",
-      "Launched a direct-booking and CRM program",
+      "Уточнили позиционирование и подняли среднюю цену размещения.",
+    context:
+      "Качественный небольшой объект продавался без выраженного позиционирования, что сдерживало цену.",
+    actions: [
+      "Определили позиционирование под свой сегмент",
+      "Обновили представление на площадках",
+      "Развили прямые бронирования",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 71, after: 78 },
-      { label: "ADR", unit: "₽", before: 10800, after: 14200 },
-      { label: "RevPAR", unit: "₽", before: 7668, after: 11076 },
+      { label: "Загрузка", unit: "%", before: 69, after: 74 },
+      { label: "ADR", unit: "₽", before: 9700, after: 12600 },
+      { label: "RevPAR", unit: "₽", before: 6693, after: 9324 },
     ],
   },
   {
-    id: "vasilievsky-scale",
-    hotel: "Vasilievsky Park",
-    segment: "Upper Midscale",
-    duration: "14 months",
+    id: "petrogradskaya-stabilization",
+    object: "Отель «Петроградская сторона»",
+    district: "Петроградский район",
+    period: "14 месяцев",
     summary:
-      "Channel and group strategy filled a large inventory across the demand calendar.",
-    challenge:
-      "Large room count creating occupancy volatility between exhibition peaks.",
-    approach: [
-      "Advanced channel-mix management",
-      "Group and exhibition pricing framework",
-      "Base-demand contracts to smooth pace",
+      "Стабилизировали загрузку крупного объекта между пиками спроса.",
+    context:
+      "Большой номерной фонд давал сильные перепады загрузки вне событийных периодов.",
+    actions: [
+      "Настроили управление каналами продаж",
+      "Ввели работу с группами и договорами",
+      "Сформировали базовый спрос на межсезонье",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 66, after: 80 },
-      { label: "ADR", unit: "₽", before: 8100, after: 9600 },
-      { label: "RevPAR", unit: "₽", before: 5346, after: 7680 },
+      { label: "Загрузка", unit: "%", before: 64, after: 77 },
+      { label: "ADR", unit: "₽", before: 7500, after: 8600 },
+      { label: "RevPAR", unit: "₽", before: 4800, after: 6622 },
     ],
   },
 ];

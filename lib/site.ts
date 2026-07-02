@@ -1,35 +1,32 @@
 /**
- * Central site configuration. Kept in one place so future surfaces
- * (admin panel, client dashboard, CRM integrations) can reuse the same
- * source of truth for branding, contact details and navigation.
+ * Единая конфигурация сайта: бренд, контакты, навигация.
+ * Держим в одном месте, чтобы будущие разделы (личный кабинет владельца,
+ * внутренняя отчётность, CRM) переиспользовали один источник данных.
  */
 export const siteConfig = {
   name: "Hotel Management Solutions",
   shortName: "HMS",
+  legalName: "HMS — управляющая компания гостиничного бизнеса",
   tagline:
-    "Full-cycle hotel management company increasing profitability and operational efficiency across hospitality assets.",
+    "HMS управляет гостиницами в Санкт-Петербурге. Мы отвечаем за операционную эффективность, продажи и финансовый результат объектов.",
   description:
-    "Hotel Management Solutions (HMS) is a full-cycle hotel management company operating 5 properties in Saint Petersburg. We deliver operations management, revenue optimization, sales, marketing and financial control for hospitality assets.",
-  url: "https://hms-hospitality.com",
-  locale: "en_US",
+    "HMS — управляющая компания гостиничного бизнеса в Санкт-Петербурге. Пять объектов под управлением: операционное управление, управление доходностью, продажи, маркетинг и финансовая отчётность.",
+  url: "https://hms-management.ru",
+  locale: "ru_RU",
   contact: {
-    phone: "+7 (812) 000-00-00",
-    email: "partners@hms-hospitality.com",
-    address: "Nevsky Prospekt, Saint Petersburg, 191186, Russia",
-    city: "Saint Petersburg",
-    country: "Russia",
-    hours: "Mon–Fri, 09:00–19:00 (MSK)",
-  },
-  social: {
-    linkedin: "https://www.linkedin.com/company/hms-hospitality",
-    telegram: "https://t.me/hms_hospitality",
+    phone: "+7 (812) 429-00-00",
+    email: "office@hms-management.ru",
+    address: "Санкт-Петербург, ул. Большая Морская, 18",
+    city: "Санкт-Петербург",
+    country: "Россия",
+    hours: "Пн–Пт, 10:00–19:00",
   },
 } as const;
 
 export const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Hotels", href: "/hotels" },
-  { label: "Case Studies", href: "/cases" },
-  { label: "Contact", href: "/contact" },
+  { label: "О компании", href: "/about" },
+  { label: "Услуги", href: "/services" },
+  { label: "Объекты", href: "/objects" },
+  { label: "Кейсы", href: "/cases" },
+  { label: "Контакты", href: "/contacts" },
 ] as const;

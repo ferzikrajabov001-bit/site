@@ -1,28 +1,25 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 interface RevealProps {
   children: React.ReactNode;
   delay?: number;
   y?: number;
   className?: string;
-  as?: "div" | "span" | "li";
-  once?: boolean;
+  as?: "div" | "span" | "li" | "tr";
 }
 
 /**
- * Scroll-triggered fade/slide reveal used across the site. Respects the
- * user's reduced-motion preference by disabling movement.
+ * Очень сдержанное появление при прокрутке: лёгкое проявление и минимальный
+ * сдвиг. Уважает системную настройку «уменьшить движение».
  */
 export function Reveal({
   children,
   delay = 0,
-  y = 20,
+  y = 12,
   className,
   as = "div",
-  once = true,
 }: RevealProps) {
   const reduceMotion = useReducedMotion();
   const MotionTag = motion[as];
@@ -32,16 +29,16 @@ export function Reveal({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   return (
     <MotionTag
-      className={cn(className)}
+      className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       variants={variants}
     >
       {children}

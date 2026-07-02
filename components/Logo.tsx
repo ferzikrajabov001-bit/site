@@ -1,30 +1,32 @@
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site";
 
 /**
- * Abstract HMS mark — stacked hospitality "towers" inside a rounded tile.
- * Uses currentColor-independent gradient so it reads on dark surfaces.
+ * Сдержанный текстовый логотип управляющей компании: монограмма + название.
+ * Никаких «стартап»-иконок — только типографика.
  */
-export function Logo({ className }: { className?: string }) {
+export function Logo({
+  className,
+  showName = true,
+}: {
+  className?: string;
+  showName?: boolean;
+}) {
   return (
-    <svg
-      viewBox="0 0 40 40"
-      className={cn(className)}
-      role="img"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="hms-logo" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#5A88FF" />
-          <stop offset="100%" stopColor="#2F6BFF" />
-        </linearGradient>
-      </defs>
-      <rect width="40" height="40" rx="11" fill="url(#hms-logo)" />
-      <g fill="#fff">
-        <rect x="11" y="18" width="5" height="12" rx="1.2" opacity="0.95" />
-        <rect x="17.5" y="12" width="5" height="18" rx="1.2" />
-        <rect x="24" y="15" width="5" height="15" rx="1.2" opacity="0.85" />
-      </g>
-      <rect x="11" y="30" width="18" height="2.4" rx="1.2" fill="#fff" opacity="0.7" />
-    </svg>
+    <span className={cn("flex items-center gap-2.5", className)}>
+      <span className="flex h-8 w-8 items-center justify-center rounded-sm border border-graphite/20 text-[13px] font-semibold tracking-tight text-graphite">
+        H
+      </span>
+      {showName ? (
+        <span className="flex flex-col leading-none">
+          <span className="text-[15px] font-semibold tracking-tight text-graphite">
+            {siteConfig.shortName}
+          </span>
+          <span className="mt-1 text-[10px] uppercase tracking-[0.16em] text-faint">
+            Управление гостиницами
+          </span>
+        </span>
+      ) : null}
+    </span>
   );
 }

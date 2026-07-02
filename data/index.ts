@@ -1,6 +1,11 @@
 export * from "./types";
-export { metrics } from "./metrics";
-export { services, getServiceBySlug } from "./services";
-export { hotels, getHotelById, getHotelIds } from "./hotels";
+export { experience } from "./experience";
+export { services } from "./services";
+export { objects, getObjectById, getObjectIds } from "./objects";
 export { caseStudies } from "./cases";
-export { valueProps } from "./values";
+export {
+  approachStatement,
+  companyPrinciples,
+  teamAreas,
+  companyStory,
+} from "./company";
