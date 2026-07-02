@@ -1,30 +1,29 @@
 import type { Metadata } from "next";
-import { operatingModel } from "@/data";
+import { services } from "@/data";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Operating Model",
+  title: "Услуги",
   description:
-    "The HMS operating model: demand management, pricing control, staffing optimization, cost discipline, service standardization and financial reporting.",
+    "Чем занимается HMS: управление загрузкой и спросом, revenue management, операционный контроль, финансовая отчётность, управление персоналом и стандартизация сервиса.",
   alternates: { canonical: "/services" },
 };
 
-export default function OperatingModelPage() {
+export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        index="03"
-        label="Operating Model"
-        title="How the system operates an asset"
-        intro="A single operating layer covering demand, pricing, staffing, cost, service and reporting."
+        label="Чем мы занимаемся"
+        title="Полный операционный цикл управления"
+        intro="Одна команда закрывает загрузку, доходность, операции, финансы, персонал и сервис объекта."
       />
 
       <section className="py-8 sm:py-12">
         <Container>
-          {operatingModel.map((item, i) => (
+          {services.map((item, i) => (
             <Reveal
               key={item.id}
               delay={(i % 3) * 0.04}
@@ -50,7 +49,10 @@ export default function OperatingModelPage() {
         </Container>
       </section>
 
-      <CTA />
+      <CTA
+        text="Расскажите о вашем объекте — предложим подходящий формат управления."
+        buttonLabel="Обсудить объект"
+      />
     </>
   );
 }

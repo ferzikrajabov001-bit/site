@@ -6,9 +6,9 @@ import { Reveal } from "@/components/Reveal";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Company",
+  title: "О компании",
   description:
-    "HMS is a hospitality asset management company operating five assets in Saint Petersburg under full operational control.",
+    "HMS — операционная управляющая компания гостиничного бизнеса в Санкт-Петербурге. История, подход к управлению и команда по направлениям.",
   alternates: { canonical: "/about" },
 };
 
@@ -16,13 +16,13 @@ function Overline({ children }: { children: React.ReactNode }) {
   return <p className="sys-label">{children}</p>;
 }
 
-export default function CompanyPage() {
+export default function AboutPage() {
   return (
     <>
       <PageHeader
-        label="Company"
-        title="Operational control and performance responsibility"
-        intro="HMS operates five hospitality assets in Saint Petersburg on a single management system."
+        label="О компании"
+        title="Берём объекты в управление и отвечаем за результат"
+        intro="HMS — операционная управляющая компания. Работаем в Санкт-Петербурге, под управлением пять объектов."
       />
 
       <section className="py-24 sm:py-32">
@@ -30,7 +30,7 @@ export default function CompanyPage() {
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Reveal>
-                <Overline>Company</Overline>
+                <Overline>История</Overline>
               </Reveal>
             </div>
             <div className="lg:col-span-9">
@@ -59,7 +59,7 @@ export default function CompanyPage() {
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Reveal>
-                <Overline>Principles</Overline>
+                <Overline>Подход</Overline>
               </Reveal>
             </div>
             <div className="lg:col-span-9">
@@ -87,7 +87,7 @@ export default function CompanyPage() {
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-3">
               <Reveal>
-                <Overline>Team</Overline>
+                <Overline>Команда</Overline>
               </Reveal>
             </div>
             <div className="lg:col-span-9">

@@ -1,123 +1,63 @@
-import type {
-  ModelItem,
-  PerformanceLine,
-  RiskItem,
-  SystemAction,
-} from "./types";
+import type { ModelItem, PerformanceLine } from "./types";
 
-/** Entry-screen meta for the Global Overview. */
-export const overview = {
-  portfolio: "5 Assets",
-  location: "Saint Petersburg",
-  status: "Operational Control Active",
-  under: "300+ rooms",
-  currency: "EUR",
-};
-
-export const investmentContext = [
-  "HMS operates hospitality assets in Saint Petersburg under full management.",
-  "Our role is operational control and performance responsibility — occupancy, revenue and operating standards.",
-  "Owners retain visibility while day-to-day execution runs on a single operating system.",
+/** Раздел «О компании» на главной. */
+export const aboutParagraphs = [
+  "HMS — операционная управляющая компания гостиничного бизнеса.",
+  "Мы работаем с гостиничными активами в Санкт-Петербурге и берём на себя управление их операционной моделью.",
 ];
 
-/** Operating model as a structured layer, not marketing copy. */
-export const operatingModel: ModelItem[] = [
+/** Чем мы занимаемся — перечень направлений. */
+export const services: ModelItem[] = [
   {
     id: "demand",
-    term: "Demand management",
-    note: "Forecasting, channel mix and pace control across the demand calendar.",
+    term: "Управление загрузкой и спросом",
+    note: "Планирование загрузки и структуры каналов продаж в течение года.",
   },
   {
-    id: "pricing",
-    term: "Pricing control",
-    note: "Segment-based dynamic pricing to grow RevPAR and protect rate.",
+    id: "revenue",
+    term: "Revenue management",
+    note: "Управление тарифами и сегментами спроса для роста доходности.",
   },
   {
-    id: "staffing",
-    term: "Staffing optimization",
-    note: "Labour models aligned to occupancy and service standards.",
+    id: "operations",
+    term: "Операционный контроль гостиниц",
+    note: "Ежедневное управление службами объекта и единые стандарты работы.",
   },
   {
-    id: "cost",
-    term: "Cost discipline",
-    note: "Procurement control and budget variance management.",
+    id: "finance",
+    term: "Финансовая отчётность",
+    note: "Бюджет, контроль расходов и регулярная отчётность собственнику.",
+  },
+  {
+    id: "staff",
+    term: "Управление персоналом",
+    note: "Подбор, обучение и организация работы команды объекта.",
   },
   {
     id: "service",
-    term: "Service standardization",
-    note: "Unified quality standards across all managed assets.",
-  },
-  {
-    id: "reporting",
-    term: "Financial reporting",
-    note: "Monthly P&L, KPI and variance reporting to owners.",
+    term: "Стандартизация сервиса",
+    note: "Единое качество обслуживания на всех объектах под управлением.",
   },
 ];
 
-/** Performance engine summary. */
+/** Подход. */
+export const approachParagraphs = [
+  "Мы не предоставляем программные решения и не работаем как консалтинг.",
+  "Мы интегрируемся в операционную модель гостиницы и отвечаем за результат совместно с собственником.",
+];
+
+/** Результаты — сводка в формате инвестиционного отчёта. */
 export const performanceLines: PerformanceLine[] = [
-  { id: "occupancy", value: "+18% — +32%", label: "occupancy growth" },
-  { id: "revenue", value: "+20% — +40%", label: "revenue growth" },
-  { id: "adr", value: "+15%", label: "ADR improvement" },
-];
-
-export const performanceIndex = [
-  { id: "stability", label: "Stability Index", value: "High" },
-  { id: "volatility", label: "Volatility", value: "Low–Medium" },
-];
-
-/** Risk intelligence layer. */
-export const riskFactors: RiskItem[] = [
+  { id: "occupancy", value: "+18% — +32%", label: "рост загрузки" },
+  { id: "revenue", value: "+20% — +40%", label: "рост доходности" },
+  { id: "model", value: "Стабилизация", label: "операционной модели" },
   {
     id: "seasonality",
-    factor: "Seasonality exposure",
-    level: "Medium",
-    note: "Summer-weighted demand managed via base-demand contracts.",
-  },
-  {
-    id: "demand",
-    factor: "Demand volatility",
-    level: "Low–Medium",
-    note: "Diversified channels and corporate base reduce swings.",
-  },
-  {
-    id: "labor",
-    factor: "Labor dependency",
-    level: "Medium",
-    note: "Standardised staffing models limit single-point reliance.",
-  },
-  {
-    id: "cost",
-    factor: "Cost pressure",
-    level: "Low–Medium",
-    note: "Procurement control and budget discipline in place.",
-  },
-  {
-    id: "sensitivity",
-    factor: "Occupancy sensitivity",
-    level: "Low–Medium",
-    note: "Length-of-stay and corporate mix stabilise occupancy.",
+    value: "Сезонность",
+    label: "повышение эффективности управления сезонностью",
   },
 ];
 
-export const investmentDecision =
-  "HMS provides full operational control and performance responsibility across hospitality assets in Saint Petersburg. If you own a hospitality asset, we can run an operational evaluation and propose a management model.";
-
-/** Action system (contact). */
-export const systemActions: SystemAction[] = [
-  {
-    id: "evaluation",
-    label: "Request Asset Evaluation",
-    note: "Operational and financial review of your property.",
-  },
-  {
-    id: "management",
-    label: "Submit Hotel for Management",
-    note: "Transfer an asset under HMS operational control.",
-  },
-  {
-    id: "investment",
-    label: "Discuss Investment Model",
-    note: "Ownership and management economics for investors.",
-  },
-];
+/** Для владельцев объектов. */
+export const ownersStatement =
+  "Если вы владеете гостиничным объектом в Санкт-Петербурге, HMS может провести оценку текущей операционной модели и предложить формат управления.";

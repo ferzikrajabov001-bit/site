@@ -2,7 +2,7 @@ import type { CaseMetric } from "@/data/types";
 import { cn } from "@/lib/utils";
 
 function format(metric: CaseMetric, value: number) {
-  if (metric.unit === "€") return `€${value.toLocaleString("en-US")}`;
+  if (metric.unit === "₽") return `${value.toLocaleString("ru-RU")} ₽`;
   if (metric.unit === "%") return `${value}%`;
   return `${value} ${metric.unit}`;
 }

@@ -12,7 +12,7 @@ export function JsonLd() {
     telephone: siteConfig.contact.phone,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Bolshaya Morskaya St. 18",
+      streetAddress: "ул. Большая Морская, 18",
       addressLocality: siteConfig.contact.city,
       addressCountry: "RU",
     },

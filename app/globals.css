@@ -49,15 +49,14 @@ body {
     @apply border-t border-line;
   }
   .index-num {
-    @apply font-mono text-xs font-medium tracking-[0.1em] text-faint tabular-nums;
+    @apply font-sans text-xs font-medium tracking-[0.14em] text-faint tabular-nums;
   }
-  /* Terminal-style label: uppercase monospace, wide tracking. */
+  /* Раздел: заглавные, разреженные — как рубрика в отчёте. */
   .sys-label {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-muted;
+    @apply text-[11px] font-medium uppercase tracking-[0.16em] text-muted;
   }
-  /* Dense tabular data. */
   .data {
-    @apply font-mono tabular-nums;
+    @apply tabular-nums;
   }
 }
 

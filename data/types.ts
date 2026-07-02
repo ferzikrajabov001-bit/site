@@ -1,25 +1,14 @@
 /**
- * Domain model for the HMS asset management system. Structured for reuse by
- * every layer (portfolio control, asset intelligence, performance, risk).
+ * Доменные типы. Описаны так, чтобы их можно было переиспользовать
+ * в будущих разделах (кабинет собственника, отчётность, CRM).
  */
 
-export type Trend = "up" | "flat" | "down";
-export type AssetStatus = "Stable" | "Improving" | "Strong";
-export type RiskLevel = "Low" | "Low–Medium" | "Medium" | "Medium–High" | "High";
+export type AssetStatus = "Под управлением" | "Стабилизация" | "Запуск";
 
 export interface AssetKpi {
-  occupancy: number; // %
-  adr: number; // EUR
-  revpar: number; // EUR
-}
-
-export interface AssetIntelligence {
-  occupancySeries: number[];
-  adrSeries: number[];
-  revenueSeries: number[];
-  seasonalRisk: RiskLevel;
-  demandVolatility: RiskLevel;
-  notes: string[];
+  occupancy: number; // загрузка, %
+  adr: number; // средний тариф, ₽
+  revpar: number; // доход на номер, ₽
 }
 
 export interface Asset {
@@ -31,9 +20,10 @@ export interface Asset {
   rooms: number;
   managedSince: number;
   status: AssetStatus;
-  trend: Trend;
+  summary: string;
+  description: string;
+  highlights: string[];
   kpi: AssetKpi;
-  intelligence: AssetIntelligence;
 }
 
 export interface ModelItem {
@@ -42,23 +32,10 @@ export interface ModelItem {
   note: string;
 }
 
-export interface RiskItem {
-  id: string;
-  factor: string;
-  level: RiskLevel;
-  note: string;
-}
-
 export interface PerformanceLine {
   id: string;
   value: string;
   label: string;
-}
-
-export interface SystemAction {
-  id: string;
-  label: string;
-  note: string;
 }
 
 export interface CaseMetric {

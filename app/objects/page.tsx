@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { assets } from "@/data";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/Container";
-import { PortfolioTable } from "@/components/PortfolioTable";
+import { ObjectRow } from "@/components/ObjectRow";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Портфель",
   description:
-    "Portfolio control layer — five hospitality assets under HMS management in Saint Petersburg with occupancy, ADR, RevPAR, trend and status.",
+    "Портфель управляющей компании HMS — пять гостиничных объектов в разных районах Санкт-Петербурга с показателями загрузки и доходности.",
   alternates: { canonical: "/objects" },
 };
 
@@ -16,21 +16,24 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHeader
-        index="02"
-        label="Portfolio Control"
-        title="Assets under management"
-        intro="Five hospitality assets in Saint Petersburg, operated on a single control system. Select an asset for its intelligence layer."
+        label="Портфель объектов"
+        title="Объекты под управлением"
+        intro="Пять объектов в разных районах Санкт-Петербурга — от бутик-отеля до крупной гостиницы и апартаментов для длительного проживания."
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16">
         <Container>
-          <PortfolioTable assets={assets} />
+          <div className="border-b border-line">
+            {assets.map((asset) => (
+              <ObjectRow key={asset.id} asset={asset} />
+            ))}
+          </div>
         </Container>
       </section>
 
       <CTA
-        text="Transfer an asset under HMS operational control, or request an evaluation of your property."
-        buttonLabel="Submit Hotel for Management"
+        text="Рассматриваете передачу объекта в управление? Проведём оценку операционной модели и предложим формат работы."
+        buttonLabel="Обсудить объект"
       />
     </>
   );

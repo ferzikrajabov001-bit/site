@@ -3,53 +3,53 @@ import type { TeamArea } from "./types";
 export const companyPrinciples = [
   {
     id: "responsibility",
-    title: "Performance responsibility",
+    title: "Отвечаем за результат",
     description:
-      "We take assets under full management and operate against metrics — occupancy, revenue and cost — not recommendations.",
+      "Берём объект в управление и работаем с показателями — загрузкой, доходностью и расходами, — а не с рекомендациями.",
   },
   {
     id: "system",
-    title: "System over individuals",
+    title: "Работаем системно",
     description:
-      "Results come from processes and standards, which makes asset performance predictable.",
+      "Результат обеспечивают процессы и стандарты, а не отдельные люди. Это делает работу объекта предсказуемой.",
   },
   {
     id: "transparency",
-    title: "Transparent reporting",
+    title: "Прозрачная отчётность",
     description:
-      "Owners receive monthly P&L, budget variance and KPI reporting with full visibility.",
+      "Собственник ежемесячно видит финансовый результат объекта: бюджет, отклонения и ключевые показатели.",
   },
   {
     id: "local",
-    title: "Local market depth",
+    title: "Знаем город",
     description:
-      "We operate only in Saint Petersburg and understand its seasonality, demand and competitive set.",
+      "Работаем в Санкт-Петербурге и понимаем сезонность, спрос и конкурентную среду каждого района.",
   },
 ];
 
 export const teamAreas: TeamArea[] = [
   {
     id: "operations",
-    role: "Operations",
+    role: "Операционное управление",
     description:
-      "General managers and heads of department accountable for daily operations and service standards.",
+      "Управляющие объектами и руководители служб, отвечающие за ежедневную работу гостиниц и стандарты сервиса.",
   },
   {
     id: "revenue",
-    role: "Revenue management",
+    role: "Управление доходностью",
     description:
-      "Revenue managers running pricing, channel mix and occupancy across the portfolio.",
+      "Revenue-менеджеры, которые работают с тарифами, каналами и загрузкой номерного фонда.",
   },
   {
     id: "finance",
-    role: "Finance & control",
+    role: "Финансы и контроль",
     description:
-      "Finance function managing budgets, cost control and owner reporting.",
+      "Финансовая служба, которая ведёт бюджет объектов, контролирует расходы и готовит отчётность собственнику.",
   },
 ];
 
 export const companyStory = [
-  "HMS is a hospitality asset management company operating hotels and aparthotels in Saint Petersburg under full operational control.",
-  "The company grew out of practice: the team operated individual assets, then consolidated a shared operating model, reporting and revenue discipline into a single management platform.",
-  "Today five assets across the city are under management — from a boutique hotel to a large business hotel and extended-stay apartments.",
+  "HMS — операционная управляющая компания гостиничного бизнеса. Мы принимаем гостиницы и апарт-отели в управление и отвечаем за их операционную работу и финансовый результат.",
+  "Компания выросла из практики: команда управляла отдельными объектами, а затем собрала общий операционный подход, отчётность и работу с доходностью в единую управляющую структуру.",
+  "Сегодня под управлением пять объектов в разных районах города — от небольшого бутик-отеля до крупной гостиницы и апартаментов для длительного проживания.",
 ];

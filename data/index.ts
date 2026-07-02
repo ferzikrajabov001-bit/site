@@ -1,14 +1,11 @@
 export * from "./types";
 export { assets, getAssetById, getAssetIds } from "./assets";
 export {
-  overview,
-  investmentContext,
-  operatingModel,
+  aboutParagraphs,
+  services,
+  approachParagraphs,
   performanceLines,
-  performanceIndex,
-  riskFactors,
-  investmentDecision,
-  systemActions,
+  ownersStatement,
 } from "./system";
 export { caseStudies } from "./cases";
 export { companyPrinciples, teamAreas, companyStory } from "./company";

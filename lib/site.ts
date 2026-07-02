@@ -1,31 +1,29 @@
 /**
- * Central system configuration: brand, contacts, navigation.
- * Single source of truth reused across every layer of the platform.
+ * Единая конфигурация сайта: бренд, контакты, навигация.
  */
 export const siteConfig = {
   name: "Hotel Management Solutions",
   shortName: "HMS",
-  system: "Hospitality Asset Management System",
   tagline:
-    "HMS provides full operational control and performance responsibility across hospitality assets in Saint Petersburg.",
+    "HMS управляет гостиничными объектами в Санкт-Петербурге и отвечает за их операционную эффективность и доходность.",
   description:
-    "HMS — Hospitality Asset Management System. Full operational control, revenue management and performance responsibility across a five-asset hospitality portfolio in Saint Petersburg.",
+    "HMS — операционная управляющая компания гостиничного бизнеса в Санкт-Петербурге. Пять объектов под управлением: управление загрузкой и доходностью, операционный контроль, финансовая отчётность.",
   url: "https://hms-management.ru",
-  locale: "en_US",
+  locale: "ru_RU",
   contact: {
     phone: "+7 (812) 429-00-00",
     email: "office@hms-management.ru",
-    address: "Bolshaya Morskaya St. 18, Saint Petersburg",
-    city: "Saint Petersburg",
-    country: "Russia",
-    hours: "Mon–Fri, 10:00–19:00",
+    address: "Санкт-Петербург, ул. Большая Морская, 18",
+    city: "Санкт-Петербург",
+    country: "Россия",
+    hours: "Пн–Пт, 10:00–19:00",
   },
 } as const;
 
 export const navLinks = [
-  { label: "Portfolio", href: "/objects" },
-  { label: "Operating Model", href: "/services" },
-  { label: "Performance", href: "/cases" },
-  { label: "Company", href: "/about" },
-  { label: "Contact", href: "/contacts" },
+  { label: "О компании", href: "/about" },
+  { label: "Услуги", href: "/services" },
+  { label: "Портфель", href: "/objects" },
+  { label: "Результаты", href: "/cases" },
+  { label: "Контакты", href: "/contacts" },
 ] as const;

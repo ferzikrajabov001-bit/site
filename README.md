@@ -1,31 +1,27 @@
 # Hotel Management Solutions (HMS)
 
-**Hospitality Asset Management System** — a corporate platform for a hotel
-asset management company operating five assets in Saint Petersburg.
+Корпоративный сайт управляющей компании гостиничных активов в Санкт-Петербурге
+(5 объектов под управлением). Институциональный редакционный стиль уровня
+инвестиционного отчёта JLL / CBRE: типографика как основной инструмент, воздух,
+тонкие линии, асимметрия — не SaaS и не дашборд.
 
-The interface is designed as a decision system (Bloomberg Terminal data density +
-JLL/CBRE report structure + McKinsey clarity), not a marketing website: dense data
-tables, monospaced figures, layered structure, thin separators and large negative
-space.
+## Дизайн
 
-## Design system
+- Фон `#F6F5F2`, графит `#1C1F26`, акцент `#2F6BFF`, линии `#DADCE0`.
+- Типографика: **Inter** (текст) + **Source Serif 4** (заголовки).
+- Без карточек, сеток-как-основы, dashboard-интерфейсов, glassmorphism и
+  icon-driven UI. Текст > UI.
+- Framer Motion — только мягкое появление секций (уважает `prefers-reduced-motion`).
 
-- Paper `#F6F5F2`, graphite `#1C1F26`, accent `#2F6BFF`, hairlines `#DADCE0`.
-- Type: **Inter** (structure/text), **Source Serif 4** (headlines), **IBM Plex Mono**
-  (data, labels, tables — the "terminal" layer).
-- No cards, no grid-as-structure, no dashboards, no glassmorphism, no icon-driven UI.
-- Framer Motion is used only for a subtle opacity fade-in (respects `prefers-reduced-motion`).
+## Технологии
 
-## Tech
-
-- **Next.js 14** (App Router, server-first — nearly everything is statically prerendered)
+- **Next.js 14** (App Router, server-first — почти всё статически пререндерится)
 - **TypeScript**
-- **Tailwind CSS** (minimal, token-driven)
-- **Framer Motion** (fade-in only)
-- Lightweight inline SVG sparklines (no chart library)
-- SEO-first (metadata, OpenGraph, sitemap, robots, JSON-LD)
+- **Tailwind CSS** (минимально, на токенах)
+- **Framer Motion** (только fade-in)
+- SEO-first (metadata, OpenGraph, sitemap, robots, JSON-LD), `lang="ru"`
 
-## Run
+## Запуск
 
 ```bash
 npm install
@@ -35,36 +31,34 @@ npm run start
 npm run lint
 ```
 
-## Structure (system layers)
+## Структура
 
 ```
 app/
-  page.tsx              # Global Overview → Portfolio Control → Operating Model →
-                        # Performance Engine → Risk Intelligence →
-                        # Investment Decision → Action System
-  objects/              # Portfolio Control (full data table)
-  objects/[id]/         # Asset Intelligence (KPIs, sparklines, risk, notes)
-  services/             # Operating Model
-  cases/                # Performance (before/after evidence)
-  about/                # Company
-  contacts/             # Action System (actions + request form)
+  page.tsx              # Hero → О компании → Чем мы занимаемся → Подход →
+                        # Портфель → Результаты → Владельцам → Контакты
+  objects/              # Портфель (список)
+  objects/[id]/         # Страница объекта (SSG + динамические metadata)
+  services/             # Услуги (чем мы занимаемся)
+  cases/                # Результаты (кейсы, до/после)
+  about/                # О компании
+  contacts/             # Контакты (реквизиты + форма запроса)
   layout.tsx sitemap.ts robots.ts manifest.ts icon.svg not-found.tsx
 
-sections/               # Home layers (GlobalOverview, InvestmentContext,
-                        # PortfolioControl, OperatingModel, PerformanceEngine,
-                        # RiskIntelligence, InvestmentDecision, ActionSystem, CTA)
-components/             # PortfolioTable, Sparkline, Trend, Layer, PageHeader,
-                        # ContactForm, BeforeAfter, Navbar, Footer, …
-data/                   # assets, system (operating model / performance / risk /
-                        # actions), cases, company, types
+sections/               # Секции главной: Hero, About, Services, Approach,
+                        # Portfolio, Results, Owners, Contacts, CTA
+components/             # ObjectRow, Layer, PageHeader, BeforeAfter, ContactForm,
+                        # Navbar, Footer, Logo, Button, Container, Reveal, …
+data/                   # assets, system (about / services / approach / results /
+                        # owners), cases, company, types
 lib/                    # site config + utils
 ```
 
-## Prepared for scale
+## Подготовлено к развитию
 
-- Single source of truth (`lib/site.ts`) and typed domain model (`data/types.ts`)
-  reusable by an owner dashboard, analytics or CRM.
-- Lead capture isolated behind one `submit()` for a future API/CRM.
+- Единый источник данных (`lib/site.ts`) и типизированная доменная модель
+  (`data/types.ts`) под будущие разделы (кабинет собственника, отчётность, CRM).
+- Отправка формы вынесена в `submit()` — легко подключить API/CRM.
 
-> All asset names and figures are illustrative demonstration data. Replace them and
-> the contacts in `lib/site.ts` before launch.
+> Названия объектов и показатели — демонстрационные данные. Перед запуском
+> замените их и контакты в `lib/site.ts` на реальные.

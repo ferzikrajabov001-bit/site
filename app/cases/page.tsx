@@ -7,20 +7,19 @@ import { BeforeAfter } from "@/components/BeforeAfter";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Performance",
+  title: "Результаты",
   description:
-    "Performance evidence across HMS-managed assets: before-and-after occupancy, ADR and RevPAR over the first management period.",
+    "Результаты по объектам под управлением HMS: рост загрузки, ADR и RevPAR за первый период управления. Только бизнес-показатели.",
   alternates: { canonical: "/cases" },
 };
 
-export default function PerformancePage() {
+export default function ResultsPage() {
   return (
     <>
       <PageHeader
-        index="04"
-        label="Performance"
-        title="Evidence across managed assets"
-        intro="What changes after an asset is placed under management. Business metrics over the first management period."
+        label="Результаты"
+        title="Результаты по объектам"
+        intro="Что меняется после передачи объекта в управление. Бизнес-показатели за первый период управления."
       />
 
       <section className="py-8 sm:py-12">
@@ -49,7 +48,7 @@ export default function PerformancePage() {
 
                 <div className="lg:col-span-7">
                   <Reveal delay={0.08}>
-                    <p className="sys-label">Actions</p>
+                    <p className="sys-label">Что сделали</p>
                     <ul className="mt-4 space-y-3">
                       {study.actions.map((action, idx) => (
                         <li

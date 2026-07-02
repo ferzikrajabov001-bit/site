@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { systemActions } from "@/data";
 import { siteConfig } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/Container";
@@ -7,35 +6,30 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Контакты",
   description:
-    "Action system — request an asset evaluation, submit a hotel for management, or discuss an investment model with HMS in Saint Petersburg.",
+    "Свяжитесь с HMS в Санкт-Петербурге, чтобы обсудить управление объектом или получить оценку доходности гостиницы.",
   alternates: { canonical: "/contacts" },
 };
 
+const phoneHref = `tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`;
+
 const details = [
-  { label: "Location", value: siteConfig.contact.city },
-  {
-    label: "Email",
-    value: siteConfig.contact.email,
-    href: `mailto:${siteConfig.contact.email}`,
-  },
-  {
-    label: "Phone",
-    value: siteConfig.contact.phone,
-    href: `tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`,
-  },
-  { label: "Hours", value: siteConfig.contact.hours },
+  { label: "Город", value: siteConfig.contact.city },
+  { label: "E-mail", value: siteConfig.contact.email, href: `mailto:${siteConfig.contact.email}` },
+  { label: "Телефон", value: siteConfig.contact.phone, href: phoneHref },
+  { label: "Часы работы", value: siteConfig.contact.hours },
 ];
 
-export default function ContactPage() {
+const requests = ["управление объектом", "оценка доходности"];
+
+export default function ContactsPage() {
   return (
     <>
       <PageHeader
-        index="07"
-        label="Action System"
-        title="Initiate a decision"
-        intro="Request an evaluation, submit an asset for management, or discuss an investment model."
+        label="Контакты"
+        title="Обсудить объект"
+        intro="Если вы владелец гостиничного объекта или инвестор — расскажите об объекте, и мы предложим формат управления."
       />
 
       <section className="py-16 sm:py-24">
@@ -43,27 +37,14 @@ export default function ContactPage() {
           <div className="grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
-                <div className="border-t border-graphite/30">
-                  {systemActions.map((action) => (
-                    <div key={action.id} className="border-b border-line py-5">
-                      <p className="font-medium text-graphite">{action.label}</p>
-                      <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
-                        {action.note}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.08}>
-                <dl className="mt-12">
+                <dl className="border-t border-line">
                   {details.map((detail) => (
                     <div
                       key={detail.label}
-                      className="flex items-baseline justify-between gap-6 border-b border-line py-4 first:border-t"
+                      className="flex items-baseline justify-between gap-6 border-b border-line py-5"
                     >
-                      <dt className="sys-label">{detail.label}</dt>
-                      <dd className="font-mono text-[15px] text-graphite">
+                      <dt className="text-sm text-muted">{detail.label}</dt>
+                      <dd className="text-right text-[15px] font-medium text-graphite">
                         {detail.href ? (
                           <a
                             href={detail.href}
@@ -78,6 +59,15 @@ export default function ContactPage() {
                     </div>
                   ))}
                 </dl>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <p className="mt-10 sys-label">Запрос</p>
+                <ul className="mt-3 space-y-1.5 text-[15px] text-muted">
+                  {requests.map((r) => (
+                    <li key={r}>— {r}</li>
+                  ))}
+                </ul>
               </Reveal>
             </div>
 

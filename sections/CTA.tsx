@@ -10,8 +10,8 @@ interface CTAProps {
 }
 
 export function CTA({
-  text = "If you own a hospitality asset, HMS can run an operational evaluation and propose a management model.",
-  buttonLabel = "Request Asset Evaluation",
+  text = "Если вы владеете гостиничным объектом в Санкт-Петербурге, HMS может провести оценку операционной модели и предложить формат управления.",
+  buttonLabel = "Обсудить объект",
   buttonHref = "/contacts",
 }: CTAProps) {
   return (

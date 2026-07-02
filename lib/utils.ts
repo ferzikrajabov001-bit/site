@@ -6,8 +6,8 @@ export function cn(...inputs: Array<string | false | null | undefined>): string 
 }
 
 /**
- * Currency formatting in EUR without fractional part.
+ * Форматирование денежных значений в рублях без дробной части.
  */
-export function formatEur(value: number): string {
-  return `€${value.toLocaleString("en-US")}`;
+export function formatRub(value: number): string {
+  return `${value.toLocaleString("ru-RU")} ₽`;
 }

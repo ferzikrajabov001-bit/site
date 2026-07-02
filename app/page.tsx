@@ -1,25 +1,25 @@
 import {
-  GlobalOverview,
-  InvestmentContext,
-  PortfolioControl,
-  OperatingModel,
-  PerformanceEngine,
-  RiskIntelligence,
-  InvestmentDecision,
-  ActionSystem,
+  Hero,
+  About,
+  Services,
+  Approach,
+  Portfolio,
+  Results,
+  Owners,
+  Contacts,
 } from "@/sections";
 
 export default function HomePage() {
   return (
     <>
-      <GlobalOverview />
-      <InvestmentContext />
-      <PortfolioControl />
-      <OperatingModel />
-      <PerformanceEngine />
-      <RiskIntelligence />
-      <InvestmentDecision />
-      <ActionSystem />
+      <Hero />
+      <About />
+      <Services />
+      <Approach />
+      <Portfolio />
+      <Results />
+      <Owners />
+      <Contacts />
     </>
   );
 }

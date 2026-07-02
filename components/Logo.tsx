@@ -22,8 +22,8 @@ export function Logo({
           <span className="text-[15px] font-semibold tracking-tight text-graphite">
             {siteConfig.shortName}
           </span>
-          <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
-            Asset Management System
+          <span className="mt-1 text-[10px] uppercase tracking-[0.16em] text-faint">
+            Управление гостиничными активами
           </span>
         </span>
       ) : null}

@@ -72,16 +72,16 @@ export function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/contacts"
-              className="font-mono text-[13px] font-medium uppercase tracking-wide text-graphite transition-colors hover:text-accent"
+              className="text-sm font-medium text-graphite transition-colors hover:text-accent"
             >
-              Request Proposal
+              Обсудить объект
             </Link>
           </div>
 
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-graphite/15 text-graphite lg:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -117,7 +117,7 @@ export function Navbar() {
                 href="/contacts"
                 className="py-4 text-base font-medium text-accent"
               >
-                Request Proposal
+                Обсудить объект
               </Link>
             </Container>
           </motion.div>

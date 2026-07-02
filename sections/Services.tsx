@@ -1,12 +1,13 @@
-import { operatingModel } from "@/data";
+import { services } from "@/data";
 import { Layer } from "@/components/Layer";
 import { Reveal } from "@/components/Reveal";
+import { TextLink } from "@/components/Button";
 
-export function OperatingModel() {
+export function Services() {
   return (
-    <Layer index="03" label="Operating Model">
+    <Layer label="Чем мы занимаемся">
       <dl>
-        {operatingModel.map((item, i) => (
+        {services.map((item, i) => (
           <Reveal key={item.id} delay={(i % 3) * 0.04}>
             <div className="grid gap-2 border-t border-line py-7 sm:grid-cols-12 sm:gap-6">
               <dt className="font-serif text-xl font-normal tracking-tight text-graphite sm:col-span-5 sm:text-[1.4rem]">
@@ -19,6 +20,11 @@ export function OperatingModel() {
           </Reveal>
         ))}
       </dl>
+      <div className="mt-8">
+        <Reveal>
+          <TextLink href="/services">Подробнее об услугах</TextLink>
+        </Reveal>
+      </div>
     </Layer>
   );
 }
