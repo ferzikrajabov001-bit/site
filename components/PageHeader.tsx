@@ -1,14 +1,14 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { SectionLabel } from "@/components/SectionLabel";
 
 interface PageHeaderProps {
   label?: string;
+  index?: string;
   title: React.ReactNode;
   intro?: React.ReactNode;
 }
 
-export function PageHeader({ label, title, intro }: PageHeaderProps) {
+export function PageHeader({ label, index, title, intro }: PageHeaderProps) {
   return (
     <header className="border-b border-line pt-36 pb-16 sm:pt-44 sm:pb-20">
       <Container>
@@ -16,7 +16,10 @@ export function PageHeader({ label, title, intro }: PageHeaderProps) {
           <div className="lg:col-span-8">
             {label ? (
               <Reveal>
-                <SectionLabel>{label}</SectionLabel>
+                <p className="sys-label">
+                  {index ? <span className="text-faint">{index} · </span> : null}
+                  {label}
+                </p>
               </Reveal>
             ) : null}
             <Reveal delay={0.05}>

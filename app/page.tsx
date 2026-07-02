@@ -1,23 +1,25 @@
 import {
-  Hero,
-  Context,
-  Approach,
-  Objects,
-  Results,
-  Owners,
-  ContactMinimal,
+  GlobalOverview,
+  InvestmentContext,
+  PortfolioControl,
+  OperatingModel,
+  PerformanceEngine,
+  RiskIntelligence,
+  InvestmentDecision,
+  ActionSystem,
 } from "@/sections";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Context />
-      <Approach />
-      <Objects />
-      <Results />
-      <Owners />
-      <ContactMinimal />
+      <GlobalOverview />
+      <InvestmentContext />
+      <PortfolioControl />
+      <OperatingModel />
+      <PerformanceEngine />
+      <RiskIntelligence />
+      <InvestmentDecision />
+      <ActionSystem />
     </>
   );
 }

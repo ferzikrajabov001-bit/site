@@ -14,15 +14,13 @@ export function Footer() {
           <div className="max-w-sm">
             <Logo />
             <p className="mt-5 text-sm leading-relaxed text-muted">
-              Управляющая компания гостиничного бизнеса. Принимаем объекты в
-              управление и отвечаем за их операционный и финансовый результат.
+              Hospitality asset management system. Full operational control and
+              performance responsibility across hotels in Saint Petersburg.
             </p>
           </div>
 
           <nav className="flex flex-col gap-3">
-            <p className="mb-1 text-xs uppercase tracking-[0.16em] text-faint">
-              Разделы
-            </p>
+            <p className="mb-1 sys-label">System</p>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -35,18 +33,16 @@ export function Footer() {
           </nav>
 
           <div className="flex flex-col gap-3">
-            <p className="mb-1 text-xs uppercase tracking-[0.16em] text-faint">
-              Контакты
-            </p>
+            <p className="mb-1 sys-label">Contact</p>
             <a
               href={phoneHref}
-              className="text-sm text-graphite transition-colors hover:text-accent"
+              className="font-mono text-sm text-graphite transition-colors hover:text-accent"
             >
               {siteConfig.contact.phone}
             </a>
             <a
               href={`mailto:${siteConfig.contact.email}`}
-              className="text-sm text-graphite transition-colors hover:text-accent"
+              className="font-mono text-sm text-graphite transition-colors hover:text-accent"
             >
               {siteConfig.contact.email}
             </a>
@@ -56,10 +52,10 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-line pt-8 text-xs text-faint sm:flex-row sm:items-center sm:justify-between">
-          <p>
+          <p className="font-mono">
             © {year} {siteConfig.name}
           </p>
-          <p>Санкт-Петербург · Управление гостиницами</p>
+          <p className="font-mono">Saint Petersburg · Hospitality Asset Management</p>
         </div>
       </Container>
     </footer>

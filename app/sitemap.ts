@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
-import { getObjectIds } from "@/data";
+import { getAssetIds } from "@/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -15,12 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const objectRoutes = getObjectIds().map((id) => ({
+  const assetRoutes = getAssetIds().map((id) => ({
     url: `${base}/objects/${id}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...objectRoutes];
+  return [...staticRoutes, ...assetRoutes];
 }

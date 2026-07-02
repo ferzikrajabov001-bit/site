@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter, Source_Serif_4, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/Navbar";
@@ -20,21 +20,28 @@ const serif = Source_Serif_4({
   style: ["normal", "italic"],
 });
 
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — управляющая компания гостиничного бизнеса`,
+    default: `${siteConfig.name} — ${siteConfig.system}`,
     template: `%s — ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "управляющая компания гостиниц",
-    "управление гостиницей",
-    "управление доходностью",
+    "hospitality asset management",
+    "hotel management company",
     "revenue management",
-    "гостиничный бизнес Санкт-Петербург",
-    "передать гостиницу в управление",
+    "hotel portfolio",
+    "Saint Petersburg hotels",
+    "asset operating system",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
@@ -42,7 +49,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — управляющая компания гостиничного бизнеса`,
+    title: `${siteConfig.name} — ${siteConfig.system}`,
     description: siteConfig.description,
   },
   robots: { index: true, follow: true },
@@ -58,7 +65,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru" className={`${sans.variable} ${serif.variable}`}>
+    <html
+      lang="en"
+      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+    >
       <body className="min-h-screen bg-paper font-sans text-graphite antialiased">
         <JsonLd />
         <Navbar />

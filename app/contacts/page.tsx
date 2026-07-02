@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { systemActions } from "@/data";
 import { siteConfig } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/Container";
@@ -6,28 +7,35 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Контакты",
+  title: "Contact",
   description:
-    "Свяжитесь с HMS в Санкт-Петербурге, чтобы обсудить передачу гостиницы в управление или оценку объекта.",
+    "Action system — request an asset evaluation, submit a hotel for management, or discuss an investment model with HMS in Saint Petersburg.",
   alternates: { canonical: "/contacts" },
 };
 
-const phoneHref = `tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`;
-
 const details = [
-  { label: "Телефон", value: siteConfig.contact.phone, href: phoneHref },
-  { label: "E-mail", value: siteConfig.contact.email, href: `mailto:${siteConfig.contact.email}` },
-  { label: "Адрес", value: siteConfig.contact.address },
-  { label: "Часы работы", value: siteConfig.contact.hours },
+  { label: "Location", value: siteConfig.contact.city },
+  {
+    label: "Email",
+    value: siteConfig.contact.email,
+    href: `mailto:${siteConfig.contact.email}`,
+  },
+  {
+    label: "Phone",
+    value: siteConfig.contact.phone,
+    href: `tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`,
+  },
+  { label: "Hours", value: siteConfig.contact.hours },
 ];
 
-export default function ContactsPage() {
+export default function ContactPage() {
   return (
     <>
       <PageHeader
-        label="Контакты"
-        title="Обсудить сотрудничество"
-        intro="Если вы владелец гостиницы или инвестор — расскажите об объекте, и мы предложим модель управления."
+        index="07"
+        label="Action System"
+        title="Initiate a decision"
+        intro="Request an evaluation, submit an asset for management, or discuss an investment model."
       />
 
       <section className="py-16 sm:py-24">
@@ -35,14 +43,27 @@ export default function ContactsPage() {
           <div className="grid gap-16 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
-                <dl className="border-t border-line">
+                <div className="border-t border-graphite/30">
+                  {systemActions.map((action) => (
+                    <div key={action.id} className="border-b border-line py-5">
+                      <p className="font-medium text-graphite">{action.label}</p>
+                      <p className="mt-1.5 text-[15px] leading-relaxed text-muted">
+                        {action.note}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <dl className="mt-12">
                   {details.map((detail) => (
                     <div
                       key={detail.label}
-                      className="flex items-start justify-between gap-6 border-b border-line py-5"
+                      className="flex items-baseline justify-between gap-6 border-b border-line py-4 first:border-t"
                     >
-                      <dt className="text-sm text-muted">{detail.label}</dt>
-                      <dd className="text-right text-[15px] font-medium text-graphite">
+                      <dt className="sys-label">{detail.label}</dt>
+                      <dd className="font-mono text-[15px] text-graphite">
                         {detail.href ? (
                           <a
                             href={detail.href}
@@ -57,13 +78,6 @@ export default function ContactsPage() {
                     </div>
                   ))}
                 </dl>
-              </Reveal>
-
-              <Reveal delay={0.08}>
-                <p className="mt-10 max-w-sm text-[15px] leading-relaxed text-muted">
-                  Работаем в Санкт-Петербурге. Встречи возможны в офисе или
-                  дистанционно.
-                </p>
               </Reveal>
             </div>
 

@@ -7,28 +7,29 @@ import { BeforeAfter } from "@/components/BeforeAfter";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Кейсы",
+  title: "Performance",
   description:
-    "Результаты по объектам под управлением HMS: рост загрузки, ADR и RevPAR за первый год работы. Только бизнес-показатели.",
+    "Performance evidence across HMS-managed assets: before-and-after occupancy, ADR and RevPAR over the first management period.",
   alternates: { canonical: "/cases" },
 };
 
-export default function CasesPage() {
+export default function PerformancePage() {
   return (
     <>
       <PageHeader
-        label="Кейсы"
-        title="Результаты по объектам"
-        intro="Что меняется после передачи объекта в управление. Показываем бизнес-показатели за первый год работы."
+        index="04"
+        label="Performance"
+        title="Evidence across managed assets"
+        intro="What changes after an asset is placed under management. Business metrics over the first management period."
       />
 
-      <section className="py-12 sm:py-16">
+      <section className="py-8 sm:py-12">
         <Container>
           {caseStudies.map((study) => (
             <div key={study.id} className="border-t border-line py-14 sm:py-16">
               <Reveal>
-                <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
-                  {study.object} · {study.district} · {study.period}
+                <p className="sys-label">
+                  {study.asset} · {study.district} · {study.period}
                 </p>
               </Reveal>
 
@@ -48,9 +49,7 @@ export default function CasesPage() {
 
                 <div className="lg:col-span-7">
                   <Reveal delay={0.08}>
-                    <p className="text-xs uppercase tracking-[0.12em] text-faint">
-                      Что сделали
-                    </p>
+                    <p className="sys-label">Actions</p>
                     <ul className="mt-4 space-y-3">
                       {study.actions.map((action, idx) => (
                         <li

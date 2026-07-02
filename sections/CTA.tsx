@@ -10,8 +10,8 @@ interface CTAProps {
 }
 
 export function CTA({
-  text = "Если вы владелец гостиницы или инвестор — мы можем провести оценку вашего объекта и предложить модель управления.",
-  buttonLabel = "Обсудить проект",
+  text = "If you own a hospitality asset, HMS can run an operational evaluation and propose a management model.",
+  buttonLabel = "Request Asset Evaluation",
   buttonHref = "/contacts",
 }: CTAProps) {
   return (
@@ -20,7 +20,7 @@ export function CTA({
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
             <Reveal>
-              <p className="max-w-2xl text-balance font-serif text-3xl font-normal leading-[1.2] tracking-tight text-paper sm:text-4xl md:text-[2.9rem]">
+              <p className="max-w-2xl text-balance font-serif text-2xl font-normal leading-[1.3] tracking-tight text-paper sm:text-3xl md:text-[2.4rem]">
                 {text}
               </p>
             </Reveal>
@@ -29,10 +29,10 @@ export function CTA({
             <Reveal delay={0.08}>
               <Link
                 href={buttonHref}
-                className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-[15px] font-medium text-graphite transition-colors duration-300 ease-editorial hover:bg-white"
+                className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-[15px] font-medium text-graphite transition-colors duration-300 hover:bg-white"
               >
                 {buttonLabel}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-editorial group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
             </Reveal>
           </div>

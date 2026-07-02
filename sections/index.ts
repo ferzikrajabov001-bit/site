@@ -1,8 +1,9 @@
-export { Hero } from "./Hero";
-export { Context } from "./Context";
-export { Approach } from "./Approach";
-export { Objects } from "./Objects";
-export { Results } from "./Results";
-export { Owners } from "./Owners";
-export { ContactMinimal } from "./ContactMinimal";
+export { GlobalOverview } from "./GlobalOverview";
+export { InvestmentContext } from "./InvestmentContext";
+export { PortfolioControl } from "./PortfolioControl";
+export { OperatingModel } from "./OperatingModel";
+export { PerformanceEngine } from "./PerformanceEngine";
+export { RiskIntelligence } from "./RiskIntelligence";
+export { InvestmentDecision } from "./InvestmentDecision";
+export { ActionSystem } from "./ActionSystem";
 export { CTA } from "./CTA";

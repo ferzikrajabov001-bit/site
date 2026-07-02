@@ -1,32 +1,31 @@
 /**
- * Единая конфигурация сайта: бренд, контакты, навигация.
- * Держим в одном месте, чтобы будущие разделы (личный кабинет владельца,
- * внутренняя отчётность, CRM) переиспользовали один источник данных.
+ * Central system configuration: brand, contacts, navigation.
+ * Single source of truth reused across every layer of the platform.
  */
 export const siteConfig = {
   name: "Hotel Management Solutions",
   shortName: "HMS",
-  legalName: "HMS — управляющая компания гостиничного бизнеса",
+  system: "Hospitality Asset Management System",
   tagline:
-    "HMS управляет гостиницами в Санкт-Петербурге. Мы отвечаем за операционную эффективность, продажи и финансовый результат объектов.",
+    "HMS provides full operational control and performance responsibility across hospitality assets in Saint Petersburg.",
   description:
-    "HMS — управляющая компания гостиничного бизнеса в Санкт-Петербурге. Пять объектов под управлением: операционное управление, управление доходностью, продажи, маркетинг и финансовая отчётность.",
+    "HMS — Hospitality Asset Management System. Full operational control, revenue management and performance responsibility across a five-asset hospitality portfolio in Saint Petersburg.",
   url: "https://hms-management.ru",
-  locale: "ru_RU",
+  locale: "en_US",
   contact: {
     phone: "+7 (812) 429-00-00",
     email: "office@hms-management.ru",
-    address: "Санкт-Петербург, ул. Большая Морская, 18",
-    city: "Санкт-Петербург",
-    country: "Россия",
-    hours: "Пн–Пт, 10:00–19:00",
+    address: "Bolshaya Morskaya St. 18, Saint Petersburg",
+    city: "Saint Petersburg",
+    country: "Russia",
+    hours: "Mon–Fri, 10:00–19:00",
   },
 } as const;
 
 export const navLinks = [
-  { label: "О компании", href: "/about" },
-  { label: "Услуги", href: "/services" },
-  { label: "Объекты", href: "/objects" },
-  { label: "Кейсы", href: "/cases" },
-  { label: "Контакты", href: "/contacts" },
+  { label: "Portfolio", href: "/objects" },
+  { label: "Operating Model", href: "/services" },
+  { label: "Performance", href: "/cases" },
+  { label: "Company", href: "/about" },
+  { label: "Contact", href: "/contacts" },
 ] as const;

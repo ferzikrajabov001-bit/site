@@ -15,12 +15,12 @@ type Status = "idle" | "submitting" | "success";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
- * Форма заявки. Отправка намеренно вынесена в отдельную функцию, чтобы позже
- * подключить API/CRM без изменения интерфейса.
+ * Request form. Submission is isolated in one function so a future API/CRM
+ * integration only replaces `submit`.
  */
 async function submit(data: FormState): Promise<void> {
   if (process.env.NODE_ENV === "development") {
-    console.debug("[HMS] заявка с формы", data);
+    console.debug("[HMS] request submitted", data);
   }
   await new Promise((resolve) => setTimeout(resolve, 800));
 }
@@ -32,10 +32,10 @@ export function ContactForm() {
 
   function validate(data: FormState): Partial<FormState> {
     const next: Partial<FormState> = {};
-    if (data.name.trim().length < 2) next.name = "Укажите имя.";
-    if (!EMAIL_RE.test(data.email)) next.email = "Укажите корректный e-mail.";
+    if (data.name.trim().length < 2) next.name = "Please enter your name.";
+    if (!EMAIL_RE.test(data.email)) next.email = "Please enter a valid email.";
     if (data.message.trim().length < 10)
-      next.message = "Коротко опишите объект или запрос.";
+      next.message = "Briefly describe the asset or request.";
     return next;
   }
 
@@ -60,17 +60,17 @@ export function ContactForm() {
     return (
       <div className="border-t border-line pt-8">
         <p className="font-serif text-2xl font-normal tracking-tight text-graphite">
-          Заявка отправлена.
+          Request received.
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-muted">
-          Мы свяжемся с вами в ближайшее время, чтобы обсудить объект.
+          We will get in touch shortly to discuss the asset.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
           className="mt-6 text-[15px] font-medium text-graphite underline decoration-line underline-offset-4 transition-colors hover:text-accent"
         >
-          Отправить ещё одну
+          Send another
         </button>
       </div>
     );
@@ -79,8 +79,8 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-7">
       <div>
-        <label htmlFor="name" className="text-xs uppercase tracking-[0.12em] text-faint">
-          Имя
+        <label htmlFor="name" className="sys-label">
+          Name
         </label>
         <input
           id="name"
@@ -90,7 +90,7 @@ export function ContactForm() {
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           className={fieldClass(!!errors.name)}
-          placeholder="Как к вам обращаться"
+          placeholder="Your name"
           aria-invalid={!!errors.name}
         />
         {errors.name ? (
@@ -99,8 +99,8 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="text-xs uppercase tracking-[0.12em] text-faint">
-          E-mail
+        <label htmlFor="email" className="sys-label">
+          Email
         </label>
         <input
           id="email"
@@ -110,7 +110,7 @@ export function ContactForm() {
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={fieldClass(!!errors.email)}
-          placeholder="you@company.ru"
+          placeholder="you@company.com"
           aria-invalid={!!errors.email}
         />
         {errors.email ? (
@@ -119,11 +119,8 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label
-          htmlFor="message"
-          className="text-xs uppercase tracking-[0.12em] text-faint"
-        >
-          Сообщение
+        <label htmlFor="message" className="sys-label">
+          Message
         </label>
         <textarea
           id="message"
@@ -132,7 +129,7 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           className={cn(fieldClass(!!errors.message), "resize-none")}
-          placeholder="Коротко об объекте: район, номерной фонд, задача"
+          placeholder="Asset details: district, room count, objective"
           aria-invalid={!!errors.message}
         />
         {errors.message ? (
@@ -143,11 +140,11 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-graphite px-6 py-3 text-[15px] font-medium text-paper transition-colors duration-300 ease-editorial hover:bg-graphite-soft disabled:opacity-60"
+        className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-graphite px-6 py-3 text-[15px] font-medium text-paper transition-colors duration-300 hover:bg-graphite-soft disabled:opacity-60"
       >
-        {status === "submitting" ? "Отправляем…" : "Отправить заявку"}
+        {status === "submitting" ? "Sending…" : "Submit request"}
         {status !== "submitting" ? (
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-editorial group-hover:translate-x-0.5" />
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
         ) : null}
       </button>
     </form>

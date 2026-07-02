@@ -1,39 +1,36 @@
 import type { Metadata } from "next";
-import { objects } from "@/data";
+import { assets } from "@/data";
 import { PageHeader } from "@/components/PageHeader";
 import { Container } from "@/components/Container";
-import { ObjectRow } from "@/components/ObjectRow";
+import { PortfolioTable } from "@/components/PortfolioTable";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Объекты",
+  title: "Portfolio",
   description:
-    "Портфель управляющей компании HMS — пять гостиниц и апарт-отелей в разных районах Санкт-Петербурга с показателями загрузки, ADR и RevPAR.",
+    "Portfolio control layer — five hospitality assets under HMS management in Saint Petersburg with occupancy, ADR, RevPAR, trend and status.",
   alternates: { canonical: "/objects" },
 };
 
-export default function ObjectsPage() {
+export default function PortfolioPage() {
   return (
     <>
       <PageHeader
-        label="Объекты"
-        title="Портфель под управлением"
-        intro="Пять объектов в разных районах Санкт-Петербурга — от бутик-отеля до крупной гостиницы и апартаментов для длительного проживания."
+        index="02"
+        label="Portfolio Control"
+        title="Assets under management"
+        intro="Five hospitality assets in Saint Petersburg, operated on a single control system. Select an asset for its intelligence layer."
       />
 
-      <section className="py-12 sm:py-16">
+      <section className="py-16 sm:py-20">
         <Container>
-          <div className="border-b border-line">
-            {objects.map((object) => (
-              <ObjectRow key={object.id} object={object} />
-            ))}
-          </div>
+          <PortfolioTable assets={assets} />
         </Container>
       </section>
 
       <CTA
-        text="Рассматриваете передачу объекта в управление? Проведём оценку и предложим модель работы."
-        buttonLabel="Передать объект в управление"
+        text="Transfer an asset under HMS operational control, or request an evaluation of your property."
+        buttonLabel="Submit Hotel for Management"
       />
     </>
   );
