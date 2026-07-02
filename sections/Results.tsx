@@ -1,44 +1,43 @@
-import { caseStudies } from "@/data";
+import { resultsSummary } from "@/data";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { SectionLabel } from "@/components/SectionLabel";
 import { TextLink } from "@/components/Button";
-import { BeforeAfter } from "@/components/BeforeAfter";
 
+/**
+ * Результаты в формате инвестиционного отчёта: диапазоны и формулировки,
+ * без графиков и интерфейсных элементов.
+ */
 export function Results() {
-  const example = caseStudies[0];
-
   return (
-    <section className="py-20 sm:py-28">
+    <section className="border-t border-line py-24 sm:py-32">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-3">
             <Reveal>
-              <SectionLabel index="05">Результаты</SectionLabel>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h2 className="mt-6 max-w-sm font-serif text-3xl font-normal leading-tight tracking-tight text-graphite sm:text-[2.4rem]">
-                Что меняется под управлением
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-muted">
-                Рост загрузки, рост доходности и стабильная операционная модель.
-                Ниже — пример по одному из объектов за первый год работы.
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
+                Результаты
               </p>
-              <div className="mt-6">
-                <TextLink href="/cases">Смотреть кейсы</TextLink>
-              </div>
             </Reveal>
           </div>
 
-          <div className="lg:col-span-8">
-            <Reveal delay={0.08}>
-              <p className="mb-6 text-sm text-muted">
-                {example.object} · {example.district} · {example.period}
-              </p>
-              <BeforeAfter metrics={example.metrics} />
-            </Reveal>
+          <div className="lg:col-span-9">
+            <dl>
+              {resultsSummary.map((item, i) => (
+                <Reveal key={item.id} delay={i * 0.05}>
+                  <div className="flex flex-col gap-1 border-t border-line py-8 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+                    <dt className="text-lg text-muted">{item.label}</dt>
+                    <dd className="font-serif text-3xl font-normal tabular-nums tracking-tight text-graphite sm:text-4xl">
+                      {item.value}
+                    </dd>
+                  </div>
+                </Reveal>
+              ))}
+            </dl>
+            <div className="mt-8">
+              <Reveal>
+                <TextLink href="/cases">Кейсы по объектам</TextLink>
+              </Reveal>
+            </div>
           </div>
         </div>
       </Container>

@@ -1,34 +1,37 @@
 import { objects } from "@/data";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { SectionLabel } from "@/components/SectionLabel";
 import { TextLink } from "@/components/Button";
 import { ObjectRow } from "@/components/ObjectRow";
 
+/**
+ * Объекты — список портфеля, а не карточки.
+ */
 export function Objects() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="border-t border-line py-24 sm:py-32">
       <Container>
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-3">
             <Reveal>
-              <SectionLabel index="04">Объекты</SectionLabel>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h2 className="mt-6 max-w-lg font-serif text-3xl font-normal leading-tight tracking-tight text-graphite sm:text-[2.4rem]">
-                Пять объектов под управлением в Санкт-Петербурге
-              </h2>
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
+                Объекты
+              </p>
             </Reveal>
           </div>
-          <Reveal delay={0.1}>
-            <TextLink href="/objects">Все объекты</TextLink>
-          </Reveal>
-        </div>
 
-        <div className="mt-14 border-b border-line">
-          {objects.map((object, i) => (
-            <ObjectRow key={object.id} object={object} index={i} />
-          ))}
+          <div className="lg:col-span-9">
+            <div className="border-b border-line">
+              {objects.map((object) => (
+                <ObjectRow key={object.id} object={object} />
+              ))}
+            </div>
+            <div className="mt-8">
+              <Reveal>
+                <TextLink href="/objects">Портфель объектов</TextLink>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

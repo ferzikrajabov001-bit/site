@@ -11,8 +11,8 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F7F7F5",
-          dim: "#EFEFEC",
+          DEFAULT: "#F6F5F2",
+          dim: "#EFEEEA",
           card: "#FFFFFF",
         },
         graphite: {
@@ -23,7 +23,7 @@ const config: Config = {
         ink: "#1C1F26",
         muted: "#5F646D",
         faint: "#9AA0A8",
-        line: "#E4E4DE",
+        line: "#DADCE0",
         accent: {
           DEFAULT: "#2F6BFF",
           deep: "#1E4FD6",

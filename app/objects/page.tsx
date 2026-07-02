@@ -24,8 +24,8 @@ export default function ObjectsPage() {
       <section className="py-12 sm:py-16">
         <Container>
           <div className="border-b border-line">
-            {objects.map((object, i) => (
-              <ObjectRow key={object.id} object={object} index={i} />
+            {objects.map((object) => (
+              <ObjectRow key={object.id} object={object} />
             ))}
           </div>
         </Container>

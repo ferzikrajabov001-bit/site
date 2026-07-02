@@ -1,23 +1,23 @@
 import {
   Hero,
-  Experience,
-  WhatWeDo,
+  Context,
   Approach,
   Objects,
   Results,
-  CTA,
+  Owners,
+  ContactMinimal,
 } from "@/sections";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Experience />
-      <WhatWeDo />
+      <Context />
       <Approach />
       <Objects />
       <Results />
-      <CTA />
+      <Owners />
+      <ContactMinimal />
     </>
   );
 }

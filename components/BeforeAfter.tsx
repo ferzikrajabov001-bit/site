@@ -13,8 +13,8 @@ function delta(before: number, after: number) {
 }
 
 /**
- * Числовое представление «до / после» в духе отчёта: без прогресс-баров и
- * ярких «зелёных» индикаторов, только аккуратные табличные значения.
+ * «До / после» в документальном виде: строки со значениями и разделителями,
+ * без таблиц-дашбордов и графиков.
  */
 export function BeforeAfter({
   metrics,
@@ -24,37 +24,23 @@ export function BeforeAfter({
   className?: string;
 }) {
   return (
-    <div className={cn("border-t border-line", className)}>
-      <div className="hidden grid-cols-12 gap-4 py-3 text-xs uppercase tracking-[0.12em] text-faint sm:grid">
-        <span className="col-span-4">Показатель</span>
-        <span className="col-span-3 text-right">Было</span>
-        <span className="col-span-3 text-right">Стало</span>
-        <span className="col-span-2 text-right">Изменение</span>
-      </div>
-      {metrics.map((metric) => {
-        const d = delta(metric.before, metric.after);
-        return (
-          <div
-            key={metric.label}
-            className="grid grid-cols-2 gap-2 border-t border-line py-4 sm:grid-cols-12 sm:gap-4 sm:py-5"
-          >
-            <span className="text-[15px] font-medium text-graphite sm:col-span-4">
-              {metric.label}
+    <dl className={cn("border-t border-line", className)}>
+      {metrics.map((metric) => (
+        <div
+          key={metric.label}
+          className="flex items-baseline justify-between gap-6 border-b border-line py-4"
+        >
+          <dt className="text-[15px] text-muted">{metric.label}</dt>
+          <dd className="flex items-baseline gap-4 tabular-nums">
+            <span className="text-[15px] text-graphite">
+              {format(metric, metric.before)} → {format(metric, metric.after)}
             </span>
-            <span className="text-sm tabular-nums text-muted sm:col-span-3 sm:text-right sm:text-[15px]">
-              <span className="text-faint sm:hidden">было </span>
-              {format(metric, metric.before)}
+            <span className="w-14 text-right text-[15px] font-medium text-accent">
+              +{delta(metric.before, metric.after)}%
             </span>
-            <span className="text-sm tabular-nums text-graphite sm:col-span-3 sm:text-right sm:text-[15px]">
-              <span className="text-faint sm:hidden">стало </span>
-              {format(metric, metric.after)}
-            </span>
-            <span className="col-span-2 text-sm font-medium tabular-nums text-accent sm:text-right sm:text-[15px]">
-              +{d}%
-            </span>
-          </div>
-        );
-      })}
-    </div>
+          </dd>
+        </div>
+      ))}
+    </dl>
   );
 }

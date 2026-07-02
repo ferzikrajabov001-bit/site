@@ -7,10 +7,11 @@
 
 ## Дизайн
 
-- Светлый тёплый фон (`#F7F7F5`), графит (`#1C1F26`), холодный синий акцент (`#2F6BFF`).
-- Типографика: **Inter** (интерфейс/текст) + **Source Serif 4** (заголовки, editorial-ритм).
-- Тонкие линии, много воздуха, лёгкая асимметрия блоков, отсутствие «одинаковых карточек».
-- Без glassmorphism и SaaS-паттернов. Framer Motion — очень сдержанно.
+- Документальный editorial-стиль: как годовой отчёт / инвест-меморандум (уровень JLL / CBRE).
+- Молочный фон (`#F6F5F2`), графит (`#1C1F26`), холодный синий акцент (`#2F6BFF`), тонкие линии (`#DADCE0`).
+- Типографика: **Inter** (текст) + **Source Serif 4** (крупные заголовки и утверждения).
+- Без карточек, сеток 3×3, hover-эффектов, glassmorphism и dashboard-элементов.
+- Framer Motion — почти не используется (только едва заметное проявление непрозрачности).
 
 ## Технологии
 
@@ -43,8 +44,8 @@ app/
   contacts/             # Контакты (форма + реквизиты)
   layout.tsx sitemap.ts robots.ts manifest.ts icon.svg not-found.tsx
 
-sections/               # Секции главной: Hero, Experience, WhatWeDo,
-                        # Approach, Objects, Results, CTA
+sections/               # Секции главной: Hero, Context, Approach,
+                        # Objects, Results, Owners, ContactMinimal, CTA
 components/             # Navbar, Footer, ObjectRow, BeforeAfter, ContactForm,
                         # PageHeader, SectionLabel, Button, Container, Reveal, …
 data/                   # Русскоязычные данные: объекты, услуги, кейсы, опыт, компания

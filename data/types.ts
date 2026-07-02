@@ -3,13 +3,6 @@
  * в будущих продуктовых разделах (кабинет владельца, отчётность, CRM).
  */
 
-export interface ExperienceItem {
-  id: string;
-  value?: string;
-  label: string;
-  description: string;
-}
-
 export interface Service {
   id: string;
   title: string;
