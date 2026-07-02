@@ -1,82 +1,69 @@
 # Hotel Management Solutions (HMS)
 
-A production-ready, premium corporate website for **Hotel Management Solutions** — a
-full-cycle hotel management company operating five properties in Saint Petersburg, Russia.
+Корпоративный сайт управляющей компании гостиничного бизнеса в Санкт-Петербурге.
+Пять объектов под управлением. Задача сайта — вызывать доверие у владельца
+гостиницы и инвестора: спокойный премиальный минимализм, редакционная вёрстка,
+живые тексты в тоне реальной управляющей компании.
 
-Built as an investment-grade B2B product foundation: clean architecture, reusable
-components, typed dummy data, and a design system prepared for future product surfaces
-(admin panel, client dashboard, analytics, CRM).
+## Дизайн
 
-## Tech Stack
+- Светлый тёплый фон (`#F7F7F5`), графит (`#1C1F26`), холодный синий акцент (`#2F6BFF`).
+- Типографика: **Inter** (интерфейс/текст) + **Source Serif 4** (заголовки, editorial-ритм).
+- Тонкие линии, много воздуха, лёгкая асимметрия блоков, отсутствие «одинаковых карточек».
+- Без glassmorphism и SaaS-паттернов. Framer Motion — очень сдержанно.
 
-- **Next.js 14** (App Router)
+## Технологии
+
+- **Next.js 14** (App Router), server-first
 - **TypeScript**
-- **Tailwind CSS** (custom design tokens)
-- **Framer Motion** (scroll reveals, animated counters, micro-interactions)
-- Component-based, fully responsive, SEO optimized
+- **Tailwind CSS** (собственные токены)
+- **Framer Motion** (минимальные появления при прокрутке)
+- SEO-ready (metadata, OpenGraph, sitemap, robots, JSON-LD), адаптивность
 
-## Getting Started
+## Запуск
 
 ```bash
 npm install
-npm run dev
+npm run dev      # http://localhost:3000
+npm run build    # прод-сборка
+npm run start    # запуск прод-сборки
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
-Other scripts:
-
-```bash
-npm run build   # production build
-npm run start   # serve the production build
-npm run lint    # eslint (next/core-web-vitals + typescript)
-```
-
-## Project Structure
+## Структура
 
 ```
 app/
-  layout.tsx            # Root layout: fonts, SEO metadata, nav/footer, JSON-LD
-  page.tsx              # Home
-  about/page.tsx        # About
-  services/page.tsx     # Services
-  hotels/page.tsx       # Hotels (filterable explorer)
-  hotels/[id]/page.tsx  # Hotel detail (static params + dynamic metadata)
-  cases/page.tsx        # Case studies
-  contact/page.tsx      # Contact (form + location)
-  sitemap.ts robots.ts manifest.ts icon.svg not-found.tsx
+  page.tsx              # Главная
+  about/                # О компании
+  services/             # Услуги
+  objects/              # Объекты (список)
+  objects/[id]/         # Страница объекта (SSG + динамические metadata)
+  cases/                # Кейсы
+  contacts/             # Контакты (форма + реквизиты)
+  layout.tsx sitemap.ts robots.ts manifest.ts icon.svg not-found.tsx
 
-components/
-  Hero, Metrics, Services, WhyHMS, HotelsGrid, CaseStudies, CTA   # Home sections
-  Navbar, Footer, Logo, PageHeader, JsonLd                        # Layout / shared
-  HotelCard, HotelsExplorer, CaseStudyCard, ContactForm, HeroVisual
-  ui/                   # Reusable primitives (Container, Section, GlassCard,
-                        # Button, Badge, Reveal, Counter, SectionHeading, icons, ...)
-
-data/                   # Typed dummy data (hotels, services, cases, metrics, values)
-lib/                    # site config + utilities
+sections/               # Секции главной: Hero, Experience, WhatWeDo,
+                        # Approach, Objects, Results, CTA
+components/             # Navbar, Footer, ObjectRow, BeforeAfter, ContactForm,
+                        # PageHeader, SectionLabel, Button, Container, Reveal, …
+data/                   # Русскоязычные данные: объекты, услуги, кейсы, опыт, компания
+lib/                    # site.ts (бренд/контакты/навигация), utils.ts
 ```
 
-## Design System
+## Тон текстов
 
-- **Palette** — backgrounds `#0B1220` / `#111C2E`, text `#FFFFFF` / `#AAB4C0`,
-  accent `#2F6BFF`, subtle hairline borders. Defined as Tailwind tokens in
-  `tailwind.config.ts`.
-- **Type** — `Sora` for display, `Inter` for body (via `next/font`).
-- **Surfaces** — glassmorphism cards (`GlassCard`), ambient gradient backgrounds,
-  faint grid overlays.
-- **Motion** — scroll-triggered reveals and animated counters that respect
-  `prefers-reduced-motion`.
+Тексты написаны как у реальной управляющей компании — без маркетингового шума,
+без «инновационный / AI-powered / революционный». Ключевой принцип раздела
+«Подход»: *«Мы не работаем как консалтинговая компания. Мы берём объект в
+управление и отвечаем за его результат.»*
 
-## Prepared for Scale
+## Подготовлено к развитию
 
-The codebase is structured as a real product foundation:
+- Единый источник данных о бренде и контактах — `lib/site.ts`.
+- Типизированная доменная модель (`data/types.ts`) под будущие разделы
+  (кабинет владельца, отчётность, аналитика, CRM).
+- Отправка формы вынесена в отдельную функцию `submit()` — легко подключить API/CRM.
 
-- **Single source of truth** for branding/contact/navigation in `lib/site.ts`.
-- **Typed domain model** in `data/types.ts` reusable by future dashboards, analytics
-  and CRM features.
-- **Filter-ready** hotels explorer that derives filters from data.
-- **Decoupled lead capture** — `ContactForm` isolates submission behind a single
-  `submit()` function ready to be wired to an API/CRM.
-
-> All figures and property names are illustrative placeholder data.
+> Названия объектов и показатели — реалистичные демонстрационные данные.
+> Перед запуском замените их и контакты в `lib/site.ts` на реальные.
