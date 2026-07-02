@@ -4,9 +4,9 @@ import { siteConfig } from "@/lib/site";
 import { formatRub } from "@/lib/utils";
 
 /**
- * Строка портфеля в документальном стиле: название и город, под ним —
- * нейтральный статус (загрузка / ADR). Без колонок, стрелок и «карточной»
- * подсветки — только тонкий разделитель и смена цвета названия.
+ * Строка реестра портфеля: название и город слева, загрузка справа,
+ * под ней — нейтральный статус (район / ADR). Без карточек, колонок-таблиц
+ * и «стрелочных» hover-эффектов — только тонкая линия и смена цвета названия.
  */
 export function ObjectRow({ object }: { object: ManagedObject }) {
   return (
@@ -14,16 +14,17 @@ export function ObjectRow({ object }: { object: ManagedObject }) {
       href={`/objects/${object.id}`}
       className="group block border-t border-line py-7 sm:py-8"
     >
-      <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+      <div className="flex items-baseline justify-between gap-6">
         <h3 className="font-serif text-2xl font-normal leading-tight tracking-tight text-graphite transition-colors duration-200 group-hover:text-accent sm:text-[1.7rem]">
           {object.name}
           <span className="text-muted"> — {siteConfig.contact.city}</span>
         </h3>
-        <p className="shrink-0 text-sm text-faint">{object.category}</p>
+        <span className="shrink-0 text-lg tabular-nums text-graphite sm:text-xl">
+          {object.kpi.occupancy}%
+        </span>
       </div>
       <p className="mt-2 text-[15px] text-muted">
-        {object.district} · Загрузка {object.kpi.occupancy}% · ADR{" "}
-        {formatRub(object.kpi.adr)} · {object.status}
+        {object.district} · ADR {formatRub(object.kpi.adr)} · {object.status}
       </p>
     </Link>
   );

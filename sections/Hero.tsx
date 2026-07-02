@@ -40,7 +40,7 @@ export function Hero() {
               Обсудить управление объектом
             </Button>
             <Button href="/contacts" variant="secondary" size="lg">
-              Получить оценку гостиницы
+              Получить оценку доходности
             </Button>
           </div>
         </Reveal>

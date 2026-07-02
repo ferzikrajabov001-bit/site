@@ -14,7 +14,7 @@ export function Approach() {
           <div className="lg:col-span-3">
             <Reveal>
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                Подход к управлению
+                Операционная модель
               </p>
             </Reveal>
           </div>

@@ -39,7 +39,7 @@ export function Owners() {
                   href="/contacts"
                   className="text-[15px] font-medium text-paper/70 transition-colors hover:text-paper"
                 >
-                  Получить оценку гостиницы
+                  Получить оценку доходности
                 </Link>
               </div>
             </Reveal>

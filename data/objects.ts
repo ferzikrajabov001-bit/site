@@ -2,8 +2,8 @@ import type { ManagedObject } from "./types";
 
 export const objects: ManagedObject[] = [
   {
-    id: "fontanka-42",
-    name: "Отель «Фонтанка 42»",
+    id: "obukhovsky",
+    name: "Hotel Obukhovsky",
     category: "4★ · бизнес",
     district: "Центральный район",
     rooms: 64,
@@ -18,11 +18,11 @@ export const objects: ManagedObject[] = [
       "Восстановлены прямые продажи",
       "Стабильная годовая загрузка",
     ],
-    kpi: { occupancy: 79, adr: 9800, revpar: 7742 },
+    kpi: { occupancy: 81, adr: 9800, revpar: 7938 },
   },
   {
-    id: "galernaya",
-    name: "Бутик-отель «Галерная»",
+    id: "nevsky-loft",
+    name: "Hotel Nevsky Loft",
     category: "бутик",
     district: "Адмиралтейский район",
     rooms: 38,
@@ -37,18 +37,17 @@ export const objects: ManagedObject[] = [
       "Индивидуальный сервис",
       "Развитые прямые бронирования",
     ],
-    kpi: { occupancy: 74, adr: 12600, revpar: 9324 },
+    kpi: { occupancy: 78, adr: 12600, revpar: 9828 },
   },
   {
-    id: "petrogradskaya",
-    name: "Отель «Петроградская сторона»",
+    id: "petrograd",
+    name: "Hotel Petrograd",
     category: "4★ · бизнес",
     district: "Петроградский район",
     rooms: 82,
     managedSince: 2021,
     status: "Под управлением",
-    summary:
-      "Крупнейший объект портфеля с групповым и деловым спросом.",
+    summary: "Крупнейший объект портфеля с групповым и деловым спросом.",
     description:
       "Объект с наибольшим номерным фондом в портфеле. Основная задача — удерживать загрузку между пиками делового и событийного спроса. Для этого мы выстроили управление каналами и работу с группами и корпоративными договорами.",
     highlights: [
@@ -56,16 +55,35 @@ export const objects: ManagedObject[] = [
       "Групповой и деловой спрос",
       "Управление каналами продаж",
     ],
-    kpi: { occupancy: 77, adr: 8600, revpar: 6622 },
+    kpi: { occupancy: 84, adr: 8600, revpar: 7224 },
   },
   {
-    id: "vasilievsky",
-    name: "Апарт-отель «Васильевский»",
+    id: "central-inn",
+    name: "Hotel Central Inn",
+    category: "4★ · бизнес",
+    district: "Московский район",
+    rooms: 74,
+    managedSince: 2023,
+    status: "Под управлением",
+    summary:
+      "Объект рядом с деловой и транспортной инфраструктурой района.",
+    description:
+      "Отель с устойчивым транзитным и деловым спросом. Мы настроили операционную модель и структуру тарифов, стабилизировали загрузку и вывели объект на плановые показатели.",
+    highlights: [
+      "Транзитный и деловой спрос",
+      "Настроенная операционная модель",
+      "Плановые показатели загрузки",
+    ],
+    kpi: { occupancy: 76, adr: 9100, revpar: 6916 },
+  },
+  {
+    id: "riverside",
+    name: "Hotel Riverside",
     category: "апарт-отель",
     district: "Василеостровский район",
     rooms: 56,
     managedSince: 2022,
-    status: "Стабилизация",
+    status: "Под управлением",
     summary:
       "Апартаменты для длительного проживания корпоративных гостей.",
     description:
@@ -75,26 +93,7 @@ export const objects: ManagedObject[] = [
       "Корпоративные договоры",
       "Низкая стоимость привлечения",
     ],
-    kpi: { occupancy: 82, adr: 7400, revpar: 6068 },
-  },
-  {
-    id: "moskovsky-dvor",
-    name: "Отель «Московский двор»",
-    category: "4★ · бизнес",
-    district: "Московский район",
-    rooms: 74,
-    managedSince: 2023,
-    status: "Запуск",
-    summary:
-      "Объект на этапе запуска: настраиваем операционную модель и выход на рынок.",
-    description:
-      "Отель на этапе запуска рядом с деловой и транспортной инфраструктурой района. Готовим операционную модель, набираем команду, настраиваем системы и выводим объект на рынок до выхода на плановые показатели.",
-    highlights: [
-      "Этап запуска",
-      "Настройка операционной модели",
-      "Вывод на рынок",
-    ],
-    kpi: { occupancy: 58, adr: 8100, revpar: 4698 },
+    kpi: { occupancy: 80, adr: 8100, revpar: 6480 },
   },
 ];
 

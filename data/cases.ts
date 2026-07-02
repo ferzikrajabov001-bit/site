@@ -2,8 +2,8 @@ import type { CaseStudy } from "./types";
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "fontanka-turnaround",
-    object: "Отель «Фонтанка 42»",
+    id: "obukhovsky-turnaround",
+    object: "Hotel Obukhovsky",
     district: "Центральный район",
     period: "12 месяцев",
     summary:
@@ -16,14 +16,14 @@ export const caseStudies: CaseStudy[] = [
       "Ввели управление тарифами по сегментам",
     ],
     metrics: [
-      { label: "Загрузка", unit: "%", before: 66, after: 79 },
+      { label: "Загрузка", unit: "%", before: 66, after: 81 },
       { label: "ADR", unit: "₽", before: 7900, after: 9800 },
-      { label: "RevPAR", unit: "₽", before: 5214, after: 7742 },
+      { label: "RevPAR", unit: "₽", before: 5214, after: 7938 },
     ],
   },
   {
-    id: "galernaya-positioning",
-    object: "Бутик-отель «Галерная»",
+    id: "nevsky-loft-positioning",
+    object: "Hotel Nevsky Loft",
     district: "Адмиралтейский район",
     period: "9 месяцев",
     summary:
@@ -36,14 +36,14 @@ export const caseStudies: CaseStudy[] = [
       "Развили прямые бронирования",
     ],
     metrics: [
-      { label: "Загрузка", unit: "%", before: 69, after: 74 },
+      { label: "Загрузка", unit: "%", before: 69, after: 78 },
       { label: "ADR", unit: "₽", before: 9700, after: 12600 },
-      { label: "RevPAR", unit: "₽", before: 6693, after: 9324 },
+      { label: "RevPAR", unit: "₽", before: 6693, after: 9828 },
     ],
   },
   {
-    id: "petrogradskaya-stabilization",
-    object: "Отель «Петроградская сторона»",
+    id: "petrograd-stabilization",
+    object: "Hotel Petrograd",
     district: "Петроградский район",
     period: "14 месяцев",
     summary:
@@ -56,9 +56,9 @@ export const caseStudies: CaseStudy[] = [
       "Сформировали базовый спрос на межсезонье",
     ],
     metrics: [
-      { label: "Загрузка", unit: "%", before: 64, after: 77 },
+      { label: "Загрузка", unit: "%", before: 64, after: 84 },
       { label: "ADR", unit: "₽", before: 7500, after: 8600 },
-      { label: "RevPAR", unit: "₽", before: 4800, after: 6622 },
+      { label: "RevPAR", unit: "₽", before: 4800, after: 7224 },
     ],
   },
 ];

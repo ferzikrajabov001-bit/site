@@ -14,7 +14,7 @@ export function Context() {
           <div className="lg:col-span-3">
             <Reveal>
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                О компании
+                Инвестиционный контекст
               </p>
             </Reveal>
           </div>

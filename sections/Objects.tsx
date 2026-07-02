@@ -15,7 +15,7 @@ export function Objects() {
           <div className="lg:col-span-3">
             <Reveal>
               <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted">
-                Объекты
+                Портфель
               </p>
             </Reveal>
           </div>

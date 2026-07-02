@@ -25,8 +25,10 @@ export function Results() {
               {resultsSummary.map((item, i) => (
                 <Reveal key={item.id} delay={i * 0.05}>
                   <div className="flex flex-col gap-1 border-t border-line py-8 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                    <dt className="text-lg text-muted">{item.label}</dt>
-                    <dd className="font-serif text-3xl font-normal tabular-nums tracking-tight text-graphite sm:text-4xl">
+                    <dt className="order-2 text-lg text-muted sm:order-2 sm:pt-1">
+                      {item.label}
+                    </dt>
+                    <dd className="order-1 font-serif text-3xl font-normal tabular-nums tracking-tight text-graphite sm:order-1 sm:text-[2.6rem]">
                       {item.value}
                     </dd>
                   </div>
