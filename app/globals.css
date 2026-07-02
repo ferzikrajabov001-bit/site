@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-900: #0b1220;
+  --bg-800: #111c2e;
+  --text: #ffffff;
+  --muted: #aab4c0;
+  --accent: #2f6bff;
+  --hairline: #e6eaf2;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-900);
+  color: var(--text);
+  font-feature-settings: "ss01", "cv01", "cv11";
+}
+
+::selection {
+  background: rgba(47, 107, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1220;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d2c48;
+  border-radius: 999px;
+  border: 2px solid #0b1220;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3d63;
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+  .glass-strong {
+    @apply border border-white/10 bg-white/[0.06] backdrop-blur-2xl;
+  }
+  .hairline {
+    @apply border-white/10;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent;
+  }
+  .accent-gradient-text {
+    @apply bg-gradient-to-r from-accent-soft to-accent bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
