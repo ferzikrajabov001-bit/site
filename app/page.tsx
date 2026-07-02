@@ -1,9 +1,10 @@
 import {
   Hero,
   About,
-  Services,
   Approach,
+  Services,
   Portfolio,
+  OperationalStatement,
   Results,
   Owners,
   Contacts,
@@ -14,9 +15,10 @@ export default function HomePage() {
     <>
       <Hero />
       <About />
-      <Services />
       <Approach />
+      <Services />
       <Portfolio />
+      <OperationalStatement />
       <Results />
       <Owners />
       <Contacts />

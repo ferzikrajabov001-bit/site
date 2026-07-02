@@ -5,7 +5,7 @@ import { TextLink } from "@/components/Button";
 
 export function Services() {
   return (
-    <Layer label="Чем мы занимаемся">
+    <Layer label="Чем мы занимаемся" tone="dim" density="normal">
       <dl>
         {services.map((item, i) => (
           <Reveal key={item.id} delay={(i % 3) * 0.04}>

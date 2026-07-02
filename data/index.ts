@@ -5,6 +5,7 @@ export {
   services,
   approachParagraphs,
   performanceLines,
+  operationalStatement,
   ownersStatement,
 } from "./system";
 export { caseStudies } from "./cases";

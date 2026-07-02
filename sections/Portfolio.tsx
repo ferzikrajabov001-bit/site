@@ -6,7 +6,7 @@ import { ObjectRow } from "@/components/ObjectRow";
 
 export function Portfolio() {
   return (
-    <Layer label="Портфель объектов">
+    <Layer label="Портфель объектов" density="dense">
       <div className="border-b border-line">
         {assets.map((asset) => (
           <ObjectRow key={asset.id} asset={asset} />

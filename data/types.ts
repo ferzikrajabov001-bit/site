@@ -20,6 +20,7 @@ export interface Asset {
   rooms: number;
   managedSince: number;
   status: AssetStatus;
+  performanceNote: string;
   summary: string;
   description: string;
   highlights: string[];

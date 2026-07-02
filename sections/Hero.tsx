@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site";
  */
 export function Hero() {
   return (
-    <section className="pt-40 pb-20 sm:pt-52 sm:pb-28">
+    <section className="pt-44 pb-28 sm:pt-56 sm:pb-40">
       <Container>
         <Reveal>
           <p className="flex items-center gap-3 sys-label">
@@ -18,24 +18,24 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <h1 className="mt-8 max-w-[16ch] text-balance font-serif text-[2.6rem] font-normal leading-[1.05] tracking-tight text-graphite sm:text-6xl md:text-[4.4rem]">
+          <h1 className="mt-10 max-w-[15ch] text-balance font-serif text-[3rem] font-normal leading-[1.02] tracking-tight text-graphite sm:text-7xl md:text-[5.4rem] md:leading-[0.98]">
             Управляющая компания гостиничных активов
           </h1>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+          <p className="mt-12 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
             HMS управляет гостиничными объектами в Санкт-Петербурге и отвечает за
             их операционную эффективность и доходность.
           </p>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <p className="mt-8 text-sm text-faint">5 объектов под управлением</p>
+          <p className="mt-10 text-sm text-faint">5 объектов под управлением</p>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-col gap-3 border-t border-line pt-10 sm:flex-row">
+          <div className="mt-14 flex flex-col gap-3 border-t border-line pt-12 sm:flex-row">
             <Button href="/contacts" variant="primary" size="lg">
               Обсудить объект
             </Button>

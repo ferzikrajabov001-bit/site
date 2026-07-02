@@ -4,6 +4,7 @@ export { Services } from "./Services";
 export { Approach } from "./Approach";
 export { Portfolio } from "./Portfolio";
 export { Results } from "./Results";
+export { OperationalStatement } from "./OperationalStatement";
 export { Owners } from "./Owners";
 export { Contacts } from "./Contacts";
 export { CTA } from "./CTA";
