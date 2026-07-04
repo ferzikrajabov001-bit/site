@@ -1,7 +1,7 @@
 /**
  * Per-hotel visual identity: a themed gradient used for the photo-placeholder
- * block on the hotel card and hotel detail page. Restrained to the site's
- * institutional palette (deep green, brass, charcoal) with variation in
+ * plate on the hotel row and hotel detail page. Restrained to the site's
+ * investment-blue palette (deep navy, capital blue) with variation in
  * weighting per property rather than introducing extra hues.
  */
 export interface HotelVisual {
@@ -9,12 +9,12 @@ export interface HotelVisual {
 }
 
 const visuals: Record<string, HotelVisual> = {
-  "art-deco-nevsky": { gradient: "from-[#0A3327] via-[#0F4D3A] to-[#15130F]" },
-  "art-nouveau-palace": { gradient: "from-[#332C20] via-[#7A5A1E] to-[#15130F]" },
-  "art-deco-primorsky": { gradient: "from-[#463C2A] via-[#A97F2E] to-[#15130F]" },
-  "petrovsky-art-loft": { gradient: "from-[#211D16] via-[#463C2A] to-[#15130F]" },
-  "art-na-repino": { gradient: "from-[#0A3327] via-[#1D7A5B] to-[#15130F]" },
-  glampoint: { gradient: "from-[#15130F] via-[#0F4D3A] to-[#211D16]" },
+  "art-deco-nevsky": { gradient: "from-[#071429] via-[#163AA8] to-[#0B1F3B]" },
+  "art-nouveau-palace": { gradient: "from-[#0B1F3B] via-[#132A4D] to-[#071429]" },
+  "art-deco-primorsky": { gradient: "from-[#071429] via-[#1E4ED8] to-[#0B1F3B]" },
+  "petrovsky-art-loft": { gradient: "from-[#0B1F3B] via-[#28323F] to-[#071429]" },
+  "art-na-repino": { gradient: "from-[#071429] via-[#60A5FA]/40 to-[#0B1F3B]" },
+  glampoint: { gradient: "from-[#0B1F3B] via-[#163AA8] to-[#28323F]" },
 };
 
 const fallbackOrder = Object.values(visuals);

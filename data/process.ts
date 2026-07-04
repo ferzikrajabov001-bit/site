@@ -2,6 +2,12 @@ import type { ProcessStep } from "./types";
 
 export const processSteps: ProcessStep[] = [
   {
+    id: "evaluation",
+    title: "Оценка актива",
+    description:
+      "Оцениваем объект как актив: расположение, состояние номерного фонда, рыночную позицию и потенциал доходности до принятия в управление.",
+  },
+  {
     id: "audit",
     title: "Диагностический аудит",
     description:

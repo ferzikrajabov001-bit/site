@@ -40,7 +40,7 @@ export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
               aria-selected={isActive}
               onClick={() => setActive(segment)}
               className={cn(
-                "rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300",
+                "rounded-sm border px-4 py-2 text-sm font-medium transition-all duration-300",
                 isActive
                   ? "border-accent/40 bg-accent/[0.08] text-accent"
                   : "border-hairline bg-white text-muted hover:border-ink-900/25 hover:text-ink-900",

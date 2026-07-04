@@ -19,15 +19,15 @@ export function Hero() {
 
             <Reveal delay={0.05}>
               <h1 className="font-display mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
-                Hotel Management{" "}
-                <span className="accent-gradient-text">Solutions</span>
+                Управляющая компания{" "}
+                <span className="accent-gradient-text">гостиничных активов</span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted">
-                Управляющая компания полного цикла — повышаем прибыльность и
-                операционную эффективность гостиничных активов.
+                HMS управляет портфелем гостиничных объектов в Санкт-Петербурге
+                и отвечает за их операционную и финансовую эффективность.
               </p>
             </Reveal>
 
@@ -38,7 +38,7 @@ export function Hero() {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button href="/contact" variant="secondary" size="lg">
-                  Получить аудит эффективности
+                  Получить оценку доходности
                 </Button>
               </div>
             </Reveal>

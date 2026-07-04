@@ -95,7 +95,7 @@ export default function ContactPage() {
                     <span className="flex h-11 w-11 items-center justify-center rounded-full border border-accent-soft/40 bg-accent-soft/20 text-accent-soft">
                       <MapPin className="h-5 w-5" />
                     </span>
-                    <span className="rounded-full border border-white/10 bg-ink-900/70 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                    <span className="rounded-full border border-white/10 bg-navy/70 px-3 py-1 text-xs font-medium text-white backdrop-blur">
                       {siteConfig.contact.city}, {siteConfig.contact.country}
                     </span>
                   </div>

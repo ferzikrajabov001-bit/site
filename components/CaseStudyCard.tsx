@@ -44,7 +44,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
                 <span className="text-sm font-medium text-ink-900">
                   {metric.label}
                 </span>
-                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-700/20 bg-emerald-700/[0.06] px-2 py-0.5 text-xs font-semibold text-emerald-800">
+                <span className="inline-flex items-center gap-1 rounded-sm border border-success/25 bg-success/[0.07] px-2 py-0.5 text-xs font-semibold text-success-deep">
                   <TrendUp className="h-3.5 w-3.5" />+{pct}%
                 </span>
               </div>

@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { Positioning } from "@/components/Positioning";
 import { Metrics } from "@/components/Metrics";
 import { Services } from "@/components/Services";
 import { WhyHMS } from "@/components/WhyHMS";
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <Positioning />
       <Metrics />
       <Services />
       <Statement eyebrow="Наш принцип">

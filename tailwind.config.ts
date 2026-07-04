@@ -9,31 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Light institutional surfaces
+        // Light investment-grade surfaces
         paper: {
-          DEFAULT: "#F6F4EF",
-          alt: "#EDEAE1",
+          DEFAULT: "#F6F8FB",
+          alt: "#EEF2F8",
         },
-        // Dark charcoal used for text and for intentional dark bands
-        // (footer, closing CTA, photo placeholders, nav-on-scroll).
+        // Text + intentional dark bands (footer, closing CTA)
         ink: {
-          900: "#15130F",
-          800: "#211D16",
-          700: "#332C20",
-          600: "#463C2A",
+          900: "#1B2430",
+          800: "#28323F",
+          700: "#3A4552",
+          600: "#5B6777",
+        },
+        navy: {
+          DEFAULT: "#0B1F3B",
+          soft: "#132A4D",
+          deep: "#071429",
         },
         accent: {
-          DEFAULT: "#0F4D3A",
-          soft: "#1D7A5B",
-          deep: "#0A3327",
+          DEFAULT: "#1E4ED8",
+          soft: "#60A5FA",
+          deep: "#163AA8",
         },
-        brass: {
-          DEFAULT: "#A97F2E",
-          soft: "#C79A44",
-          deep: "#7A5A1E",
+        success: {
+          DEFAULT: "#16A34A",
+          soft: "#4ADE80",
+          deep: "#0F7C38",
         },
-        muted: "#6B6459",
-        hairline: "#DEDAD0",
+        muted: "#5B6777",
+        hairline: "#E6EDF5",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
@@ -47,12 +51,12 @@ const config: Config = {
         "3xl": "0.25rem",
       },
       boxShadow: {
-        card: "0 2px 4px rgba(21,19,15,0.04), 0 12px 32px -16px rgba(21,19,15,0.12)",
-        "card-hover": "0 4px 10px rgba(21,19,15,0.06), 0 20px 44px -16px rgba(21,19,15,0.16)",
+        card: "0 2px 4px rgba(11,31,59,0.04), 0 12px 32px -16px rgba(11,31,59,0.12)",
+        "card-hover": "0 4px 10px rgba(11,31,59,0.06), 0 20px 44px -16px rgba(11,31,59,0.16)",
       },
       backgroundImage: {
         "grid-faint":
-          "linear-gradient(to right, rgba(21,19,15,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(21,19,15,0.05) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(11,31,59,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(11,31,59,0.05) 1px, transparent 1px)",
       },
       keyframes: {
         float: {

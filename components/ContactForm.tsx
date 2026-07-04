@@ -76,9 +76,9 @@ export function ContactForm() {
           key="success"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col items-start gap-4 rounded-sm border border-emerald-700/25 bg-emerald-700/[0.05] p-8"
+          className="flex flex-col items-start gap-4 rounded-sm border border-success/25 bg-success/[0.06] p-8"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-sm border border-emerald-700/30 bg-emerald-700/10 text-emerald-800">
+          <span className="flex h-12 w-12 items-center justify-center rounded-sm border border-success/30 bg-success/10 text-success-deep">
             <Check className="h-6 w-6" />
           </span>
           <div>
