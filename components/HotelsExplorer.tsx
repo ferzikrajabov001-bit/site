@@ -14,14 +14,14 @@ import { cn } from "@/lib/utils";
 export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
   const segments = useMemo(() => {
     const unique = Array.from(new Set(hotels.map((h) => h.segment)));
-    return ["All", ...unique];
+    return ["Все", ...unique];
   }, [hotels]);
 
-  const [active, setActive] = useState<string>("All");
+  const [active, setActive] = useState<string>("Все");
 
   const filtered = useMemo(
     () =>
-      active === "All"
+      active === "Все"
         ? hotels
         : hotels.filter((hotel) => hotel.segment === active),
     [active, hotels],
@@ -29,7 +29,7 @@ export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter hotels by segment">
+      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Фильтр отелей по сегменту">
         {segments.map((segment) => {
           const isActive = segment === active;
           return (
@@ -42,8 +42,8 @@ export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
               className={cn(
                 "rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300",
                 isActive
-                  ? "border-accent/50 bg-accent/15 text-white"
-                  : "border-white/10 bg-white/[0.03] text-muted hover:border-white/25 hover:text-white",
+                  ? "border-accent/40 bg-accent/[0.08] text-accent"
+                  : "border-hairline bg-white text-muted hover:border-ink-900/25 hover:text-ink-900",
               )}
             >
               {segment}

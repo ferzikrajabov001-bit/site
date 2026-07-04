@@ -6,8 +6,8 @@ interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * Glassmorphism surface primitive. `interactive` adds hover elevation and
- * an accent border used for clickable cards.
+ * Primary card surface: plain white, thin hairline border, soft shadow.
+ * `interactive` adds hover elevation and an accent border for clickable cards.
  */
 export function GlassCard({
   className,
@@ -20,9 +20,9 @@ export function GlassCard({
   return (
     <Component
       className={cn(
-        "relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl transition-all duration-300",
+        "relative overflow-hidden rounded-2xl border border-hairline bg-white shadow-card transition-all duration-300",
         interactive &&
-          "hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.06] hover:shadow-card",
+          "hover:-translate-y-1 hover:border-accent/30 hover:shadow-card-hover",
         className,
       )}
       {...props}

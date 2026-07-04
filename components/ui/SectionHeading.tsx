@@ -26,14 +26,14 @@ export function SectionHeading({
     >
       {eyebrow ? (
         <Reveal>
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
-            <span className="h-px w-6 bg-accent-soft/60" aria-hidden />
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent">
+            <span className="h-px w-6 bg-accent/50" aria-hidden />
             {eyebrow}
           </span>
         </Reveal>
       ) : null}
       <Reveal delay={0.05}>
-        <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-[2.75rem] md:leading-[1.05]">
+        <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl md:text-[2.75rem] md:leading-[1.08]">
           {title}
         </h2>
       </Reveal>

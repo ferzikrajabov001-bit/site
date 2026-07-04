@@ -4,33 +4,33 @@ export const testimonials: Testimonial[] = [
   {
     id: "nevsky-owner",
     quote:
-      "Handing operations to HMS was the best decision we made for the property. Reporting is transparent and occupancy has never been more stable.",
-    author: "Sergei Ivanov",
-    role: "Asset Owner",
+      "Передача операций HMS была лучшим решением для нашего объекта. Отчётность прозрачна, а загрузка стала стабильной как никогда.",
+    author: "Сергей Иванов",
+    role: "Собственник актива",
     hotelId: "art-deco-nevsky",
   },
   {
     id: "palace-owner",
     quote:
-      "HMS protected the building's heritage character while completely rebuilding our direct-booking channel. ADR is up and the property still feels like itself.",
-    author: "Natalia Gromova",
-    role: "Asset Owner",
+      "HMS сохранила исторический характер здания и полностью перестроила канал прямых бронирований. ADR вырос, а объект остался собой.",
+    author: "Наталья Громова",
+    role: "Собственник актива",
     hotelId: "art-nouveau-palace",
   },
   {
     id: "loft-owner",
     quote:
-      "Their content and distribution work turned our design story into real OTA visibility. We finally have the booking numbers to match the building.",
-    author: "Pavel Orlov",
-    role: "Asset Owner",
+      "Их работа с контентом и дистрибуцией превратила нашу дизайнерскую историю в реальную видимость на OTA. Наконец цифры бронирований соответствуют зданию.",
+    author: "Павел Орлов",
+    role: "Собственник актива",
     hotelId: "petrovsky-art-loft",
   },
   {
     id: "repino-owner",
     quote:
-      "The team understood the intimacy of the property from day one. Premium leisure demand grew without ever compromising the guest experience.",
-    author: "Marina Sokolova",
-    role: "Asset Owner",
+      "Команда с первого дня поняла камерность объекта. Премиальный досуговый спрос вырос без единого компромисса в гостевом опыте.",
+    author: "Марина Соколова",
+    role: "Собственник актива",
     hotelId: "art-na-repino",
   },
 ];

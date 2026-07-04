@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 type Tone = "accent" | "neutral" | "success" | "warning";
 
 const tones: Record<Tone, string> = {
-  accent: "border-accent/30 bg-accent/10 text-accent-soft",
-  neutral: "border-white/15 bg-white/[0.04] text-muted",
-  success: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
-  warning: "border-amber-400/30 bg-amber-400/10 text-amber-300",
+  accent: "border-accent/25 bg-accent/[0.06] text-accent",
+  neutral: "border-hairline bg-paper-alt text-muted",
+  success: "border-emerald-700/20 bg-emerald-700/[0.06] text-emerald-800",
+  warning: "border-brass/30 bg-brass/[0.08] text-brass-deep",
 };
 
 interface BadgeProps {

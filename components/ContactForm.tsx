@@ -27,8 +27,6 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * CRM/API integration only needs to replace the `submit` implementation.
  */
 async function submit(data: FormState): Promise<void> {
-  // Placeholder for future CRM / API integration. `data` is where the
-  // outbound payload will be sent once a backend endpoint is available.
   if (process.env.NODE_ENV === "development") {
     console.debug("[HMS] contact form submission", data);
   }
@@ -46,10 +44,10 @@ export function ContactForm() {
 
   function validate(data: FormState): FieldErrors {
     const next: FieldErrors = {};
-    if (data.name.trim().length < 2) next.name = "Please enter your name.";
-    if (!EMAIL_RE.test(data.email)) next.email = "Enter a valid email address.";
+    if (data.name.trim().length < 2) next.name = "Пожалуйста, укажите имя.";
+    if (!EMAIL_RE.test(data.email)) next.email = "Введите корректный email.";
     if (data.message.trim().length < 10)
-      next.message = "Please add a few words about your enquiry.";
+      next.message = "Добавьте пару слов о вашем запросе.";
     return next;
   }
 
@@ -67,8 +65,8 @@ export function ContactForm() {
 
   const fieldClass = (hasError?: boolean) =>
     cn(
-      "w-full rounded-2xl border bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-muted/70 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/50",
-      hasError ? "border-red-400/60" : "border-white/10 focus:border-accent/50",
+      "w-full rounded-2xl border bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-muted/70 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40",
+      hasError ? "border-red-500/60" : "border-hairline focus:border-accent/50",
     );
 
   return (
@@ -78,25 +76,26 @@ export function ContactForm() {
           key="success"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col items-start gap-4 rounded-3xl border border-emerald-400/30 bg-emerald-400/[0.06] p-8"
+          className="flex flex-col items-start gap-4 rounded-3xl border border-emerald-700/25 bg-emerald-700/[0.05] p-8"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-400/40 bg-emerald-400/10 text-emerald-300">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-700/30 bg-emerald-700/10 text-emerald-800">
             <Check className="h-6 w-6" />
           </span>
           <div>
-            <h3 className="text-lg font-semibold text-white">
-              Thank you — message received
+            <h3 className="text-lg font-semibold text-ink-900">
+              Спасибо — сообщение получено
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Our team will be in touch shortly to arrange your consultation.
+              Наша команда свяжется с вами в ближайшее время, чтобы
+              договориться о консультации.
             </p>
           </div>
           <button
             type="button"
             onClick={() => setStatus("idle")}
-            className="text-sm font-medium text-accent-soft transition-colors hover:text-white"
+            className="text-sm font-medium text-accent transition-colors hover:text-ink-900"
           >
-            Send another message
+            Отправить ещё одно сообщение
           </button>
         </motion.div>
       ) : (
@@ -109,8 +108,8 @@ export function ContactForm() {
           className="flex flex-col gap-5"
         >
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-sm font-medium text-white/90">
-              Name
+            <label htmlFor="name" className="text-sm font-medium text-ink-900/90">
+              Имя
             </label>
             <input
               id="name"
@@ -120,16 +119,16 @@ export function ContactForm() {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               className={fieldClass(!!errors.name)}
-              placeholder="Your full name"
+              placeholder="Ваше имя и фамилия"
               aria-invalid={!!errors.name}
             />
             {errors.name ? (
-              <p className="text-xs text-red-400">{errors.name}</p>
+              <p className="text-xs text-red-600">{errors.name}</p>
             ) : null}
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm font-medium text-white/90">
+            <label htmlFor="email" className="text-sm font-medium text-ink-900/90">
               Email
             </label>
             <input
@@ -144,13 +143,13 @@ export function ContactForm() {
               aria-invalid={!!errors.email}
             />
             {errors.email ? (
-              <p className="text-xs text-red-400">{errors.email}</p>
+              <p className="text-xs text-red-600">{errors.email}</p>
             ) : null}
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-sm font-medium text-white/90">
-              Message
+            <label htmlFor="message" className="text-sm font-medium text-ink-900/90">
+              Сообщение
             </label>
             <textarea
               id="message"
@@ -159,11 +158,11 @@ export function ContactForm() {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className={cn(fieldClass(!!errors.message), "resize-none")}
-              placeholder="Tell us about your hotel and what you'd like to achieve."
+              placeholder="Расскажите о вашем отеле и цели, которую хотите достичь."
               aria-invalid={!!errors.message}
             />
             {errors.message ? (
-              <p className="text-xs text-red-400">{errors.message}</p>
+              <p className="text-xs text-red-600">{errors.message}</p>
             ) : null}
           </div>
 
@@ -174,7 +173,7 @@ export function ContactForm() {
             disabled={status === "submitting"}
             className="mt-1"
           >
-            {status === "submitting" ? "Sending…" : "Book consultation"}
+            {status === "submitting" ? "Отправка…" : "Записаться на консультацию"}
             {status !== "submitting" ? <ArrowRight className="h-4 w-4" /> : null}
           </Button>
         </motion.form>

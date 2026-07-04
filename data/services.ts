@@ -4,91 +4,91 @@ export const services: Service[] = [
   {
     id: "operations",
     slug: "hotel-operations-management",
-    title: "Hotel Operations Management",
+    title: "Операционное управление",
     summary:
-      "A unified operating system covering front office, housekeeping, F&B and maintenance.",
+      "Единая операционная система: служба приёма, хаускипинг, F&B и техническая эксплуатация.",
     description:
-      "We assume full operational responsibility for the property — standardizing processes, staffing models and service quality on a single operating platform. Owners retain transparency and control while day-to-day execution is handled by an experienced management team.",
+      "Мы берём на себя полную операционную ответственность за объект — стандартизируем процессы, штатную модель и качество сервиса на единой операционной платформе. Владельцы сохраняют прозрачность и контроль, а исполнение день в день ведёт опытная управляющая команда.",
     icon: "operations",
     outcomes: [
-      "Standardized SOPs and service quality",
-      "Optimized staffing and labor cost",
-      "Centralized procurement and vendor control",
+      "Стандартизированные SOP и качество сервиса",
+      "Оптимизация штата и фонда оплаты труда",
+      "Централизованные закупки и контроль поставщиков",
     ],
   },
   {
     id: "revenue",
     slug: "revenue-management",
-    title: "Revenue Management",
+    title: "Доходный менеджмент",
     summary:
-      "Dynamic pricing and demand forecasting to maximize RevPAR across seasons.",
+      "Динамическое ценообразование и прогнозирование спроса для роста RevPAR по сезонам.",
     description:
-      "Our revenue team runs continuous demand forecasting, competitive rate shopping and dynamic pricing across all room categories. We balance occupancy and ADR to grow RevPAR while protecting long-term rate integrity.",
+      "Команда доходного менеджмента ведёт непрерывное прогнозирование спроса, мониторинг конкурентов и динамическое ценообразование по всем категориям номеров. Мы балансируем загрузку и ADR ради роста RevPAR, сохраняя целостность тарифной политики.",
     icon: "revenue",
     outcomes: [
-      "Dynamic pricing by segment and channel",
-      "Demand forecasting and pace monitoring",
-      "RevPAR and profit optimization",
+      "Динамическое ценообразование по сегментам и каналам",
+      "Прогноз спроса и отслеживание темпов бронирования",
+      "Оптимизация RevPAR и прибыли",
     ],
   },
   {
     id: "sales",
     slug: "sales-ota-optimization",
-    title: "Sales & OTA Optimization",
+    title: "Продажи и оптимизация OTA",
     summary:
-      "Channel mix management and OTA performance tuning to grow qualified demand.",
+      "Управление каналами продаж и настройка OTA для роста качественного спроса.",
     description:
-      "We manage the full distribution landscape — OTAs, corporate contracts, MICE and direct booking — optimizing channel mix, commission efficiency and conversion. Listings are continuously tuned for visibility and ranking.",
+      "Мы управляем всем ландшафтом дистрибуции — OTA, корпоративными контрактами, MICE и прямыми продажами, — оптимизируя микс каналов, комиссионную нагрузку и конверсию. Карточки объектов постоянно донастраиваются для роста видимости и ранжирования.",
     icon: "sales",
     outcomes: [
-      "Optimized channel and commission mix",
-      "OTA content, ranking and conversion tuning",
-      "Corporate and MICE demand development",
+      "Оптимизация микса каналов и комиссий",
+      "Настройка контента, ранжирования и конверсии OTA",
+      "Развитие корпоративного и MICE-спроса",
     ],
   },
   {
     id: "marketing",
     slug: "marketing-strategy",
-    title: "Marketing Strategy",
+    title: "Маркетинговая стратегия",
     summary:
-      "Brand positioning, direct-booking growth and performance marketing.",
+      "Позиционирование бренда, рост прямых бронирований и performance-маркетинг.",
     description:
-      "We build a positioning and marketing engine that grows direct demand and reduces channel dependency — combining brand strategy, content, CRM and performance campaigns tailored to each property's segment.",
+      "Мы выстраиваем систему позиционирования и маркетинга, которая наращивает прямой спрос и снижает зависимость от каналов — сочетая бренд-стратегию, контент, CRM и performance-кампании под сегмент каждого объекта.",
     icon: "marketing",
     outcomes: [
-      "Positioning and brand strategy",
-      "Direct-booking and CRM growth",
-      "Performance marketing and analytics",
+      "Позиционирование и бренд-стратегия",
+      "Рост прямых бронирований и CRM",
+      "Performance-маркетинг и аналитика",
     ],
   },
   {
     id: "finance",
     slug: "financial-control-reporting",
-    title: "Financial Control & Reporting",
+    title: "Финансовый контроль и отчётность",
     summary:
-      "Transparent P&L management, budgeting and investor-grade reporting.",
+      "Прозрачное управление P&L, бюджетирование и отчётность инвестиционного уровня.",
     description:
-      "Owners receive transparent, standardized financial reporting on a monthly cadence — full P&L, budget variance, cash flow and KPI dashboards built to institutional investment standards.",
+      "Владельцы получают прозрачную стандартизированную финансовую отчётность на ежемесячной основе — полный P&L, анализ отклонений от бюджета, движение денежных средств и KPI-дашборды, построенные по институциональным стандартам.",
     icon: "finance",
     outcomes: [
-      "USALI-aligned P&L management",
-      "Budgeting and variance control",
-      "Investor-grade monthly reporting",
+      "Управление P&L по стандарту USALI",
+      "Бюджетирование и контроль отклонений",
+      "Ежемесячная отчётность инвестиционного уровня",
     ],
   },
   {
     id: "launch",
     slug: "hotel-launch-opening",
-    title: "Hotel Launch & Opening",
+    title: "Запуск и открытие отеля",
     summary:
-      "Pre-opening planning, technical setup and market entry execution.",
+      "Предоткрытийное планирование, техническая подготовка и вывод на рынок.",
     description:
-      "From concept validation to opening day, we manage pre-opening budgets, technical services, systems setup, recruitment and go-to-market — de-risking launches and accelerating the path to stabilized performance.",
+      "От проверки концепции до дня открытия мы ведём предоткрытийный бюджет, технические сервисы, настройку систем, подбор персонала и вывод на рынок — снижая риски запуска и ускоряя выход на стабильные показатели.",
     icon: "launch",
     outcomes: [
-      "Pre-opening budget and critical path",
-      "Systems, tech and team setup",
-      "Go-to-market and ramp-up plan",
+      "Предоткрытийный бюджет и критический путь",
+      "Настройка систем, технологий и команды",
+      "План вывода на рынок и наращивания показателей",
     ],
   },
 ];

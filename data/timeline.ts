@@ -4,50 +4,50 @@ export const timeline: TimelineEvent[] = [
   {
     id: "founded",
     year: "2018",
-    title: "HMS founded",
+    title: "Основание HMS",
     description:
-      "Hotel Management Solutions is founded in Saint Petersburg to bring institutional operating discipline to independent hospitality assets.",
+      "Hotel Management Solutions основана в Санкт-Петербурге, чтобы принести институциональную операционную дисциплину в независимые гостиничные активы.",
   },
   {
     id: "flagship",
     year: "2019",
-    title: "Flagship onboarded",
+    title: "Флагман под управлением",
     description:
-      "Art Deco Nevsky transfers under management, becoming the portfolio's benchmark for corporate and MICE demand.",
+      "Art Deco Nevsky переходит под управление и становится эталоном портфеля по корпоративному и MICE-спросу.",
   },
   {
     id: "heritage-and-coast",
     year: "2020",
-    title: "Heritage and coastal expansion",
+    title: "Расширение: наследие и побережье",
     description:
-      "Art Nouveau Palace and Art na Repino join the portfolio, extending HMS into heritage boutique and seaside leisure segments.",
+      "К портфелю присоединяются Art Nouveau Palace и Art na Repino, расширяя присутствие HMS в сегментах исторического бутика и морского отдыха.",
   },
   {
     id: "design-loft",
     year: "2021",
-    title: "Design segment added",
+    title: "Добавлен дизайн-сегмент",
     description:
-      "Petrovsky Art Loft is onboarded, adding a converted-industrial design property with a strong content-led OTA presence.",
+      "В управление передан Petrovsky Art Loft — объект в переоборудованном промышленном здании с сильным присутствием на OTA за счёт контента.",
   },
   {
     id: "scale",
     year: "2022",
-    title: "Portfolio scales up",
+    title: "Масштабирование портфеля",
     description:
-      "Art Deco Primorsky brings the portfolio's largest inventory online, sharpening group and exhibition demand strategy.",
+      "Art Deco Primorsky вводит в строй крупнейший номерной фонд портфеля, обостряя стратегию группового и выставочного спроса.",
   },
   {
     id: "platform",
     year: "2023",
-    title: "Unified reporting platform",
+    title: "Единая платформа отчётности",
     description:
-      "Investor-grade monthly reporting is standardized across every property, giving owners full P&L and KPI transparency.",
+      "Ежемесячная отчётность инвестиционного уровня стандартизирована по всем объектам, обеспечивая владельцам полную прозрачность P&L и KPI.",
   },
   {
     id: "glamping",
     year: "2025",
-    title: "New asset class: Glampoint",
+    title: "Новый класс активов: Glampoint",
     description:
-      "HMS enters nature tourism with Glampoint, managing the full pre-opening critical path for a coastal glamping retreat.",
+      "HMS выходит в природный туризм с Glampoint, ведя весь предоткрытийный критический путь для прибрежного глэмпинга.",
   },
 ];

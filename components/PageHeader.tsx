@@ -22,14 +22,14 @@ export function PageHeader({
         <div className="max-w-3xl">
           {eyebrow ? (
             <Reveal>
-              <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent-soft">
-                <span className="h-px w-6 bg-accent-soft/60" aria-hidden />
+              <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent">
+                <span className="h-px w-6 bg-accent/50" aria-hidden />
                 {eyebrow}
               </span>
             </Reveal>
           ) : null}
           <Reveal delay={0.05}>
-            <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="font-display mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
               {title}
             </h1>
           </Reveal>

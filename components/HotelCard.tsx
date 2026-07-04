@@ -5,12 +5,7 @@ import { Badge } from "@/components/ui/Badge";
 import { MapPin, ArrowUpRight } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
 import { getHotelVisual } from "@/lib/hotelVisuals";
-
-const statusTone = {
-  "Under Management": "accent",
-  Stabilized: "success",
-  "Launch Phase": "warning",
-} as const;
+import { statusLabels, statusTone } from "@/lib/labels";
 
 export function HotelCard({ hotel, index = 0 }: { hotel: Hotel; index?: number }) {
   const { gradient } = getHotelVisual(hotel.id, index);
@@ -25,25 +20,25 @@ export function HotelCard({ hotel, index = 0 }: { hotel: Hotel; index?: number }
               gradient,
             )}
           />
-          <div className="absolute inset-0 bg-grid-faint [background-size:32px_32px] opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 to-transparent" />
+          <div className="absolute inset-0 bg-grid-faint [background-size:32px_32px] opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           <div className="absolute left-4 top-4">
-            <Badge tone={statusTone[hotel.status]}>{hotel.status}</Badge>
+            <Badge tone={statusTone[hotel.status]}>{statusLabels[hotel.status]}</Badge>
           </div>
           <div className="absolute bottom-4 left-4">
-            <p className="text-xs uppercase tracking-[0.14em] text-white/70">
+            <p className="text-xs uppercase tracking-[0.14em] text-white/80">
               {hotel.category}
             </p>
           </div>
         </div>
 
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="flex items-start justify-between gap-2 text-lg font-semibold text-white">
+          <h3 className="flex items-start justify-between gap-2 text-lg font-semibold text-ink-900">
             {hotel.name}
-            <ArrowUpRight className="h-5 w-5 shrink-0 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent-soft" />
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
           </h3>
           <p className="mt-1 flex items-center gap-1.5 text-sm text-muted">
-            <MapPin className="h-4 w-4 text-accent-soft" />
+            <MapPin className="h-4 w-4 text-accent" />
             {hotel.district}, {hotel.location}
           </p>
 
@@ -51,16 +46,16 @@ export function HotelCard({ hotel, index = 0 }: { hotel: Hotel; index?: number }
             {hotel.summary}
           </p>
 
-          <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-5">
+          <div className="mt-6 grid grid-cols-2 gap-3 border-t border-hairline pt-5">
             <div>
-              <p className="text-xs text-muted">Occupancy</p>
-              <p className="text-base font-semibold text-white">
+              <p className="text-xs text-muted">Загрузка</p>
+              <p className="text-base font-semibold text-ink-900">
                 {hotel.kpi.occupancy}%
               </p>
             </div>
             <div>
-              <p className="text-xs text-muted">Rooms</p>
-              <p className="text-base font-semibold text-white">
+              <p className="text-xs text-muted">Номеров</p>
+              <p className="text-base font-semibold text-ink-900">
                 {hotel.kpi.rooms}
               </p>
             </div>

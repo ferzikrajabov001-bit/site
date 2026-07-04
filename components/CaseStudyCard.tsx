@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TrendUp } from "@/components/ui/icons";
 
 function formatValue(value: number, unit: string) {
-  if (unit === "₽") return `₽${value.toLocaleString("en-US")}`;
+  if (unit === "₽") return `₽${value.toLocaleString("ru-RU")}`;
   if (unit === "%") return `${value}%`;
   return `${value}${unit}`;
 }
@@ -24,7 +24,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         <Badge tone="neutral">{study.duration}</Badge>
       </div>
 
-      <p className="mt-5 text-lg font-medium leading-relaxed text-white">
+      <p className="mt-5 text-lg font-medium leading-relaxed text-ink-900">
         {study.summary}
       </p>
 
@@ -38,23 +38,23 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
             <Reveal
               key={metric.label}
               delay={i * 0.06}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+              className="rounded-2xl border border-hairline bg-paper p-4"
             >
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-white">
+                <span className="text-sm font-medium text-ink-900">
                   {metric.label}
                 </span>
-                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 text-xs font-semibold text-emerald-300">
+                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-700/20 bg-emerald-700/[0.06] px-2 py-0.5 text-xs font-semibold text-emerald-800">
                   <TrendUp className="h-3.5 w-3.5" />+{pct}%
                 </span>
               </div>
 
               <div className="mt-3 space-y-2">
                 <div className="flex items-center gap-3">
-                  <span className="w-12 text-xs text-muted">Before</span>
-                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
+                  <span className="w-12 text-xs text-muted">Было</span>
+                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-hairline">
                     <div
-                      className="h-full rounded-full bg-white/25"
+                      className="h-full rounded-full bg-ink-900/25"
                       style={{ width: `${beforePct}%` }}
                     />
                   </div>
@@ -63,14 +63,14 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-12 text-xs text-accent-soft">After</span>
-                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
+                  <span className="w-12 text-xs text-accent">Стало</span>
+                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-hairline">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-accent-soft to-accent"
                       style={{ width: `${afterPct}%` }}
                     />
                   </div>
-                  <span className="w-16 text-right text-xs font-semibold text-white">
+                  <span className="w-16 text-right text-xs font-semibold text-ink-900">
                     {formatValue(metric.after, metric.unit)}
                   </span>
                 </div>

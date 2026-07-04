@@ -5,14 +5,14 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 disabled:pointer-events-none disabled:opacity-60";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-paper disabled:pointer-events-none disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white shadow-[0_10px_30px_-10px_rgba(31,111,82,0.7)] hover:bg-accent-deep hover:shadow-[0_16px_40px_-12px_rgba(31,111,82,0.8)]",
+    "bg-accent text-white shadow-[0_10px_24px_-10px_rgba(15,77,58,0.55)] hover:bg-accent-deep",
   secondary:
-    "border border-white/15 bg-white/[0.04] text-white backdrop-blur-xl hover:border-white/30 hover:bg-white/[0.08]",
-  ghost: "text-white/80 hover:text-white",
+    "border border-ink-900/15 bg-white text-ink-900 hover:border-ink-900/30 hover:bg-paper-alt",
+  ghost: "text-ink-900/80 hover:text-ink-900",
 };
 
 const sizes: Record<Size, string> = {

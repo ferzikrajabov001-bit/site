@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter, PT_Serif } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/Navbar";
@@ -7,34 +7,34 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 
 const sans = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const display = Sora({
-  subsets: ["latin"],
+const display = PT_Serif({
+  subsets: ["latin", "cyrillic"],
   variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Full-Cycle Hotel Management`,
+    default: `${siteConfig.name} — управление гостиничными активами`,
     template: `%s — ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
-    "hotel management",
-    "hotel management company",
-    "revenue management",
-    "hospitality management",
-    "Saint Petersburg hotels",
-    "hotel operations",
-    "hotel launch",
+    "управление отелями",
+    "управляющая компания отелей",
+    "доходный менеджмент",
+    "гостиничный менеджмент",
+    "отели Санкт-Петербурга",
+    "операционное управление отелем",
+    "запуск отеля",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Full-Cycle Hotel Management`,
+    title: `${siteConfig.name} — управление гостиничными активами`,
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Full-Cycle Hotel Management`,
+    title: `${siteConfig.name} — управление гостиничными активами`,
     description: siteConfig.description,
   },
   robots: {
@@ -62,16 +62,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#17130F",
-  colorScheme: "dark",
+  themeColor: "#F6F4EF",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
-      <body className="min-h-screen bg-ink-900 font-sans text-white antialiased">
+    <html lang="ru" className={`${sans.variable} ${display.variable}`}>
+      <body className="min-h-screen bg-paper font-sans text-ink-900 antialiased">
         <JsonLd />
         <Navbar />
         <main className="relative">{children}</main>

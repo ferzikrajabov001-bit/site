@@ -4,19 +4,19 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "nevsky-deco-turnaround",
     hotel: "Art Deco Nevsky",
-    segment: "Upscale Business",
-    duration: "12 months",
+    segment: "Бизнес верхнего сегмента",
+    duration: "12 месяцев",
     summary:
-      "Operational reset and corporate demand rebuild lifted RevPAR by over a third.",
+      "Операционный рестарт и восстановление корпоративного спроса подняли RevPAR больше чем на треть.",
     challenge:
-      "A strong Art Deco asset on Nevsky Prospekt underperforming on rate and over-reliant on low-margin OTA demand.",
+      "Сильный объект в стиле ар-деко на Невском проспекте недобирал по тарифу и был чрезмерно зависим от низкомаржинального спроса с OTA.",
     approach: [
-      "Rebuilt corporate and MICE account base",
-      "Introduced dynamic segment-based pricing",
-      "Shifted mix toward direct and negotiated demand",
+      "Восстановили корпоративную и MICE-клиентскую базу",
+      "Внедрили динамическое ценообразование по сегментам",
+      "Сместили микс в сторону прямого и договорного спроса",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 68, after: 82 },
+      { label: "Загрузка", unit: "%", before: 68, after: 82 },
       { label: "ADR", unit: "₽", before: 9200, after: 11800 },
       { label: "RevPAR", unit: "₽", before: 6256, after: 9676 },
     ],
@@ -24,19 +24,19 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "repino-repositioning",
     hotel: "Art na Repino",
-    segment: "Boutique Leisure",
-    duration: "9 months",
+    segment: "Бутик / курортный отдых",
+    duration: "9 месяцев",
     summary:
-      "Artist-colony repositioning grew ADR while protecting the boutique experience.",
+      "Репозиционирование вокруг истории колонии художников подняло ADR при сохранении бутикового опыта.",
     challenge:
-      "Undifferentiated seaside positioning suppressing rate potential for a high-quality boutique product.",
+      "Неотстроенное позиционирование на морском побережье сдерживало тарифный потенциал качественного бутикового продукта.",
     approach: [
-      "Repositioned around the Repino artists'-colony story",
-      "Upgraded content across premium OTAs",
-      "Launched a direct-booking and CRM program",
+      "Репозиционировали вокруг истории колонии художников Репино",
+      "Обновили контент на премиальных OTA",
+      "Запустили программу прямых бронирований и CRM",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 71, after: 78 },
+      { label: "Загрузка", unit: "%", before: 71, after: 78 },
       { label: "ADR", unit: "₽", before: 10800, after: 14200 },
       { label: "RevPAR", unit: "₽", before: 7668, after: 11076 },
     ],
@@ -44,19 +44,19 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "primorsky-scale",
     hotel: "Art Deco Primorsky",
-    segment: "Upper Midscale",
-    duration: "14 months",
+    segment: "Upper midscale",
+    duration: "14 месяцев",
     summary:
-      "Channel and group strategy filled a large inventory across the demand calendar.",
+      "Канальная и групповая стратегия заполнила крупный номерной фонд по всему календарю спроса.",
     challenge:
-      "Large room count creating occupancy volatility between exhibition peaks.",
+      "Большой номерной фонд создавал волатильность загрузки между выставочными пиками.",
     approach: [
-      "Advanced channel-mix management",
-      "Group and exhibition pricing framework",
-      "Base-demand contracts to smooth pace",
+      "Продвинутое управление миксом каналов",
+      "Фреймворк группового и выставочного ценообразования",
+      "Контракты базового спроса для сглаживания темпов",
     ],
     metrics: [
-      { label: "Occupancy", unit: "%", before: 66, after: 80 },
+      { label: "Загрузка", unit: "%", before: 66, after: 80 },
       { label: "ADR", unit: "₽", before: 8100, after: 9600 },
       { label: "RevPAR", unit: "₽", before: 5346, after: 7680 },
     ],

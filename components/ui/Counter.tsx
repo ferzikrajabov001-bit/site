@@ -46,7 +46,7 @@ export function Counter({
     return () => controls.stop();
   }, [inView, value, duration, reduceMotion]);
 
-  const formatted = display.toLocaleString("en-US", {
+  const formatted = display.toLocaleString("ru-RU", {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });

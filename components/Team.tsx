@@ -7,21 +7,18 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
 
 const toneClasses: Record<TeamMember["tone"], string> = {
-  accent: "border-accent/30 bg-accent/10 text-accent-soft",
-  secondary: "border-secondary/30 bg-secondary/10 text-secondary-soft",
-  brass: "border-brass/30 bg-brass/10 text-brass-soft",
-  wine: "border-wine/30 bg-wine/10 text-wine-soft",
-  teal: "border-teal/30 bg-teal/10 text-teal-soft",
+  accent: "border-accent/25 bg-accent/[0.06] text-accent",
+  brass: "border-brass/30 bg-brass/[0.08] text-brass-deep",
+  ink: "border-ink-900/15 bg-ink-900/[0.04] text-ink-900",
 };
 
 export function Team() {
   return (
-    <Section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-radial-brass opacity-50" />
+    <Section className="relative overflow-hidden bg-paper-alt">
       <SectionHeading
-        eyebrow="Leadership"
-        title="The team behind every property"
-        description="A senior management team with a direct track record across hotel operations, revenue, sales, marketing and finance."
+        eyebrow="Руководство"
+        title="Команда за каждым объектом"
+        description="Опытная управляющая команда с прямым track record в операциях, доходном менеджменте, продажах, маркетинге и финансах."
         align="center"
       />
 
@@ -37,10 +34,10 @@ export function Team() {
               >
                 {member.initials}
               </div>
-              <h3 className="mt-5 text-base font-semibold text-white">
+              <h3 className="mt-5 text-base font-semibold text-ink-900">
                 {member.name}
               </h3>
-              <p className="mt-1 text-sm font-medium text-accent-soft">
+              <p className="mt-1 text-sm font-medium text-accent">
                 {member.role}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted">

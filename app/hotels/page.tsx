@@ -6,9 +6,9 @@ import { HotelsExplorer } from "@/components/HotelsExplorer";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Hotels",
+  title: "Отели",
   description:
-    "Explore the five-property Saint Petersburg portfolio managed by HMS, spanning business, boutique, extended-stay and luxury heritage segments.",
+    "Портфель из шести объектов в Санкт-Петербурге под управлением HMS: бизнес-сегмент, бутик, дизайн-лофт и премиальное наследие.",
   alternates: { canonical: "/hotels" },
 };
 
@@ -16,9 +16,9 @@ export default function HotelsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="The portfolio"
-        title="Hotels under management"
-        description="A diversified Saint Petersburg portfolio of six properties, each operated on the HMS platform. Filter by segment to explore each asset."
+        eyebrow="Портфель"
+        title="Отели в управлении"
+        description="Диверсифицированный портфель из шести объектов в Санкт-Петербурге, каждый на платформе HMS. Отфильтруйте по сегменту, чтобы изучить каждый актив."
       />
 
       <Section className="pt-0">
@@ -26,9 +26,9 @@ export default function HotelsPage() {
       </Section>
 
       <CTA
-        title="Transfer your hotel under management"
-        description="Join a portfolio built for performance. Book a consultation to discuss onboarding your property."
-        primaryLabel="Transfer hotel under management"
+        title="Передайте свой отель в управление"
+        description="Присоединяйтесь к портфелю, построенному на результат. Запишитесь на консультацию, чтобы обсудить онбординг вашего объекта."
+        primaryLabel="Передать отель в управление"
       />
     </>
   );

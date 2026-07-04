@@ -15,12 +15,11 @@ export function CaseStudies({ limit, showCta = true }: CaseStudiesProps) {
   const list = typeof limit === "number" ? caseStudies.slice(0, limit) : caseStudies;
 
   return (
-    <Section className="relative overflow-hidden bg-ink-800/40">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+    <Section className="relative overflow-hidden bg-paper-alt">
       <SectionHeading
-        eyebrow="Proven results"
-        title="Measurable performance improvements"
-        description="Before-and-after outcomes across occupancy, ADR and RevPAR from properties managed under HMS."
+        eyebrow="Результаты"
+        title="Измеримый рост показателей"
+        description="Результаты «было / стало» по загрузке, ADR и RevPAR на объектах под управлением HMS."
         align="center"
       />
 
@@ -35,7 +34,7 @@ export function CaseStudies({ limit, showCta = true }: CaseStudiesProps) {
       {showCta ? (
         <div className="mt-12 flex justify-center">
           <Button href="/cases" variant="secondary" size="lg">
-            Explore all case studies
+            Все результаты
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>

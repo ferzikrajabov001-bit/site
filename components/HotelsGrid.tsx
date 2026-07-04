@@ -24,14 +24,14 @@ export function HotelsGrid({
       {showHeading ? (
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="The portfolio"
-            title="Six properties under management"
-            description="A diversified Saint Petersburg portfolio spanning Art Deco business hotels, Art Nouveau heritage, design lofts, boutique leisure and a glamping retreat."
+            eyebrow="Портфель"
+            title="Шесть объектов в управлении"
+            description="Диверсифицированный портфель в Санкт-Петербурге: бизнес-отели в стиле ар-деко, историческое наследие модерна, дизайн-лофты, бутиковый отдых и глэмпинг."
           />
           {showCta ? (
             <div className="shrink-0">
               <Button href="/hotels" variant="secondary">
-                View all hotels
+                Все отели
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>

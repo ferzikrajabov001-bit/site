@@ -43,7 +43,7 @@ export function Navbar() {
         className={cn(
           "transition-all duration-300",
           scrolled
-            ? "border-b border-white/10 bg-ink-900/70 backdrop-blur-xl"
+            ? "border-b border-hairline bg-paper/85 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
       >
@@ -51,11 +51,11 @@ export function Navbar() {
           <Link
             href="/"
             className="flex items-center gap-2.5"
-            aria-label={`${siteConfig.name} home`}
+            aria-label={`${siteConfig.name} — на главную`}
           >
             <Logo className="h-9 w-9" />
             <span className="flex flex-col leading-none">
-              <span className="text-sm font-semibold tracking-tight text-white">
+              <span className="text-sm font-semibold tracking-tight text-ink-900">
                 {siteConfig.shortName}
               </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
@@ -72,8 +72,8 @@ export function Navbar() {
                 className={cn(
                   "rounded-full px-4 py-2 text-sm font-medium transition-colors",
                   isActive(link.href)
-                    ? "text-white"
-                    : "text-muted hover:text-white",
+                    ? "text-ink-900"
+                    : "text-muted hover:text-ink-900",
                 )}
               >
                 {link.label}
@@ -83,14 +83,14 @@ export function Navbar() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Button href="/contact" variant="primary" size="md">
-              Book consultation
+              Записаться на консультацию
             </Button>
           </div>
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white lg:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-hairline bg-white text-ink-900 lg:hidden"
+            aria-label={open ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -110,7 +110,7 @@ export function Navbar() {
             className="lg:hidden"
           >
             <Container className="pb-6 pt-2">
-              <div className="flex flex-col gap-1 rounded-3xl border border-white/10 bg-ink-800/90 p-3 backdrop-blur-xl">
+              <div className="flex flex-col gap-1 rounded-3xl border border-hairline bg-white p-3 shadow-card">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -118,15 +118,15 @@ export function Navbar() {
                     className={cn(
                       "rounded-2xl px-4 py-3 text-base font-medium transition-colors",
                       isActive(link.href)
-                        ? "bg-white/[0.06] text-white"
-                        : "text-muted hover:bg-white/[0.04] hover:text-white",
+                        ? "bg-paper-alt text-ink-900"
+                        : "text-muted hover:bg-paper-alt hover:text-ink-900",
                     )}
                   >
                     {link.label}
                   </Link>
                 ))}
                 <Button href="/contact" variant="primary" size="lg" className="mt-2">
-                  Book consultation
+                  Записаться на консультацию
                 </Button>
               </div>
             </Container>

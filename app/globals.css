@@ -3,16 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg-900: #150f0b;
-  --bg-800: #1e1710;
-  --text: #f7f1e4;
-  --muted: #b3a691;
-  --accent: #18966d;
-  --secondary: #e56a32;
-  --brass: #ddac3c;
-  --wine: #9c2f4e;
-  --teal: #178497;
-  --hairline: #ede3ce;
+  --bg: #f6f4ef;
+  --bg-alt: #edeae1;
+  --text: #15130f;
+  --muted: #6b6459;
+  --accent: #0f4d3a;
+  --brass: #a97f2e;
+  --hairline: #dedad0;
 }
 
 * {
@@ -25,14 +22,14 @@ html {
 }
 
 body {
-  background-color: var(--bg-900);
+  background-color: var(--bg);
   color: var(--text);
   font-feature-settings: "ss01", "cv01", "cv11";
 }
 
 ::selection {
-  background: rgba(24, 150, 109, 0.45);
-  color: #f7f1e4;
+  background: rgba(15, 77, 58, 0.18);
+  color: #15130f;
 }
 
 /* Custom scrollbar */
@@ -41,32 +38,29 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #150f0b;
+  background: #f6f4ef;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a2b1b;
+  background: #d8d2c4;
   border-radius: 999px;
-  border: 2px solid #150f0b;
+  border: 2px solid #f6f4ef;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #55402a;
+  background: #c4bcaa;
 }
 
 @layer components {
-  .glass {
-    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
-  }
-  .glass-strong {
-    @apply border border-white/10 bg-white/[0.06] backdrop-blur-2xl;
+  .card {
+    @apply border border-hairline bg-white;
   }
   .hairline {
-    @apply border-white/10;
+    @apply border-hairline;
   }
   .text-gradient {
-    @apply bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent;
+    @apply text-ink-900;
   }
   .accent-gradient-text {
-    @apply bg-gradient-to-r from-accent-soft to-accent bg-clip-text text-transparent;
+    @apply text-accent;
   }
 }
 

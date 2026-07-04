@@ -3,32 +3,32 @@ import type { ProcessStep } from "./types";
 export const processSteps: ProcessStep[] = [
   {
     id: "audit",
-    title: "Diagnostic audit",
+    title: "Диагностический аудит",
     description:
-      "We review operations, revenue and financial performance to establish a clear baseline and identify the fastest paths to improvement.",
+      "Изучаем операции, доходный менеджмент и финансовые показатели, чтобы зафиксировать базу и определить самые быстрые точки роста.",
   },
   {
     id: "transition",
-    title: "Platform transition",
+    title: "Переход на платформу",
     description:
-      "The property moves onto the HMS unified operating platform — standardized SOPs, staffing model and reporting from day one.",
+      "Объект переходит на единую операционную платформу HMS — стандартизированные SOP, штатная модель и отчётность с первого дня.",
   },
   {
     id: "revenue-rebuild",
-    title: "Revenue & distribution rebuild",
+    title: "Перестройка доходов и дистрибуции",
     description:
-      "We rebuild the channel mix and pricing strategy, balancing occupancy and ADR to grow RevPAR without sacrificing rate integrity.",
+      "Перестраиваем микс каналов и тарифную стратегию, балансируя загрузку и ADR ради роста RevPAR без потери целостности тарифов.",
   },
   {
     id: "cost-structure",
-    title: "Cost & staffing optimization",
+    title: "Оптимизация затрат и штата",
     description:
-      "Labor models and vendor contracts are restructured to protect service quality while improving the property's cost structure.",
+      "Пересматриваем модель труда и контракты с поставщиками, чтобы улучшить структуру затрат объекта, сохранив качество сервиса.",
   },
   {
     id: "reporting",
-    title: "Ongoing reporting & reviews",
+    title: "Отчётность и регулярные обзоры",
     description:
-      "Owners receive investor-grade monthly reporting and sit in on regular performance reviews for full, continuing transparency.",
+      "Владельцы получают ежемесячную отчётность инвестиционного уровня и участвуют в регулярных обзорах показателей для полной прозрачности.",
   },
 ];

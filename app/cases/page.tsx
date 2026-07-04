@@ -9,9 +9,9 @@ import { CTA } from "@/components/CTA";
 import { Check } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
-  title: "Case Studies",
+  title: "Результаты",
   description:
-    "Before-and-after results from hotels managed by HMS — measurable improvements in occupancy, ADR and RevPAR across the Saint Petersburg portfolio.",
+    "Результаты «было / стало» по отелям под управлением HMS — измеримый рост загрузки, ADR и RevPAR по портфелю в Санкт-Петербурге.",
   alternates: { canonical: "/cases" },
 };
 
@@ -19,9 +19,9 @@ export default function CasesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Case studies"
-        title="Performance you can measure"
-        description="Real transformations from properties managed under HMS. Each engagement pairs an operational reset with a data-led revenue strategy."
+        eyebrow="Результаты"
+        title="Показатели, которые можно измерить"
+        description="Реальные трансформации объектов под управлением HMS. Каждый проект сочетает операционный рестарт с доходной стратегией на основе данных."
       />
 
       <Section className="pt-0">
@@ -39,14 +39,14 @@ export default function CasesPage() {
           {caseStudies.map((study, i) => (
             <Reveal key={study.id} delay={(i % 3) * 0.06} className="h-full">
               <GlassCard className="h-full p-8">
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-lg font-semibold text-ink-900">
                   {study.hotel}
                 </h2>
-                <p className="mt-1 text-sm text-accent-soft">{study.segment}</p>
+                <p className="mt-1 text-sm text-accent">{study.segment}</p>
 
                 <div className="mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
-                    Challenge
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                    Вызов
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
                     {study.challenge}
@@ -54,16 +54,16 @@ export default function CasesPage() {
                 </div>
 
                 <div className="mt-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
-                    Approach
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                    Подход
                   </p>
                   <ul className="mt-3 space-y-2.5">
                     {study.approach.map((step) => (
                       <li
                         key={step}
-                        className="flex items-start gap-3 text-sm leading-relaxed text-white/90"
+                        className="flex items-start gap-3 text-sm leading-relaxed text-ink-900/90"
                       >
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" />
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                         {step}
                       </li>
                     ))}
@@ -76,8 +76,8 @@ export default function CasesPage() {
       </Section>
 
       <CTA
-        title="Could your hotel perform like this?"
-        description="Book a consultation for a confidential performance review and a clear improvement plan."
+        title="Хотите таких же показателей у себя?"
+        description="Запишитесь на консультацию — конфиденциальный разбор эффективности и понятный план улучшений."
       />
     </>
   );

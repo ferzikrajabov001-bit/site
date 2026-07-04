@@ -3,32 +3,32 @@ import type { ValueProp } from "./types";
 export const valueProps: ValueProp[] = [
   {
     id: "unified-system",
-    title: "Unified operational system",
+    title: "Единая операционная система",
     description:
-      "Every property runs on a single operating platform with standardized processes, so quality and control never depend on a single individual.",
+      "Каждый объект работает на одной операционной платформе со стандартизированными процессами, поэтому качество и контроль не зависят от одного человека.",
   },
   {
     id: "transparent-reporting",
-    title: "Transparent reporting",
+    title: "Прозрачная отчётность",
     description:
-      "Owners receive investor-grade monthly reporting — full P&L, variance and KPI dashboards — with complete visibility into performance.",
+      "Владельцы получают ежемесячную отчётность инвестиционного уровня — полный P&L, анализ отклонений и KPI-дашборды с полной видимостью показателей.",
   },
   {
     id: "revenue-model",
-    title: "Revenue optimization model",
+    title: "Модель доходной оптимизации",
     description:
-      "A disciplined revenue-management model balances occupancy and rate to grow RevPAR and profit, not just top-line volume.",
+      "Дисциплинированная модель доходного менеджмента балансирует загрузку и тариф ради роста RevPAR и прибыли, а не только выручки.",
   },
   {
     id: "hospitality-standards",
-    title: "Professional hospitality standards",
+    title: "Профессиональные гостиничные стандарты",
     description:
-      "Service delivery is held to international hospitality standards, protecting guest experience and long-term asset value.",
+      "Уровень сервиса соответствует международным гостиничным стандартам, защищая гостевой опыт и долгосрочную стоимость актива.",
   },
   {
     id: "management-team",
-    title: "Experienced management team",
+    title: "Опытная управляющая команда",
     description:
-      "A senior team with a track record across operations, revenue and finance leads every property under management.",
+      "Каждым объектом руководит опытная команда с track record в операциях, доходном менеджменте и финансах.",
   },
 ];

@@ -1,45 +1,20 @@
 /**
- * Per-hotel visual identity: a themed gradient (and matching glow color)
- * used across the hotel card, hotel detail page and other surfaces so
- * each property reads consistently everywhere. Chosen to reflect each
- * asset's character rather than assigned arbitrarily:
- *  - Art Deco Nevsky        -> emerald (flagship, corporate)
- *  - Art Nouveau Palace     -> wine (heritage, Style Moderne)
- *  - Art Deco Primorsky     -> brass/gold (business, exhibition)
- *  - Petrovsky Art Loft     -> secondary/rust (industrial conversion)
- *  - Art na Repino          -> teal (seaside, Gulf of Finland)
- *  - Glampoint              -> deep forest (nature retreat)
+ * Per-hotel visual identity: a themed gradient used for the photo-placeholder
+ * block on the hotel card and hotel detail page. Restrained to the site's
+ * institutional palette (deep green, brass, charcoal) with variation in
+ * weighting per property rather than introducing extra hues.
  */
 export interface HotelVisual {
   gradient: string;
-  glow: string;
 }
 
 const visuals: Record<string, HotelVisual> = {
-  "art-deco-nevsky": {
-    gradient: "from-[#0B4530] via-[#18966D] to-[#150F0B]",
-    glow: "rgba(24,150,109,0.35)",
-  },
-  "art-nouveau-palace": {
-    gradient: "from-[#551A2C] via-[#9C2F4E] to-[#150F0B]",
-    glow: "rgba(156,47,78,0.35)",
-  },
-  "art-deco-primorsky": {
-    gradient: "from-[#96721C] via-[#DDAC3C] to-[#150F0B]",
-    glow: "rgba(221,172,60,0.35)",
-  },
-  "petrovsky-art-loft": {
-    gradient: "from-[#9C3F17] via-[#E56A32] to-[#150F0B]",
-    glow: "rgba(229,106,50,0.35)",
-  },
-  "art-na-repino": {
-    gradient: "from-[#0B4550] via-[#178497] to-[#150F0B]",
-    glow: "rgba(23,132,151,0.35)",
-  },
-  glampoint: {
-    gradient: "from-[#123D2C] via-[#2D6A4C] to-[#150F0B]",
-    glow: "rgba(24,150,109,0.3)",
-  },
+  "art-deco-nevsky": { gradient: "from-[#0A3327] via-[#0F4D3A] to-[#15130F]" },
+  "art-nouveau-palace": { gradient: "from-[#332C20] via-[#7A5A1E] to-[#15130F]" },
+  "art-deco-primorsky": { gradient: "from-[#463C2A] via-[#A97F2E] to-[#15130F]" },
+  "petrovsky-art-loft": { gradient: "from-[#211D16] via-[#463C2A] to-[#15130F]" },
+  "art-na-repino": { gradient: "from-[#0A3327] via-[#1D7A5B] to-[#15130F]" },
+  glampoint: { gradient: "from-[#15130F] via-[#0F4D3A] to-[#211D16]" },
 };
 
 const fallbackOrder = Object.values(visuals);

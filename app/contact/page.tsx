@@ -8,16 +8,16 @@ import { ContactForm } from "@/components/ContactForm";
 import { Clock, Mail, MapPin, Phone } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Контакты",
   description:
-    "Contact Hotel Management Solutions in Saint Petersburg to discuss transferring your hotel under management or requesting a performance audit.",
+    "Свяжитесь с Hotel Management Solutions в Санкт-Петербурге, чтобы обсудить передачу отеля в управление или запросить аудит эффективности.",
   alternates: { canonical: "/contact" },
 };
 
 const details = [
   {
     icon: Phone,
-    label: "Phone",
+    label: "Телефон",
     value: siteConfig.contact.phone,
     href: `tel:${siteConfig.contact.phone.replace(/[^+\d]/g, "")}`,
   },
@@ -29,12 +29,12 @@ const details = [
   },
   {
     icon: MapPin,
-    label: "Office",
+    label: "Офис",
     value: siteConfig.contact.address,
   },
   {
     icon: Clock,
-    label: "Hours",
+    label: "Часы работы",
     value: siteConfig.contact.hours,
   },
 ];
@@ -43,9 +43,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Contact"
-        title="Let's talk about your hotel"
-        description="Book a confidential consultation to discuss transferring your asset under management, or request a performance audit of your property."
+        eyebrow="Контакты"
+        title="Давайте обсудим ваш отель"
+        description="Запишитесь на конфиденциальную консультацию, чтобы обсудить передачу актива в управление, или запросите аудит эффективности вашего объекта."
       />
 
       <Section className="pt-0">
@@ -57,13 +57,13 @@ export default function ContactPage() {
                   const Icon = detail.icon;
                   const content = (
                     <GlassCard className="h-full p-6">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-accent/10 text-accent-soft">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/20 bg-accent/[0.06] text-accent">
                         <Icon className="h-5 w-5" />
                       </div>
                       <p className="mt-4 text-xs uppercase tracking-[0.14em] text-muted">
                         {detail.label}
                       </p>
-                      <p className="mt-1 text-sm font-medium text-white">
+                      <p className="mt-1 text-sm font-medium text-ink-900">
                         {detail.value}
                       </p>
                     </GlassCard>
@@ -87,12 +87,12 @@ export default function ContactPage() {
               <GlassCard className="overflow-hidden">
                 <div
                   className="relative h-56"
-                  aria-label={`Map placeholder — ${siteConfig.contact.city}`}
+                  aria-label={`Место на карте — ${siteConfig.contact.city}`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-ink-700 to-ink-900" />
-                  <div className="absolute inset-0 bg-grid-faint [background-size:28px_28px] opacity-50" />
+                  <div className="absolute inset-0 bg-grid-faint [background-size:28px_28px] opacity-20" />
                   <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 bg-accent/20 text-accent-soft">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-accent-soft/40 bg-accent-soft/20 text-accent-soft">
                       <MapPin className="h-5 w-5" />
                     </span>
                     <span className="rounded-full border border-white/10 bg-ink-900/70 px-3 py-1 text-xs font-medium text-white backdrop-blur">
@@ -101,12 +101,12 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-base font-semibold text-white">
-                    Saint Petersburg
+                  <h3 className="text-base font-semibold text-ink-900">
+                    Санкт-Петербург
                   </h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                    Our team operates the portfolio locally. Meetings are
-                    available at our central office or remotely.
+                    Наша команда управляет портфелем на месте. Встречи возможны
+                    в центральном офисе или удалённо.
                   </p>
                 </div>
               </GlassCard>
@@ -115,12 +115,12 @@ export default function ContactPage() {
 
           <Reveal delay={0.12}>
             <GlassCard className="p-8 sm:p-10">
-              <h2 className="text-xl font-semibold text-white">
-                Send us a message
+              <h2 className="text-xl font-semibold text-ink-900">
+                Напишите нам
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Fill in the form and our team will respond within one business
-                day.
+                Заполните форму — наша команда ответит в течение одного
+                рабочего дня.
               </p>
               <div className="mt-8">
                 <ContactForm />

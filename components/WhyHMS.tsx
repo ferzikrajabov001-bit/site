@@ -10,17 +10,16 @@ import { cn } from "@/lib/utils";
 export function WhyHMS() {
   return (
     <Section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-radial-accent opacity-60" />
       <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <SectionHeading
-            eyebrow="Why HMS"
-            title="An operating partner built for asset performance"
-            description="We combine institutional discipline with hands-on hospitality expertise — so owners get predictable performance and full transparency."
+            eyebrow="Почему HMS"
+            title="Операционный партнёр для роста стоимости актива"
+            description="Мы сочетаем институциональную дисциплину с практической гостиничной экспертизой — владельцы получают предсказуемые показатели и полную прозрачность."
           />
           <div className="mt-8">
             <Button href="/about" variant="secondary" size="lg">
-              About our approach
+              О нашем подходе
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
@@ -36,13 +35,13 @@ export function WhyHMS() {
                   className={cn(
                     "flex h-9 w-9 items-center justify-center rounded-xl border",
                     warm
-                      ? "border-secondary/30 bg-secondary/10 text-secondary-soft"
-                      : "border-accent/30 bg-accent/10 text-accent-soft",
+                      ? "border-brass/30 bg-brass/[0.08] text-brass-deep"
+                      : "border-accent/25 bg-accent/[0.06] text-accent",
                   )}
                 >
                   <Check className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-white">
+                <h3 className="mt-4 text-base font-semibold text-ink-900">
                   {value.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">

@@ -7,18 +7,18 @@ export const siteConfig = {
   name: "Hotel Management Solutions",
   shortName: "HMS",
   tagline:
-    "Full-cycle hotel management company increasing profitability and operational efficiency across hospitality assets.",
+    "Управляющая компания гостиничных активов полного цикла — рост прибыльности и операционной эффективности объектов размещения.",
   description:
-    "Hotel Management Solutions (HMS) is a full-cycle hotel management company operating 6 properties in Saint Petersburg. We deliver operations management, revenue optimization, sales, marketing and financial control for hospitality assets.",
+    "Hotel Management Solutions (HMS) — управляющая компания полного цикла, в портфеле которой 6 объектов в Санкт-Петербурге. Операционное управление, доходный менеджмент, продажи, маркетинг и финансовый контроль для гостиничных активов.",
   url: "https://hms-hospitality.com",
-  locale: "en_US",
+  locale: "ru_RU",
   contact: {
     phone: "+7 (812) 000-00-00",
     email: "partners@hms-hospitality.com",
-    address: "Nevsky Prospekt, Saint Petersburg, 191186, Russia",
-    city: "Saint Petersburg",
-    country: "Russia",
-    hours: "Mon–Fri, 09:00–19:00 (MSK)",
+    address: "Невский проспект, Санкт-Петербург, 191186",
+    city: "Санкт-Петербург",
+    country: "Россия",
+    hours: "Пн–Пт, 09:00–19:00 (МСК)",
   },
   social: {
     linkedin: "https://www.linkedin.com/company/hms-hospitality",
@@ -27,9 +27,9 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Hotels", href: "/hotels" },
-  { label: "Case Studies", href: "/cases" },
-  { label: "Contact", href: "/contact" },
+  { label: "О компании", href: "/about" },
+  { label: "Услуги", href: "/services" },
+  { label: "Отели", href: "/hotels" },
+  { label: "Результаты", href: "/cases" },
+  { label: "Контакты", href: "/contact" },
 ] as const;
