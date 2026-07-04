@@ -5,10 +5,10 @@
 :root {
   --bg: #f6f8fb;
   --bg-alt: #eef2f8;
-  --text: #1b2430;
+  --text: #0f172a;
   --muted: #5b6777;
-  --accent: #1e4ed8;
-  --navy: #0b1f3b;
+  --accent: #1d4ed8;
+  --navy: #0a1b33;
   --success: #16a34a;
   --hairline: #e6edf5;
 }
@@ -29,8 +29,8 @@ body {
 }
 
 ::selection {
-  background: rgba(30, 78, 216, 0.16);
-  color: #1b2430;
+  background: rgba(29, 78, 216, 0.16);
+  color: #0f172a;
 }
 
 /* Custom scrollbar */

@@ -9,12 +9,12 @@ export interface HotelVisual {
 }
 
 const visuals: Record<string, HotelVisual> = {
-  "art-deco-nevsky": { gradient: "from-[#071429] via-[#163AA8] to-[#0B1F3B]" },
-  "art-nouveau-palace": { gradient: "from-[#0B1F3B] via-[#132A4D] to-[#071429]" },
-  "art-deco-primorsky": { gradient: "from-[#071429] via-[#1E4ED8] to-[#0B1F3B]" },
-  "petrovsky-art-loft": { gradient: "from-[#0B1F3B] via-[#28323F] to-[#071429]" },
-  "art-na-repino": { gradient: "from-[#071429] via-[#60A5FA]/40 to-[#0B1F3B]" },
-  glampoint: { gradient: "from-[#0B1F3B] via-[#163AA8] to-[#28323F]" },
+  "art-deco-nevsky": { gradient: "from-[#060F1E] via-[#153DAD] to-[#0A1B33]" },
+  "art-nouveau-palace": { gradient: "from-[#0A1B33] via-[#122A4A] to-[#060F1E]" },
+  "art-deco-primorsky": { gradient: "from-[#060F1E] via-[#1D4ED8] to-[#0A1B33]" },
+  "petrovsky-art-loft": { gradient: "from-[#0A1B33] via-[#1E293B] to-[#060F1E]" },
+  "art-na-repino": { gradient: "from-[#060F1E] via-[#60A5FA]/40 to-[#0A1B33]" },
+  glampoint: { gradient: "from-[#0A1B33] via-[#153DAD] to-[#1E293B]" },
 };
 
 const fallbackOrder = Object.values(visuals);

@@ -16,20 +16,20 @@ const config: Config = {
         },
         // Text + intentional dark bands (footer, closing CTA)
         ink: {
-          900: "#1B2430",
-          800: "#28323F",
-          700: "#3A4552",
+          900: "#0F172A",
+          800: "#1E293B",
+          700: "#334155",
           600: "#5B6777",
         },
         navy: {
-          DEFAULT: "#0B1F3B",
-          soft: "#132A4D",
-          deep: "#071429",
+          DEFAULT: "#0A1B33",
+          soft: "#122a4a",
+          deep: "#060F1E",
         },
         accent: {
-          DEFAULT: "#1E4ED8",
+          DEFAULT: "#1D4ED8",
           soft: "#60A5FA",
-          deep: "#163AA8",
+          deep: "#153DAD",
         },
         success: {
           DEFAULT: "#16A34A",

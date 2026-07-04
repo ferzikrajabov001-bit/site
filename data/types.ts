@@ -11,6 +11,8 @@ export interface Metric {
   prefix?: string;
   decimals?: number;
   description: string;
+  /** Overrides the animated counter with static text (e.g. a range like "18–32%" or "24/7"). */
+  display?: string;
 }
 
 export interface Service {

@@ -49,7 +49,7 @@ export function Hero() {
                   <dt className="text-xs uppercase tracking-[0.1em] text-muted">
                     Отелей
                   </dt>
-                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                  <dd className="font-display mt-1 text-2xl font-semibold text-accent">
                     6
                   </dd>
                 </div>
@@ -57,7 +57,7 @@ export function Hero() {
                   <dt className="text-xs uppercase tracking-[0.1em] text-muted">
                     Номеров
                   </dt>
-                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                  <dd className="font-display mt-1 text-2xl font-semibold text-accent">
                     350+
                   </dd>
                 </div>
@@ -65,7 +65,7 @@ export function Hero() {
                   <dt className="text-xs uppercase tracking-[0.1em] text-muted">
                     Рост выручки
                   </dt>
-                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                  <dd className="font-display mt-1 text-2xl font-semibold text-accent">
                     +28%
                   </dd>
                 </div>

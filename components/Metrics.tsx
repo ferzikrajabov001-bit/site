@@ -11,13 +11,15 @@ export function Metrics({ className }: { className?: string }) {
     <Section className={cn("border-t border-hairline py-16 sm:py-20", className)}>
       <div className="grid gap-x-16 gap-y-10 lg:grid-cols-[0.62fr_0.38fr]">
         <Reveal>
-          <p className="font-display text-7xl font-semibold leading-none tracking-tight text-ink-900 sm:text-8xl md:text-9xl">
-            <Counter
-              value={lead.value}
-              prefix={lead.prefix}
-              suffix={lead.suffix}
-              decimals={lead.decimals}
-            />
+          <p className="font-display text-7xl font-semibold leading-none tracking-tight text-accent sm:text-8xl md:text-9xl">
+            {lead.display ?? (
+              <Counter
+                value={lead.value}
+                prefix={lead.prefix}
+                suffix={lead.suffix}
+                decimals={lead.decimals}
+              />
+            )}
           </p>
           <p className="mt-5 max-w-xs text-base font-medium text-ink-900">
             {lead.label}
@@ -41,13 +43,15 @@ export function Metrics({ className }: { className?: string }) {
                 <p className="text-sm font-medium text-ink-900">
                   {metric.label}
                 </p>
-                <p className="font-display shrink-0 text-2xl font-semibold text-ink-900">
-                  <Counter
-                    value={metric.value}
-                    prefix={metric.prefix}
-                    suffix={metric.suffix}
-                    decimals={metric.decimals}
-                  />
+                <p className="font-display shrink-0 text-2xl font-semibold text-accent">
+                  {metric.display ?? (
+                    <Counter
+                      value={metric.value}
+                      prefix={metric.prefix}
+                      suffix={metric.suffix}
+                      decimals={metric.decimals}
+                    />
+                  )}
                 </p>
               </div>
               <p className="mt-1 max-w-xs text-xs leading-relaxed text-muted">

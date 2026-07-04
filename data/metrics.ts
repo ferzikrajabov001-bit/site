@@ -3,9 +3,9 @@ import type { Metric } from "./types";
 export const metrics: Metric[] = [
   {
     id: "hotels",
-    label: "Отелей в управлении",
+    label: "Объектов в управлении",
     value: 6,
-    description: "Полносервисные объекты под end-to-end управлением в Санкт-Петербурге.",
+    description: "Полносервисные активы под end-to-end управлением в Санкт-Петербурге.",
   },
   {
     id: "rooms",
@@ -15,18 +15,17 @@ export const metrics: Metric[] = [
     description: "Номерной фонд, оптимизируемый ежедневно по всем каналам дистрибуции.",
   },
   {
-    id: "revenue",
-    label: "Средний рост выручки",
-    value: 28,
-    prefix: "+",
-    suffix: "%",
-    description: "Прирост за первый год после передачи актива в управление HMS.",
+    id: "rate-growth",
+    label: "Диапазон роста ADR",
+    value: 0,
+    display: "+18–32%",
+    description: "Разброс роста тарифа по объектам за первый год под управлением HMS.",
   },
   {
-    id: "satisfaction",
-    label: "Удовлетворённость гостей",
-    value: 94,
-    suffix: "%",
-    description: "Стабильные стандарты качества по всему портфелю объектов.",
+    id: "oversight",
+    label: "Операционный контроль",
+    value: 0,
+    display: "24/7",
+    description: "Мониторинг эффективности портфеля и реагирование без выходных.",
   },
 ];
