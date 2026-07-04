@@ -22,7 +22,7 @@ export function CTA({
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-ink-800 to-ink-900 px-8 py-14 sm:px-14 sm:py-20">
             <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/25 blur-[120px]" />
-            <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-accent-soft/15 blur-[120px]" />
+            <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-secondary/18 blur-[120px]" />
             <div className="pointer-events-none absolute inset-0 bg-grid-faint [background-size:48px_48px] opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
 
             <div className="relative mx-auto flex max-w-2xl flex-col items-center text-center">

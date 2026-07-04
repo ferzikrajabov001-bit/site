@@ -16,11 +16,12 @@ const statusTone = {
  * bundling image assets. Ready to be swapped for real photography later.
  */
 const gradients = [
-  "from-[#1E4FD6] via-[#2F6BFF] to-[#0B1220]",
-  "from-[#3B2F63] via-[#5A88FF] to-[#111C2E]",
-  "from-[#0F3B5C] via-[#2F6BFF] to-[#0B1220]",
-  "from-[#12324A] via-[#3E6DBE] to-[#111C2E]",
-  "from-[#2A2140] via-[#2F6BFF] to-[#0B1220]",
+  "from-[#123D2C] via-[#1F6F52] to-[#17130F]",
+  "from-[#98572D] via-[#C97C4A] to-[#1F1A15]",
+  "from-[#8F7238] via-[#C6A15B] to-[#17130F]",
+  "from-[#123D2C] via-[#4FA382] to-[#1F1A15]",
+  "from-[#5C3A22] via-[#C97C4A] to-[#17130F]",
+  "from-[#2D4A3C] via-[#1F6F52] to-[#1F1A15]",
 ];
 
 export function HotelCard({ hotel, index = 0 }: { hotel: Hotel; index?: number }) {

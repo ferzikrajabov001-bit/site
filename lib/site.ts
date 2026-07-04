@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline:
     "Full-cycle hotel management company increasing profitability and operational efficiency across hospitality assets.",
   description:
-    "Hotel Management Solutions (HMS) is a full-cycle hotel management company operating 5 properties in Saint Petersburg. We deliver operations management, revenue optimization, sales, marketing and financial control for hospitality assets.",
+    "Hotel Management Solutions (HMS) is a full-cycle hotel management company operating 6 properties in Saint Petersburg. We deliver operations management, revenue optimization, sales, marketing and financial control for hospitality assets.",
   url: "https://hms-hospitality.com",
   locale: "en_US",
   contact: {

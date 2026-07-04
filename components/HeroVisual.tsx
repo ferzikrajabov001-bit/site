@@ -6,8 +6,8 @@ import { TrendUp } from "@/components/ui/icons";
 const bars = [42, 58, 51, 69, 63, 82, 88];
 const channels = [
   { label: "Direct", value: 38, tone: "bg-accent" },
-  { label: "OTA", value: 34, tone: "bg-accent-soft" },
-  { label: "Corporate", value: 28, tone: "bg-white/40" },
+  { label: "OTA", value: 34, tone: "bg-secondary" },
+  { label: "Corporate", value: 28, tone: "bg-brass" },
 ];
 
 /**

@@ -11,7 +11,7 @@ import { Check } from "@/components/ui/icons";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hotel Management Solutions is a full-cycle hotel management company operating a five-property portfolio in Saint Petersburg with an institutional, performance-driven approach.",
+    "Hotel Management Solutions is a full-cycle hotel management company operating a six-property portfolio in Saint Petersburg with an institutional, performance-driven approach.",
   alternates: { canonical: "/about" },
 };
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About HMS"
         title="A hotel management company built for asset performance"
-        description="Hotel Management Solutions operates a five-property portfolio in Saint Petersburg. We pair institutional discipline with hands-on hospitality expertise to grow profitability for owners and investors."
+        description="Hotel Management Solutions operates a six-property portfolio in Saint Petersburg. We pair institutional discipline with hands-on hospitality expertise to grow profitability for owners and investors."
       />
 
       <Section className="pt-0">

@@ -101,7 +101,7 @@ export default function HotelDetailPage({
                 className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/10"
                 aria-hidden
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1E4FD6] via-[#2F6BFF] to-[#0B1220]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#123D2C] via-[#1F6F52] to-[#17130F]" />
                 <div className="absolute inset-0 bg-grid-faint [background-size:36px_36px] opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent" />
               </div>

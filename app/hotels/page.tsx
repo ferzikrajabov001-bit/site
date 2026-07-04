@@ -18,7 +18,7 @@ export default function HotelsPage() {
       <PageHeader
         eyebrow="The portfolio"
         title="Hotels under management"
-        description="A diversified Saint Petersburg portfolio of five properties, each operated on the HMS platform. Filter by segment to explore each asset."
+        description="A diversified Saint Petersburg portfolio of six properties, each operated on the HMS platform. Filter by segment to explore each asset."
       />
 
       <Section className="pt-0">

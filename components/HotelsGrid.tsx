@@ -25,8 +25,8 @@ export function HotelsGrid({
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="The portfolio"
-            title="Five properties under management"
-            description="A diversified Saint Petersburg portfolio spanning business, boutique, extended-stay and luxury heritage segments."
+            title="Six properties under management"
+            description="A diversified Saint Petersburg portfolio spanning Art Deco business hotels, Art Nouveau heritage, design lofts, boutique leisure and a glamping retreat."
           />
           {showCta ? (
             <div className="shrink-0">

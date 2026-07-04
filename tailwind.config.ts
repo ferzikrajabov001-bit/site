@@ -10,18 +10,28 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          900: "#0B1220",
-          800: "#111C2E",
-          700: "#16223A",
-          600: "#1D2C48",
+          900: "#17130F",
+          800: "#1F1A15",
+          700: "#271F17",
+          600: "#33291D",
         },
         accent: {
-          DEFAULT: "#2F6BFF",
-          soft: "#5A88FF",
-          deep: "#1E4FD6",
+          DEFAULT: "#1F6F52",
+          soft: "#4FA382",
+          deep: "#123D2C",
         },
-        muted: "#AAB4C0",
-        hairline: "#E6EAF2",
+        secondary: {
+          DEFAULT: "#C97C4A",
+          soft: "#E2A374",
+          deep: "#98572D",
+        },
+        brass: {
+          DEFAULT: "#C6A15B",
+          soft: "#DBC08A",
+          deep: "#8F7238",
+        },
+        muted: "#B3A691",
+        hairline: "#EDE3CE",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
@@ -35,14 +45,16 @@ const config: Config = {
         "3xl": "1.75rem",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(47,107,255,0.25), 0 20px 60px -20px rgba(47,107,255,0.45)",
-        card: "0 24px 60px -30px rgba(4,10,24,0.75)",
+        glow: "0 0 0 1px rgba(31,111,82,0.25), 0 20px 60px -20px rgba(31,111,82,0.45)",
+        card: "0 24px 60px -30px rgba(10,8,5,0.75)",
       },
       backgroundImage: {
         "grid-faint":
-          "linear-gradient(to right, rgba(230,234,242,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(230,234,242,0.06) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(237,227,206,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(237,227,206,0.06) 1px, transparent 1px)",
         "radial-accent":
-          "radial-gradient(60% 60% at 50% 0%, rgba(47,107,255,0.22) 0%, rgba(11,18,32,0) 70%)",
+          "radial-gradient(60% 60% at 50% 0%, rgba(31,111,82,0.24) 0%, rgba(23,19,15,0) 70%)",
+        "radial-secondary":
+          "radial-gradient(55% 55% at 100% 20%, rgba(201,124,74,0.20) 0%, rgba(23,19,15,0) 70%)",
       },
       keyframes: {
         "gradient-pan": {

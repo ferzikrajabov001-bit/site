@@ -5,6 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { Check, ArrowRight } from "@/components/ui/icons";
+import { cn } from "@/lib/utils";
 
 export function WhyHMS() {
   return (
@@ -26,10 +27,19 @@ export function WhyHMS() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {valueProps.map((value, i) => (
+          {valueProps.map((value, i) => {
+            const warm = i % 2 === 1;
+            return (
             <Reveal key={value.id} delay={(i % 2) * 0.08}>
               <GlassCard className="h-full p-6">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent-soft">
+                <div
+                  className={cn(
+                    "flex h-9 w-9 items-center justify-center rounded-xl border",
+                    warm
+                      ? "border-secondary/30 bg-secondary/10 text-secondary-soft"
+                      : "border-accent/30 bg-accent/10 text-accent-soft",
+                  )}
+                >
                   <Check className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-white">
@@ -40,7 +50,8 @@ export function WhyHMS() {
                 </p>
               </GlassCard>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </Section>

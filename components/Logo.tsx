@@ -14,8 +14,8 @@ export function Logo({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="hms-logo" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#5A88FF" />
-          <stop offset="100%" stopColor="#2F6BFF" />
+          <stop offset="0%" stopColor="#4FA382" />
+          <stop offset="100%" stopColor="#1F6F52" />
         </linearGradient>
       </defs>
       <rect width="40" height="40" rx="11" fill="url(#hms-logo)" />

@@ -2,14 +2,14 @@ import type { CaseStudy } from "./types";
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "nevsky-turnaround",
-    hotel: "Nevsky Grand",
+    id: "nevsky-deco-turnaround",
+    hotel: "Art Deco Nevsky",
     segment: "Upscale Business",
     duration: "12 months",
     summary:
       "Operational reset and corporate demand rebuild lifted RevPAR by over a third.",
     challenge:
-      "A strong asset underperforming on rate and over-reliant on low-margin OTA demand.",
+      "A strong Art Deco asset on Nevsky Prospekt underperforming on rate and over-reliant on low-margin OTA demand.",
     approach: [
       "Rebuilt corporate and MICE account base",
       "Introduced dynamic segment-based pricing",
@@ -22,16 +22,16 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    id: "moyka-repositioning",
-    hotel: "Moyka Boutique",
-    segment: "Boutique Lifestyle",
+    id: "repino-repositioning",
+    hotel: "Art na Repino",
+    segment: "Boutique Leisure",
     duration: "9 months",
     summary:
-      "Premium repositioning grew ADR while protecting the boutique experience.",
+      "Artist-colony repositioning grew ADR while protecting the boutique experience.",
     challenge:
-      "Undifferentiated positioning suppressing rate potential for a high-quality product.",
+      "Undifferentiated seaside positioning suppressing rate potential for a high-quality boutique product.",
     approach: [
-      "Repositioned toward premium leisure",
+      "Repositioned around the Repino artists'-colony story",
       "Upgraded content across premium OTAs",
       "Launched a direct-booking and CRM program",
     ],
@@ -42,8 +42,8 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    id: "vasilievsky-scale",
-    hotel: "Vasilievsky Park",
+    id: "primorsky-scale",
+    hotel: "Art Deco Primorsky",
     segment: "Upper Midscale",
     duration: "14 months",
     summary:

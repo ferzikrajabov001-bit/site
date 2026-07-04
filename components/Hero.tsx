@@ -48,12 +48,12 @@ export function Hero() {
             <Reveal delay={0.2}>
               <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-muted">
                 <div>
-                  <span className="text-2xl font-semibold text-white">5</span>
+                  <span className="text-2xl font-semibold text-white">6</span>
                   <span className="ml-2">hotels managed</span>
                 </div>
                 <span className="hidden h-8 w-px bg-white/10 sm:block" />
                 <div>
-                  <span className="text-2xl font-semibold text-white">300+</span>
+                  <span className="text-2xl font-semibold text-white">350+</span>
                   <span className="ml-2">rooms</span>
                 </div>
                 <span className="hidden h-8 w-px bg-white/10 sm:block" />
