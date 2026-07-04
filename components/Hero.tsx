@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-hairline pt-32 pb-20 sm:pt-40 sm:pb-28">
       <Container>
-        <div className="grid items-start gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid items-start gap-16 lg:grid-cols-[1.55fr_1fr]">
           <div className="flex flex-col items-start">
             <Reveal>
               <span className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-muted">
@@ -73,7 +73,7 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <div className="relative lg:pl-6">
+          <div className="relative lg:pl-6 lg:pt-14">
             <HeroVisual />
           </div>
         </div>

@@ -19,7 +19,7 @@ export function Team() {
               className={
                 i % 2 === 0
                   ? "flex items-start gap-5 border-b border-hairline py-7 sm:border-r sm:pr-10"
-                  : "flex items-start gap-5 border-b border-hairline py-7 sm:pl-10"
+                  : "flex items-start gap-5 border-b border-hairline py-7 sm:pl-10 sm:pt-11"
               }
             >
               <span className="font-display flex h-12 w-12 shrink-0 items-center justify-center border border-ink-900/15 text-sm font-semibold text-ink-900">

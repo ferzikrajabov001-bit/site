@@ -1,15 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import type { Hotel } from "@/data/types";
-import { HotelCard } from "@/components/HotelCard";
+import { HotelRow } from "@/components/HotelRow";
 import { cn } from "@/lib/utils";
 
 /**
- * Client-side hotels explorer with a filter-ready architecture. Filters are
- * derived from the data so new segments/statuses scale automatically as the
- * portfolio grows.
+ * Filterable hotels explorer. Filters are derived from the data so new
+ * segments/statuses scale automatically as the portfolio grows.
  */
 export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
   const segments = useMemo(() => {
@@ -26,6 +24,8 @@ export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
         : hotels.filter((hotel) => hotel.segment === active),
     [active, hotels],
   );
+
+  const [first, ...others] = filtered;
 
   return (
     <div>
@@ -52,23 +52,12 @@ export function HotelsExplorer({ hotels }: { hotels: Hotel[] }) {
         })}
       </div>
 
-      <motion.div layout className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence mode="popLayout">
-          {filtered.map((hotel, i) => (
-            <motion.div
-              key={hotel.id}
-              layout
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="h-full"
-            >
-              <HotelCard hotel={hotel} index={i} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="mt-10">
+        {first ? <HotelRow key={first.id} hotel={first} index={0} featured /> : null}
+        {others.map((hotel, i) => (
+          <HotelRow key={hotel.id} hotel={hotel} index={i + 1} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,8 @@
 import { hotels } from "@/data";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { HotelCard } from "@/components/HotelCard";
+import { HotelRow } from "@/components/HotelRow";
 import { ArrowRight } from "@/components/ui/icons";
 
 interface HotelsGridProps {
@@ -18,18 +17,19 @@ export function HotelsGrid({
   showCta = true,
 }: HotelsGridProps) {
   const list = typeof limit === "number" ? hotels.slice(0, limit) : hotels;
+  const [first, ...others] = list;
 
   return (
-    <Section>
+    <Section className="border-t border-hairline">
       {showHeading ? (
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="grid gap-6 sm:grid-cols-[1.4fr_1fr] sm:items-end">
           <SectionHeading
             eyebrow="Портфель"
             title="Шесть объектов в управлении"
             description="Диверсифицированный портфель в Санкт-Петербурге: бизнес-отели в стиле ар-деко, историческое наследие модерна, дизайн-лофты, бутиковый отдых и глэмпинг."
           />
           {showCta ? (
-            <div className="shrink-0">
+            <div className="sm:justify-self-end">
               <Button href="/hotels" variant="secondary">
                 Все отели
                 <ArrowRight className="h-4 w-4" />
@@ -39,11 +39,10 @@ export function HotelsGrid({
         </div>
       ) : null}
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((hotel, i) => (
-          <Reveal key={hotel.id} delay={(i % 3) * 0.08} className="h-full">
-            <HotelCard hotel={hotel} index={i} />
-          </Reveal>
+      <div className="mt-14">
+        {first ? <HotelRow hotel={first} index={0} featured /> : null}
+        {others.map((hotel, i) => (
+          <HotelRow key={hotel.id} hotel={hotel} index={i + 1} />
         ))}
       </div>
     </Section>

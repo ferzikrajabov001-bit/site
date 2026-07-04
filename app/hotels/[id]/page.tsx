@@ -9,7 +9,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
-import { HotelCard } from "@/components/HotelCard";
+import { HotelRow } from "@/components/HotelRow";
 import { ArrowRight, Check, MapPin } from "@/components/ui/icons";
 import { getHotelVisual } from "@/lib/hotelVisuals";
 import { statusLabels, statusTone } from "@/lib/labels";
@@ -109,18 +109,16 @@ export default function HotelDetailPage({
       </section>
 
       <Section className="pt-4">
-        <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+        <dl className="grid grid-cols-2 divide-x divide-y divide-hairline border border-hairline sm:grid-cols-3 lg:grid-cols-6 lg:divide-y-0">
           {kpis.map((kpi, i) => (
-            <Reveal key={kpi.label} delay={(i % 6) * 0.05}>
-              <GlassCard className="h-full p-6 text-center">
-                <p className="text-2xl font-semibold text-ink-900">{kpi.value}</p>
-                <p className="mt-1.5 text-xs uppercase tracking-[0.12em] text-muted">
-                  {kpi.label}
-                </p>
-              </GlassCard>
+            <Reveal key={kpi.label} delay={(i % 6) * 0.05} className="px-5 py-6 text-center">
+              <dd className="font-display text-2xl font-semibold text-ink-900">{kpi.value}</dd>
+              <dt className="mt-1.5 text-xs uppercase tracking-[0.12em] text-muted">
+                {kpi.label}
+              </dt>
             </Reveal>
           ))}
-        </div>
+        </dl>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-start">
           <Reveal>
@@ -190,11 +188,9 @@ export default function HotelDetailPage({
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6">
           {related.map((item, i) => (
-            <Reveal key={item.id} delay={(i % 3) * 0.08} className="h-full">
-              <HotelCard hotel={item} index={i} />
-            </Reveal>
+            <HotelRow key={item.id} hotel={item} index={i} />
           ))}
         </div>
       </Section>

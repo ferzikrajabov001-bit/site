@@ -7,6 +7,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Metrics } from "@/components/Metrics";
 import { Timeline } from "@/components/Timeline";
 import { Team } from "@/components/Team";
+import { Statement } from "@/components/Statement";
 import { CTA } from "@/components/CTA";
 import { Check } from "@/components/ui/icons";
 
@@ -99,6 +100,11 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </Section>
+
+      <Statement eyebrow="Наш подход" align="left">
+        Институциональная дисциплина существует не ради процедур —
+        она существует, чтобы результат не зависел от одного человека.
+      </Statement>
 
       <Section className="pt-0">
         <SectionHeading
