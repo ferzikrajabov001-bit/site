@@ -21,7 +21,7 @@ export function Timeline() {
           {timeline.map((event, i) => (
             <Reveal key={event.id} delay={(i % 4) * 0.06} as="li">
               <div className="flex gap-6">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-accent/25 bg-accent/[0.06] text-sm font-semibold text-accent sm:h-16 sm:w-16">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm border border-accent/25 bg-accent/[0.06] text-sm font-semibold text-accent sm:h-16 sm:w-16">
                   {event.year}
                 </div>
                 <div className="pt-1">

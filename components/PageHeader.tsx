@@ -1,6 +1,5 @@
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 interface PageHeaderProps {
   eyebrow?: string;
@@ -16,14 +15,13 @@ export function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden pt-36 pb-16 sm:pt-44 sm:pb-20">
-      <AmbientBackground />
+    <section className="relative border-b border-hairline pt-36 pb-16 sm:pt-44 sm:pb-20">
       <Container>
         <div className="max-w-3xl">
           {eyebrow ? (
             <Reveal>
-              <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-accent">
-                <span className="h-px w-6 bg-accent/50" aria-hidden />
+              <span className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-muted">
+                <span className="h-px w-6 bg-accent" />
                 {eyebrow}
               </span>
             </Reveal>

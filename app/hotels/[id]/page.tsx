@@ -94,7 +94,7 @@ export default function HotelDetailPage({
 
             <Reveal delay={0.12}>
               <div
-                className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-hairline"
+                className="relative aspect-[16/10] overflow-hidden rounded-sm border border-hairline"
                 aria-hidden
               >
                 <div
@@ -162,7 +162,7 @@ export default function HotelDetailPage({
                 ))}
               </div>
 
-              <div className="mt-8 rounded-2xl border border-accent/20 bg-accent/[0.05] p-6">
+              <div className="mt-8 rounded-sm border border-accent/20 bg-accent/[0.05] p-6">
                 <p className="text-sm font-medium text-ink-900">
                   Хотите таких же результатов?
                 </p>

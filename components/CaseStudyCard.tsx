@@ -38,7 +38,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
             <Reveal
               key={metric.label}
               delay={i * 0.06}
-              className="rounded-2xl border border-hairline bg-paper p-4"
+              className="rounded-sm border border-hairline bg-paper p-4"
             >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-ink-900">

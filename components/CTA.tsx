@@ -20,7 +20,7 @@ export function CTA({
     <section className="py-20 sm:py-28">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] border border-ink-700 bg-ink-900 px-8 py-14 sm:px-14 sm:py-20">
+          <div className="relative overflow-hidden rounded-none border border-ink-700 bg-ink-900 px-8 py-14 sm:px-14 sm:py-20">
             <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent-soft/20 blur-[120px]" />
             <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-brass/15 blur-[120px]" />
             <div className="pointer-events-none absolute inset-0 bg-grid-faint [background-size:48px_48px] opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />

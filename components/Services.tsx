@@ -2,9 +2,8 @@ import { services } from "@/data";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { ServiceGlyph, ArrowUpRight } from "@/components/ui/icons";
-import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "@/components/ui/icons";
+import Link from "next/link";
 
 interface ServicesProps {
   showAll?: boolean;
@@ -21,35 +20,26 @@ export function Services({ showAll = true }: ServicesProps) {
         description="Шесть интегрированных направлений, которые превращают гостиничные активы в стабильно прибыльный, профессионально управляемый бизнес."
       />
 
-      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((service, i) => {
-          const warm = i % 3 === 1;
-          return (
-          <Reveal key={service.id} delay={(i % 3) * 0.08}>
-            <GlassCard interactive className="group h-full p-7">
-              <div
-                className={cn(
-                  "flex h-12 w-12 items-center justify-center rounded-2xl border transition-colors duration-300 group-hover:text-white",
-                  warm
-                    ? "border-brass/25 bg-brass/[0.08] text-brass-deep group-hover:bg-brass"
-                    : "border-accent/25 bg-accent/[0.06] text-accent group-hover:bg-accent",
-                )}
-              >
-                <ServiceGlyph name={service.icon} className="h-6 w-6" />
-              </div>
-
-              <h3 className="mt-6 flex items-start justify-between gap-3 text-lg font-semibold text-ink-900">
+      <div className="mt-14 border-t border-hairline">
+        {list.map((service, i) => (
+          <Reveal key={service.id} delay={Math.min(i, 3) * 0.05}>
+            <Link
+              href={`/services#${service.slug}`}
+              className="group grid grid-cols-[3rem_1fr_auto] items-baseline gap-6 border-b border-hairline py-6 transition-colors hover:bg-paper-alt sm:grid-cols-[3.5rem_1fr_1.5fr_auto] sm:items-center sm:px-4"
+            >
+              <span className="font-display text-sm text-muted">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-lg font-semibold text-ink-900">
                 {service.title}
-                <ArrowUpRight className="h-5 w-5 shrink-0 text-muted opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent group-hover:opacity-100" />
               </h3>
-
-              <p className="mt-2.5 text-sm leading-relaxed text-muted">
+              <p className="hidden text-sm leading-relaxed text-muted sm:block">
                 {service.summary}
               </p>
-            </GlassCard>
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+            </Link>
           </Reveal>
-          );
-        })}
+        ))}
       </div>
     </Section>
   );

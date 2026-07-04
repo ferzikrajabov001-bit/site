@@ -20,9 +20,9 @@ export function GlassCard({
   return (
     <Component
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-hairline bg-white shadow-card transition-all duration-300",
+        "relative overflow-hidden rounded-sm border border-hairline bg-white shadow-card transition-all duration-300",
         interactive &&
-          "hover:-translate-y-1 hover:border-accent/30 hover:shadow-card-hover",
+          "hover:border-accent/30 hover:shadow-card-hover",
         className,
       )}
       {...props}

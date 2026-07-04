@@ -1,49 +1,42 @@
 import { team } from "@/data";
-import type { TeamMember } from "@/data/types";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { cn } from "@/lib/utils";
-
-const toneClasses: Record<TeamMember["tone"], string> = {
-  accent: "border-accent/25 bg-accent/[0.06] text-accent",
-  brass: "border-brass/30 bg-brass/[0.08] text-brass-deep",
-  ink: "border-ink-900/15 bg-ink-900/[0.04] text-ink-900",
-};
 
 export function Team() {
   return (
-    <Section className="relative overflow-hidden bg-paper-alt">
+    <Section className="border-t border-hairline">
       <SectionHeading
         eyebrow="Руководство"
         title="Команда за каждым объектом"
         description="Опытная управляющая команда с прямым track record в операциях, доходном менеджменте, продажах, маркетинге и финансах."
-        align="center"
       />
 
-      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid gap-x-10 gap-y-0 border-t border-hairline sm:grid-cols-2">
         {team.map((member, i) => (
-          <Reveal key={member.id} delay={(i % 3) * 0.08} className="h-full">
-            <GlassCard className="h-full p-7">
-              <div
-                className={cn(
-                  "flex h-14 w-14 items-center justify-center rounded-2xl border text-base font-semibold",
-                  toneClasses[member.tone],
-                )}
-              >
+          <Reveal key={member.id} delay={Math.min(i, 3) * 0.05}>
+            <div
+              className={
+                i % 2 === 0
+                  ? "flex items-start gap-5 border-b border-hairline py-7 sm:border-r sm:pr-10"
+                  : "flex items-start gap-5 border-b border-hairline py-7 sm:pl-10"
+              }
+            >
+              <span className="font-display flex h-12 w-12 shrink-0 items-center justify-center border border-ink-900/15 text-sm font-semibold text-ink-900">
                 {member.initials}
+              </span>
+              <div>
+                <h3 className="text-base font-semibold text-ink-900">
+                  {member.name}
+                </h3>
+                <p className="mt-0.5 text-sm font-medium text-accent">
+                  {member.role}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {member.bio}
+                </p>
               </div>
-              <h3 className="mt-5 text-base font-semibold text-ink-900">
-                {member.name}
-              </h3>
-              <p className="mt-1 text-sm font-medium text-accent">
-                {member.role}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                {member.bio}
-              </p>
-            </GlassCard>
+            </div>
           </Reveal>
         ))}
       </div>

@@ -85,7 +85,6 @@ export interface TeamMember {
   role: string;
   bio: string;
   initials: string;
-  tone: "accent" | "brass" | "ink";
 }
 
 export interface TimelineEvent {

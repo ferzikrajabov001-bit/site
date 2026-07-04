@@ -65,7 +65,7 @@ export function ContactForm() {
 
   const fieldClass = (hasError?: boolean) =>
     cn(
-      "w-full rounded-2xl border bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-muted/70 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40",
+      "w-full rounded-sm border bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-muted/70 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40",
       hasError ? "border-red-500/60" : "border-hairline focus:border-accent/50",
     );
 
@@ -76,9 +76,9 @@ export function ContactForm() {
           key="success"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col items-start gap-4 rounded-3xl border border-emerald-700/25 bg-emerald-700/[0.05] p-8"
+          className="flex flex-col items-start gap-4 rounded-sm border border-emerald-700/25 bg-emerald-700/[0.05] p-8"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-700/30 bg-emerald-700/10 text-emerald-800">
+          <span className="flex h-12 w-12 items-center justify-center rounded-sm border border-emerald-700/30 bg-emerald-700/10 text-emerald-800">
             <Check className="h-6 w-6" />
           </span>
           <div>

@@ -110,13 +110,13 @@ export function Navbar() {
             className="lg:hidden"
           >
             <Container className="pb-6 pt-2">
-              <div className="flex flex-col gap-1 rounded-3xl border border-hairline bg-white p-3 shadow-card">
+              <div className="flex flex-col gap-1 rounded-sm border border-hairline bg-white p-3 shadow-card">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "rounded-2xl px-4 py-3 text-base font-medium transition-colors",
+                      "rounded-sm px-4 py-3 text-base font-medium transition-colors",
                       isActive(link.href)
                         ? "bg-paper-alt text-ink-900"
                         : "text-muted hover:bg-paper-alt hover:text-ink-900",

@@ -57,7 +57,7 @@ export default function ContactPage() {
                   const Icon = detail.icon;
                   const content = (
                     <GlassCard className="h-full p-6">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/20 bg-accent/[0.06] text-accent">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-sm border border-accent/20 bg-accent/[0.06] text-accent">
                         <Icon className="h-5 w-5" />
                       </div>
                       <p className="mt-4 text-xs uppercase tracking-[0.14em] text-muted">

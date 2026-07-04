@@ -16,7 +16,7 @@ export function ServiceStepper() {
       <div className="mt-14 grid gap-4 lg:grid-cols-5">
         {processSteps.map((step, i) => (
           <Reveal key={step.id} delay={i * 0.07} className="h-full">
-            <div className="relative flex h-full flex-col rounded-2xl border border-hairline bg-white p-6">
+            <div className="relative flex h-full flex-col rounded-sm border border-hairline bg-white p-6">
               <span className="font-display text-3xl font-semibold tracking-tight text-accent/50">
                 {String(i + 1).padStart(2, "0")}
               </span>

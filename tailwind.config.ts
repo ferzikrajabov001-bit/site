@@ -43,8 +43,8 @@ const config: Config = {
         container: "1200px",
       },
       borderRadius: {
-        xl2: "1.25rem",
-        "3xl": "1.5rem",
+        xl2: "0.25rem",
+        "3xl": "0.25rem",
       },
       boxShadow: {
         card: "0 2px 4px rgba(21,19,15,0.04), 0 12px 32px -16px rgba(21,19,15,0.12)",

@@ -1,20 +1,18 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { HeroVisual } from "@/components/HeroVisual";
 import { ArrowRight } from "@/components/ui/icons";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <AmbientBackground />
+    <section className="relative overflow-hidden border-b border-hairline pt-32 pb-20 sm:pt-40 sm:pb-28">
       <Container>
-        <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid items-start gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col items-start">
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-3.5 py-1.5 text-xs font-medium text-muted">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-muted">
+                <span className="h-px w-6 bg-accent" />
                 Управляющая компания отелей · Санкт-Петербург
               </span>
             </Reveal>
@@ -46,22 +44,32 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-muted">
-                <div>
-                  <span className="text-2xl font-semibold text-ink-900">6</span>
-                  <span className="ml-2">отелей в управлении</span>
+              <dl className="mt-12 grid grid-cols-3 divide-x divide-hairline border-y border-hairline">
+                <div className="py-4 pr-4">
+                  <dt className="text-xs uppercase tracking-[0.1em] text-muted">
+                    Отелей
+                  </dt>
+                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                    6
+                  </dd>
                 </div>
-                <span className="hidden h-8 w-px bg-hairline sm:block" />
-                <div>
-                  <span className="text-2xl font-semibold text-ink-900">350+</span>
-                  <span className="ml-2">номеров</span>
+                <div className="py-4 px-4">
+                  <dt className="text-xs uppercase tracking-[0.1em] text-muted">
+                    Номеров
+                  </dt>
+                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                    350+
+                  </dd>
                 </div>
-                <span className="hidden h-8 w-px bg-hairline sm:block" />
-                <div>
-                  <span className="text-2xl font-semibold text-ink-900">+28%</span>
-                  <span className="ml-2">рост выручки</span>
+                <div className="py-4 pl-4">
+                  <dt className="text-xs uppercase tracking-[0.1em] text-muted">
+                    Рост выручки
+                  </dt>
+                  <dd className="font-display mt-1 text-2xl font-semibold text-ink-900">
+                    +28%
+                  </dd>
                 </div>
-              </div>
+              </dl>
             </Reveal>
           </div>
 

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function Metrics({ className }: { className?: string }) {
   return (
     <Section className={cn("py-16 sm:py-20", className)}>
-      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-hairline bg-hairline lg:grid-cols-4">
         {metrics.map((metric, i) => (
           <Reveal
             key={metric.id}

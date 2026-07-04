@@ -2,14 +2,12 @@ import { valueProps } from "@/data";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
-import { Check, ArrowRight } from "@/components/ui/icons";
-import { cn } from "@/lib/utils";
+import { ArrowRight } from "@/components/ui/icons";
 
 export function WhyHMS() {
   return (
-    <Section className="relative overflow-hidden">
+    <Section className="border-t border-hairline bg-paper-alt">
       <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <SectionHeading
@@ -25,32 +23,24 @@ export function WhyHMS() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {valueProps.map((value, i) => {
-            const warm = i % 2 === 1;
-            return (
-            <Reveal key={value.id} delay={(i % 2) * 0.08}>
-              <GlassCard className="h-full p-6">
-                <div
-                  className={cn(
-                    "flex h-9 w-9 items-center justify-center rounded-xl border",
-                    warm
-                      ? "border-brass/30 bg-brass/[0.08] text-brass-deep"
-                      : "border-accent/25 bg-accent/[0.06] text-accent",
-                  )}
-                >
-                  <Check className="h-5 w-5" />
+        <div className="border-t border-ink-900/10">
+          {valueProps.map((value, i) => (
+            <Reveal key={value.id} delay={Math.min(i, 3) * 0.05}>
+              <div className="grid grid-cols-[2.5rem_1fr] gap-5 border-b border-ink-900/10 py-6">
+                <span className="font-display text-sm text-muted">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-base font-semibold text-ink-900">
+                    {value.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-ink-900">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {value.description}
-                </p>
-              </GlassCard>
+              </div>
             </Reveal>
-            );
-          })}
+          ))}
         </div>
       </div>
     </Section>

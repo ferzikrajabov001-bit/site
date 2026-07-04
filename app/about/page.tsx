@@ -132,7 +132,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-3">
             {approach.map((step, i) => (
               <Reveal key={step} delay={i * 0.06}>
-                <div className="flex items-start gap-4 rounded-2xl border border-hairline bg-white p-5">
+                <div className="flex items-start gap-4 rounded-sm border border-hairline bg-white p-5">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/25 bg-accent/[0.06] text-sm font-semibold text-accent">
                     {i + 1}
                   </span>
