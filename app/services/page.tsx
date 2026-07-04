@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { CTA } from "@/components/CTA";
+import { ServiceStepper } from "@/components/ServiceStepper";
 import { ServiceGlyph, Check } from "@/components/ui/icons";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function ServicesPage() {
         title="Full-cycle hotel management, end to end"
         description="Six integrated disciplines delivered on a single operating platform — everything a hospitality asset needs to perform, from daily operations to market launch."
       />
+
+      <ServiceStepper />
 
       <Section className="pt-0">
         <div className="flex flex-col gap-6">

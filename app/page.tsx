@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { WhyHMS } from "@/components/WhyHMS";
 import { HotelsGrid } from "@/components/HotelsGrid";
 import { CaseStudies } from "@/components/CaseStudies";
+import { Testimonials } from "@/components/Testimonials";
 import { CTA } from "@/components/CTA";
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <WhyHMS />
       <HotelsGrid limit={5} />
       <CaseStudies />
+      <Testimonials />
       <CTA />
     </>
   );

@@ -78,3 +78,33 @@ export interface ValueProp {
   title: string;
   description: string;
 }
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  initials: string;
+  tone: "accent" | "secondary" | "brass" | "wine" | "teal";
+}
+
+export interface TimelineEvent {
+  id: string;
+  year: string;
+  title: string;
+  description: string;
+}
+
+export interface Testimonial {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  hotelId: string;
+}
+
+export interface ProcessStep {
+  id: string;
+  title: string;
+  description: string;
+}

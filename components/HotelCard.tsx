@@ -4,6 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
 import { MapPin, ArrowUpRight } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
+import { getHotelVisual } from "@/lib/hotelVisuals";
 
 const statusTone = {
   "Under Management": "accent",
@@ -11,21 +12,8 @@ const statusTone = {
   "Launch Phase": "warning",
 } as const;
 
-/**
- * Deterministic gradient per hotel so cards stay visually distinct without
- * bundling image assets. Ready to be swapped for real photography later.
- */
-const gradients = [
-  "from-[#123D2C] via-[#1F6F52] to-[#17130F]",
-  "from-[#98572D] via-[#C97C4A] to-[#1F1A15]",
-  "from-[#8F7238] via-[#C6A15B] to-[#17130F]",
-  "from-[#123D2C] via-[#4FA382] to-[#1F1A15]",
-  "from-[#5C3A22] via-[#C97C4A] to-[#17130F]",
-  "from-[#2D4A3C] via-[#1F6F52] to-[#1F1A15]",
-];
-
 export function HotelCard({ hotel, index = 0 }: { hotel: Hotel; index?: number }) {
-  const gradient = gradients[index % gradients.length];
+  const { gradient } = getHotelVisual(hotel.id, index);
 
   return (
     <GlassCard interactive as="article" className="group h-full">

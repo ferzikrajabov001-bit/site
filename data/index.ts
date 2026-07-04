@@ -4,3 +4,7 @@ export { services, getServiceBySlug } from "./services";
 export { hotels, getHotelById, getHotelIds } from "./hotels";
 export { caseStudies } from "./cases";
 export { valueProps } from "./values";
+export { team } from "./team";
+export { timeline } from "./timeline";
+export { testimonials } from "./testimonials";
+export { processSteps } from "./process";

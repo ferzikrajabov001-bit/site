@@ -10,25 +10,35 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          900: "#17130F",
-          800: "#1F1A15",
-          700: "#271F17",
-          600: "#33291D",
+          900: "#150F0B",
+          800: "#1E1710",
+          700: "#2A1F15",
+          600: "#3A2B1B",
         },
         accent: {
-          DEFAULT: "#1F6F52",
-          soft: "#4FA382",
-          deep: "#123D2C",
+          DEFAULT: "#18966D",
+          soft: "#4FE3AC",
+          deep: "#0B4530",
         },
         secondary: {
-          DEFAULT: "#C97C4A",
-          soft: "#E2A374",
-          deep: "#98572D",
+          DEFAULT: "#E56A32",
+          soft: "#FFA46A",
+          deep: "#9C3F17",
         },
         brass: {
-          DEFAULT: "#C6A15B",
-          soft: "#DBC08A",
-          deep: "#8F7238",
+          DEFAULT: "#DDAC3C",
+          soft: "#F5D573",
+          deep: "#96721C",
+        },
+        wine: {
+          DEFAULT: "#9C2F4E",
+          soft: "#E0759A",
+          deep: "#551A2C",
+        },
+        teal: {
+          DEFAULT: "#178497",
+          soft: "#5FD3E6",
+          deep: "#0B4550",
         },
         muted: "#B3A691",
         hairline: "#EDE3CE",
@@ -45,16 +55,18 @@ const config: Config = {
         "3xl": "1.75rem",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(31,111,82,0.25), 0 20px 60px -20px rgba(31,111,82,0.45)",
-        card: "0 24px 60px -30px rgba(10,8,5,0.75)",
+        glow: "0 0 0 1px rgba(24,150,109,0.3), 0 20px 60px -20px rgba(24,150,109,0.5)",
+        card: "0 24px 60px -30px rgba(8,6,4,0.8)",
       },
       backgroundImage: {
         "grid-faint":
           "linear-gradient(to right, rgba(237,227,206,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(237,227,206,0.06) 1px, transparent 1px)",
         "radial-accent":
-          "radial-gradient(60% 60% at 50% 0%, rgba(31,111,82,0.24) 0%, rgba(23,19,15,0) 70%)",
+          "radial-gradient(60% 60% at 50% 0%, rgba(24,150,109,0.32) 0%, rgba(21,15,11,0) 70%)",
         "radial-secondary":
-          "radial-gradient(55% 55% at 100% 20%, rgba(201,124,74,0.20) 0%, rgba(23,19,15,0) 70%)",
+          "radial-gradient(55% 55% at 100% 20%, rgba(229,106,50,0.26) 0%, rgba(21,15,11,0) 70%)",
+        "radial-brass":
+          "radial-gradient(50% 50% at 0% 100%, rgba(221,172,60,0.22) 0%, rgba(21,15,11,0) 70%)",
       },
       keyframes: {
         "gradient-pan": {

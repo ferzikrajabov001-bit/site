@@ -5,6 +5,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Metrics } from "@/components/Metrics";
+import { Timeline } from "@/components/Timeline";
+import { Team } from "@/components/Team";
 import { CTA } from "@/components/CTA";
 import { Check } from "@/components/ui/icons";
 
@@ -144,6 +146,8 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      <Timeline />
+      <Team />
       <Metrics className="pt-0" />
       <CTA
         title="Let's talk about your asset"

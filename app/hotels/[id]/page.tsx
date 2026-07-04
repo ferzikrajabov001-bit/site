@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { HotelCard } from "@/components/HotelCard";
 import { ArrowRight, Check, MapPin } from "@/components/ui/icons";
+import { getHotelVisual } from "@/lib/hotelVisuals";
 
 export function generateStaticParams() {
   return getHotelIds().map((id) => ({ id }));
@@ -101,7 +102,9 @@ export default function HotelDetailPage({
                 className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/10"
                 aria-hidden
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#123D2C] via-[#1F6F52] to-[#17130F]" />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${getHotelVisual(hotel.id).gradient}`}
+                />
                 <div className="absolute inset-0 bg-grid-faint [background-size:36px_36px] opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent" />
               </div>
